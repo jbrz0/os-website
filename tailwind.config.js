@@ -18,9 +18,14 @@ module.exports = {
     fontFamily: {
       // display: ['serif'],
       // body: ['serif'],
-      'sans': ['Helvetica', 'Arial', 'sans-serif'],
+      'sans': ['OS Sans', 'Arial', 'sans-serif'],
       'serif': ['serif'],
       'mono': ['OS Mono', 'monospace'],
+    },
+    fontWeight: {
+      light: 300,
+      normal: 400,
+      bold: 600,
     },
     // borderWidth: {
     //   default: '1px',
@@ -30,9 +35,20 @@ module.exports = {
     // },
     extend: {
       colors: {
-        teal: '#01F0E3',
-        black: '#000000',
-        gray900: '#090819'
+        'teal': '#00f0e3',
+        'purple': '#4028fb',
+        'dark-purple': '#3e0bdc',
+        'black': '#000000',
+        'gray-900': '#0c0a20',
+        'gray-800': '#110d26',
+        'gray-700': '#131033',
+        'gray-600': '#2d2844',
+        'gray-500': '#3b4167',
+        'gray-400': '#484f7d',
+        'gray-300': '#546a90',
+        'gray-200': '#b6bfcc',
+        'gray-100': '#f2f3f7',
+        'white': '#ffffff',
       },
       // spacing: {
       //   '96': '24rem',

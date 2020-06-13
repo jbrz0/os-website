@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Header from '../components/Header'
 import Text from './Text'
 import Nav from '../components/Nav'
 
@@ -8,13 +8,10 @@ export default function Home() {
 
   return (
     <div>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+      <Header />
       <Nav />
       <Text />
+      <h1>Test Header</h1>
 
       <style jsx>{`
         .container {
@@ -166,15 +163,6 @@ export default function Home() {
 
         path {
           shape-rendering: geometricPrecision;
-        }
-      `}</style>
-
-      <style jsx global>{`
-        @font-face {
-          font-family: 'OS Mono';
-          src: url('/fonts/os-mono-regular.otf');
-          font-weight: normal;
-          font-style: normal;
         }
       `}</style>
     </div>

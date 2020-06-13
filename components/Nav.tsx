@@ -17,12 +17,12 @@ const items: Content[] = [
 
 const NavItem: React.FC<Content> = ({url, icon, title}) => {
   const router: NextRouter = useRouter()
-  const path = router.pathname
-  const active = path === url ? true : false
+  const path: string = router.pathname
+  const active: boolean = path === url ? true : false
 
   return <li className="mx-1">
     <Link href={url}>
-      <a className="flex items-stretch px-2 text-gray-500 hover:text-blue-800">
+      <a className="flex items-stretch px-2 text-gray-200 hover:text-gray-100">
         <img src={active ? icon + '-active.svg' : icon + '.svg'}
         className="flex items-stretch pr-2 hover:blue-800" />
         {title}
@@ -35,13 +35,13 @@ const Nav: React.FC = () => {
 
   return <nav
     className="flex items-center justify-between
-    flex-wrap bg-gray900 rounded-sm m-1 p-2">
+    flex-wrap bg-gray-900 rounded-sm m-1 p-2">
 
       <img src="/logo.svg" alt="Odd Scenes Logo" className="w-40 flex" />
 
       <ul className="flex">
-        {items.map(({url, icon, title}) =>
-          <NavItem title={title} icon={icon} url={url} />)}
+        {items.map(({url, icon, title}, i) =>
+          <NavItem title={title} icon={icon} url={url} key={i} />)}
       </ul>
 
     <input type="text" placeholder="Search..." />

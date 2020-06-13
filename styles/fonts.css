@@ -1,0 +1,51 @@
+/* Headings Family */
+@font-face {
+  font-family: 'OS Extended Black';
+  src: url('/fonts/os-extended-black.woff2');
+}
+@font-face {
+  font-family: 'OS Extended Bold';
+  src: url('/fonts/os-extended-bold.woff2');
+}
+@font-face {
+  font-family: 'OS Extended Light';
+  src: url('/fonts/os-extended-light.woff2');
+}
+@font-face {
+  font-family: 'OS Condensed Bold';
+  src: url('/fonts/os-condensed-bold.woff2');
+}
+
+/* Body Family */
+@font-face {
+  font-family: 'OS Sans';
+  src: url('/fonts/os-light.woff2');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'OS Sans';
+  src: url('/fonts/os-normal.woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'OS Sans';
+  src: url('/fonts/os-bold.woff2');
+  font-weight: 600;
+}
+
+/* Mono Family */
+@font-face {
+  font-family: 'OS Mono';
+  src: url('/fonts/os-mono-light.woff2');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'OS Mono';
+  src: url('/fonts/os-mono-normal.woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'OS Mono';
+  src: url('/fonts/os-mono-medium.woff2');
+  font-weight: 500;
+}

@@ -1,6 +1,11 @@
+/* Tailwind Stuff */
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+/* Typography */
+@import "./fonts";
+@import "./types";
 
 body {
   @apply bg-black;

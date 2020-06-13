@@ -1,0 +1,34 @@
+h1 {
+  font-family: 'OS Extended Black';
+}
+h2 {
+  font-family: 'OS Extended Bold';
+}
+h3 {
+  font-family: 'OS Extended Light';
+}
+h4 {
+  font-family: 'OS Condensed Bold';
+}
+h5 {
+  font-family: 'OS Sans';
+  font-weight: 600;
+}
+h6 {
+  font-family: 'OS Sans';
+  font-weight: 300;
+}
+p, .small, .caption {
+  font-family: 'OS Sans';
+  font-weight: 400;
+}
+.small {
+  font-size: 0.85rem;
+}
+.caption {
+  font-size: 0.65rem;
+}
+pre {
+  font-family: 'OS Mono';
+  font-weight: 400;
+}
