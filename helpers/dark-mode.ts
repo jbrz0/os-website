@@ -5,15 +5,13 @@ function darkMode(): boolean {
   if (window) {
 
     if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-      // one of us
+      // console.log('system: dark mode')
       isDark = true
-      console.log('dark')
     }
 
     else {
-      // light mode
+      // console.log('system: light mode')
       isDark = false
-      console.log('light')
     }
   }
 

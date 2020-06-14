@@ -1,3 +1,4 @@
+/* Default Elements */
 h1 {
   font-family: 'OS Extended Black';
 }
@@ -31,4 +32,10 @@ p, .small, .caption {
 pre {
   font-family: 'OS Mono';
   font-weight: 400;
+}
+
+/* User Behaviour */
+::selection {
+  color: #00f0e3;
+  background: #3e0bdc;
 }

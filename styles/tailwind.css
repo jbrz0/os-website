@@ -5,8 +5,14 @@
 
 /* Typography */
 @import "./fonts";
-@import "./types";
+@import "./type";
+
+/* Components */
+@import "./nav";
 
 body {
   @apply bg-black;
+}
+input {
+  caret-color: rgba(62, 11, 220);
 }
