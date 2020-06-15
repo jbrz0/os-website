@@ -1,10 +1,12 @@
 import Link from 'next/link'
 import { useRouter, NextRouter } from 'next/router'
+import MenuButton from './MenuButton'
 
 interface Content {
   url: string
   icon: string
-  title?: string
+  title?: string,
+  isNew?: boolean,
 }
 
 const navItems: Content[] = [
@@ -16,10 +18,10 @@ const navItems: Content[] = [
 ]
 
 const btnItems: Content[] = [
-  { url: "/profile", icon: 'icons/profile.svg', title: 'Profile' },
-  { url: "/cart", icon: 'icons/cart.svg', title: 'Cart' },
-  { url: "/chat", icon: 'icons/chat.svg', title: 'Chat' },
-  { url: "/mode", icon: 'icons/light.svg', title: 'Light Mode' },
+  { url: "/profile", icon: 'icons/profile.svg', title: 'Profile', isNew: false },
+  { url: "/cart", icon: 'icons/cart.svg', title: 'Cart', isNew: true },
+  { url: "/chat", icon: 'icons/chat.svg', title: 'Chat', isNew: false },
+  { url: "/mode", icon: 'icons/light.svg', title: 'Light Mode', isNew: false },
 ]
 
 const NavItem: React.FC<Content> = ({url, icon, title}) => {
@@ -44,24 +46,41 @@ const Nav: React.FC = () => {
   return <nav
     className="bg-gray-900 rounded-sm m-1 p-2 grid grid-cols-12 gap-1">
 
-      <div className="col-span-3 flex self-center">
-        <img src="/logo.svg" alt="Odd Scenes Logo" className="w-40" />
+      <div className="md:col-span-5 lg:col-span-3 flex self-center">
+
+        <ul className="flex top-menu">
+          <MenuButton mobile />
+        </ul>
+
+        <Link href="/"><a className="flex flex-none">
+          <img src="/logo.svg" alt="Odd Scenes Logo" className="w-32 xl:w-40" />
+        </a></Link>
+
+        {/* Optional Badge */}
+        {/* <div className="text-white ml-2
+          text-xs bg-blue px-1 rounded-sm nav-badge">
+          This is a message!
+        </div> */}
       </div>
 
-      <div className="col-span-5">
-        <ul className="flex justify-center top-menu">
+      <div className="md:col-span-7 lg:col-span-5">
+        <ul className="flex md:justify-end lg:justify-center top-menu">
           {navItems.map(({url, icon, title}, i) =>
             <NavItem title={title} icon={icon} url={url} key={i} />)}
+
+          <MenuButton />
         </ul>
       </div>
 
-      <div className="col-span-4">
+      <div className="hidden lg:block lg:col-span-4">
         <div className="flex justify-end">
           <ul className="flex justify-between">
-            {btnItems.map(({url, icon, title}, i) =>
+            {btnItems.map(({url, icon, title, isNew}, i) =>
               <li className="bg-gray-700 hover:bg-gray-800 cursor-pointer
-                rounded-sm p-1 mr-1 flex flex-none" key={i}>
-                <Link href={url}><a className="self-center">
+                rounded-sm mr-1 flex flex-none py-1 xl:px-2 lg:px-1" key={i}>
+                <Link href={url}><a className="self-center relative">
+                  {isNew && <span className="absolute bg-red w-1 h-1
+                    rounded-full right-0 top-0" />}
                   <img src={icon} alt={title} className="flex flex-none w-4" />
                 </a></Link>
               </li>
