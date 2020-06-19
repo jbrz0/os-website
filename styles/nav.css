@@ -7,4 +7,36 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  min-width: 104px;
 }
+@media (max-width: 767px) {
+  .nav-logo {
+    position: fixed;
+    top: 17px;
+    left: 56px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 340px) {
+  .nav-logo {
+    max-width: 128px;
+    top: 18px;
+  }
+}
+.search-input {
+  padding-right: 27px;
+  width: 190px;
+}
+.nav-search {
+  margin-top: -2px;
+}
+.nav-social {
+  object-fit: contain;
+  height: 100%;
+  margin: auto;
+}
+.social-icons li:nth-child(1) img {max-width: 1.95rem;}
+.social-icons li:nth-child(2) img {max-width: 1.6rem;}
+.social-icons li:nth-child(3) img {max-width: 1.35rem;}
+.social-icons li:nth-child(4) img {max-width: 1.65rem;}

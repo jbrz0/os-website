@@ -1,5 +1,6 @@
 /* Default Elements */
-h1 {
+h1,
+.menu-text {
   font-family: 'OS Extended Black';
 }
 h2 {
