@@ -7,8 +7,14 @@
 @import "./fonts";
 @import "./type";
 
+/* Design */
+@import "./gradients.css";
+
 /* Components */
 @import "./nav";
+
+/* Sections */
+@import "./intro";
 
 body {
   @apply bg-black;

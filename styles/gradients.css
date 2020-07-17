@@ -1,0 +1,55 @@
+/* radial */
+.gr-rad-orange {
+  background: rgb(255,213,7);
+  background: radial-gradient(circle, rgba(255,213,7,1) 0%, rgba(243,23,76,1) 70%);
+}
+.gr-rad-blue {
+  background: rgb(53,206,249);
+  background: radial-gradient(circle, rgba(53,206,249,1) 0%, rgba(64,40,251,1) 70%);
+}
+.gr-rad-green {
+  background: rgb(1,240,227);
+  background: radial-gradient(circle, rgba(1,240,227,1) 0%, rgba(39,159,113,1) 70%);
+}
+.gr-rad-pink {
+  background: rgb(255,42,252);
+  background: radial-gradient(circle, rgba(255,42,252,1) 0%, rgba(194,19,37,1) 70%);
+}
+.gr-rad-rose {
+  background: rgb(249,34,113);
+  background: radial-gradient(circle, rgba(249,34,113,1) 0%, rgba(220,21,69,1) 70%);
+}
+.gr-rad-teal {
+  background: rgb(0,216,255);
+  background: radial-gradient(circle, rgba(0,216,255,1) 0%, rgba(33,134,178,1) 70%);
+}
+.gr-rad-yellow {
+  background: rgb(255,213,7);
+  background: radial-gradient(circle, rgba(255,213,7,1) 0%, rgba(241,126,38,1) 70%);
+}
+
+/* linear */
+.gr-orange {
+  background: rgb(255,213,7);
+  background: linear-gradient(90deg, rgba(255,213,7,1) 0%, rgba(243,23,76,1) 100%);
+}
+.gr-blue {
+  background: rgb(53,206,249);
+  background: linear-gradient(90deg, rgba(53,206,249,1) 0%, rgba(64,40,251,1) 100%);
+}
+.gr-green {
+  background: rgb(1,240,227);
+  background: linear-gradient(90deg, rgba(1,240,227,1) 0%, rgba(39,159,113,1) 100%);
+}
+.gr-pink {
+  background: rgb(255,42,252);
+  background: linear-gradient(90deg, rgba(255,42,252,1) 0%, rgba(194,19,37,1) 100%);
+}
+.gr-teal {
+  background: rgb(0,216,255);
+  background: linear-gradient(90deg, rgba(0,216,255,1) 0%, rgba(33,134,178,1) 100%);
+}
+.gr-yellow {
+  background: rgb(255,213,7);
+  background: linear-gradient(90deg, rgba(255,213,7,1) 0%, rgba(241,126,38,1) 100%);
+}

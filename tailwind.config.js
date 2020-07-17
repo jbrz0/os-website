@@ -39,6 +39,7 @@ module.exports = {
         'purple': '#4028fb',
         'dark-purple': '#3e0bdc',
         'black': '#000000',
+        'gray-1000': '#090819',
         'gray-900': '#0c0a20',
         'gray-800': '#110d26',
         'gray-700': '#131033',
@@ -77,6 +78,9 @@ module.exports = {
       //   '96': '24rem',
       //   '128': '32rem',
       // }
+      opacity: {
+        '85': '0.85',
+      }
     }
   }
 }

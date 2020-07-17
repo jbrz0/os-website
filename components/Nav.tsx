@@ -6,8 +6,8 @@ import {titleCase} from '../helpers/format-text'
 
 interface Content {
   url: string
-  icon: string
-  title?: string,
+  icon?: string
+  title: string,
   isNew?: boolean,
 }
 
@@ -26,6 +26,21 @@ export const btnItems: Content[] = [
   { url: "/mode", icon: 'icons/light.svg', title: 'Light Mode', isNew: false },
 ]
 
+export const mobileMenu: Content[] = [
+  { url: "/", icon: 'icons/profile.svg', title: 'Home'},
+  { url: "/projects", icon: 'icons/profile.svg', title: 'Projects'},
+  { url: "/labs", icon: 'icons/profile.svg', title: 'Labs'},
+  { url: "/blog", icon: 'icons/profile.svg', title: 'Blog'},
+  { url: "/shop", icon: 'icons/profile.svg', title: 'Shop'},
+]
+
+export const mobileSocial: Content[] = [
+  { url: "https://reddit.com/r/oddscenes", icon: 'icons/profile.svg', title: 'Reddit'},
+  { url: "https://reddit.com/r/oddscenes", icon: 'icons/profile.svg', title: 'Twitter'},
+  { url: "https://reddit.com/r/oddscenes", icon: 'icons/profile.svg', title: 'Github'},
+  { url: "https://reddit.com/r/oddscenes", icon: 'icons/profile.svg', title: 'Email'},
+]
+
 const NavItem: React.FC<Content> = ({url, icon, title}) => {
   const router: NextRouter = useRouter()
   const path: string = router.pathname
@@ -34,11 +49,10 @@ const NavItem: React.FC<Content> = ({url, icon, title}) => {
   return <li className="md:mx-2 lg:mx-3 xl:mx-4">
     <Link href={url}>
       <a
-        className="flex items-stretch py-1">
+        className="flex items-stretch py-1 nav-item-link">
         <img src={active ? icon + '-active.svg' : icon + '.svg'}
           className="flex flex-none pr-2 hover:blue-800" />
-        <span className="text-gray-200
-        hover:text-gray-100 text-sm">{title}</span>
+        <span className="text-gray-200 text-sm">{title}</span>
       </a>
     </Link>
   </li>
@@ -46,7 +60,7 @@ const NavItem: React.FC<Content> = ({url, icon, title}) => {
 
 const Nav: React.FC = () => {
 
-  return <div className="fixed w-full">
+  return <div className="fixed w-full top-0">
     <nav className="bg-gray-900 rounded-sm m-1 p-2 grid grid-cols-12 gap-1 shadow-lg">
 
       <ReactTooltip uuid="tooltip" />

@@ -1,0 +1,9 @@
+.intro-text {
+  font-size: 10.25rem;
+  line-height: 1;
+  left: 4vw;
+  opacity: 0.875;
+}
+.intro-subtext {
+  max-width: 26rem;
+}

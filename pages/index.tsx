@@ -1,6 +1,11 @@
 import Header from '../components/Header'
-import Text from './Text'
 import Nav from '../components/Nav'
+import Intro from '../components/Intro'
+import About from '../components/About'
+import Line from '../components/Line'
+import Features from '../components/Features'
+import RecentProj from '../components/RecentProj'
+
 
 const red = 'orange'
 
@@ -10,8 +15,11 @@ export default function Home() {
     <div>
       <Header />
       <Nav />
-      <Text />
-      <h1>Test Header</h1>
+      <Intro />
+      <About />
+      <Line />
+      <Features />
+      <RecentProj />
 
       <style jsx>{`
         .container {

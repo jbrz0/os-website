@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import Link from 'next/link'
-import {btnItems} from './Nav'
+import {btnItems, mobileMenu} from './Nav'
 import {useKeyPress} from '../hooks/useKeyPress'
 
 interface Viewport {
@@ -57,11 +57,12 @@ const MenuButton: React.FC<Viewport> = ({mobile}) => {
 
       <div className="h-full flex items-center">
         <div className="ml-8 pt-6 pb-2">
-          <div className="menu-text text-4xl text-white mb-6">Home</div>
-          <div className="menu-text text-4xl text-white mb-6">Projects</div>
-          <div className="menu-text text-4xl text-white mb-6">Labs</div>
-          <div className="menu-text text-4xl text-white mb-6">Blog</div>
-          <div className="menu-text text-4xl text-white mb-6">Shop</div>
+        {mobileMenu.map(({url, icon, title}) => <>
+          <Link href={url}><a>
+            <div className="menu-text text-4xl text-white mb-6 hover:opacity-85">{title}</div>
+          </a></Link>
+          </>
+        )}
         </div>
       </div>
 

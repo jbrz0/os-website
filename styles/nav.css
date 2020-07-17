@@ -24,6 +24,9 @@
     top: 18px;
   }
 }
+.nav-item-link:hover span {
+  color: #f2f3f7;
+}
 .search-input {
   padding-right: 27px;
   width: 190px;
