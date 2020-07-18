@@ -8,6 +8,9 @@
 // }
 module.exports = {
   // purge: ['./components/**/*.js', './pages/**/*.js'],
+  variants: {
+    textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+  },
   theme: {
     // screens: {
     //   sm: '640px',

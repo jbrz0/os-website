@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import Link from 'next/link'
 import {btnItems, mobileMenu} from './Nav'
-import {useKeyPress} from '../hooks/useKeyPress'
+import {useKeyPress} from '../../hooks/useKeyPress'
 
 interface Viewport {
   mobile?: boolean

@@ -1,5 +1,5 @@
 function Features() {
-  return <div className="p-20 bg-gray-1000">
+  return <div className="p-40 bg-gray-1000">
     <div className="container mx-auto px-24">
 
       <div className="grid grid-cols-12 mb-20">
@@ -44,7 +44,7 @@ function Features() {
         <div className="col-span-2"></div>
       </div>
 
-      <div className="grid grid-cols-12 mb-20">
+      <div className="grid grid-cols-12">
         <div className="col-span-2"></div>
         <div className="col-span-4 relative px-8">
           <h4 className="mb-3 text-white text-2xl float-left">Asynchronous Flow</h4>

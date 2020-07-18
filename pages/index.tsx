@@ -1,11 +1,12 @@
 import Header from '../components/Header'
-import Nav from '../components/Nav'
-import Intro from '../components/Intro'
-import About from '../components/About'
-import Line from '../components/Line'
-import Features from '../components/Features'
-import RecentProj from '../components/RecentProj'
-
+import Nav from '../components/shared/Nav'
+import Intro from '../components/home/Intro'
+import About from '../components/home/About'
+import Line from '../components/shared/Line'
+import Features from '../components/home/Features'
+import RecentProj from '../components/home/Projects'
+import Tech from '../components/home/Tech'
+import Labs from '../components/home/Labs'
 
 const red = 'orange'
 
@@ -20,6 +21,10 @@ export default function Home() {
       <Line />
       <Features />
       <RecentProj />
+      <Tech />
+      <Line />
+      <Labs />
+      <Line />
 
       <style jsx>{`
         .container {

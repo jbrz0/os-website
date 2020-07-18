@@ -2,7 +2,7 @@ import Link from 'next/link'
 import ReactTooltip from "react-tooltip"
 import {useRouter, NextRouter} from 'next/router'
 import MenuButton from './MenuButton'
-import {titleCase} from '../helpers/format-text'
+import {titleCase} from '../../helpers/format-text'
 
 interface Content {
   url: string
@@ -60,7 +60,7 @@ const NavItem: React.FC<Content> = ({url, icon, title}) => {
 
 const Nav: React.FC = () => {
 
-  return <div className="fixed w-full top-0">
+  return <div className="fixed w-full top-0 z-10">
     <nav className="bg-gray-900 rounded-sm m-1 p-2 grid grid-cols-12 gap-1 shadow-lg">
 
       <ReactTooltip uuid="tooltip" />
