@@ -7,6 +7,8 @@ import Features from '../components/home/Features'
 import RecentProj from '../components/home/Projects'
 import Tech from '../components/home/Tech'
 import Labs from '../components/home/Labs'
+import Store from '../components/home/Store'
+import Footer from '../components/shared/Footer'
 
 const red = 'orange'
 
@@ -25,6 +27,8 @@ export default function Home() {
       <Line />
       <Labs />
       <Line />
+      <Store />
+      <Footer />
 
       <style jsx>{`
         .container {

@@ -46,7 +46,7 @@ const NavItem: React.FC<Content> = ({url, icon, title}) => {
   const path: string = router.pathname
   const active: boolean = path === url ? true : false
 
-  return <li className="md:mx-2 lg:mx-3 xl:mx-4">
+  return <li className="md:mx-2 lg:mx-3 xl:mx-4" key={title}>
     <Link href={url}>
       <a
         className="flex items-stretch py-1 nav-item-link">
