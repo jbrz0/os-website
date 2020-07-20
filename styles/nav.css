@@ -34,12 +34,3 @@
 .nav-search {
   margin-top: -2px;
 }
-.nav-social {
-  object-fit: contain;
-  height: 100%;
-  margin: auto;
-}
-.social-icons li:nth-child(1) img {max-width: 1.95rem;}
-.social-icons li:nth-child(2) img {max-width: 1.6rem;}
-.social-icons li:nth-child(3) img {max-width: 1.35rem;}
-.social-icons li:nth-child(4) img {max-width: 1.65rem;}

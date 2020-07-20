@@ -59,3 +59,25 @@
   background: rgb(17,13,38);
   background: linear-gradient(0deg, rgba(17,13,38,0) 0%, rgba(17,13,38,1) 100%);
 }
+
+/* two colour */
+.gr-tw-1 {
+  background: rgb(255,0,129);
+  background: linear-gradient(90deg, rgba(255,0,129,1) 0%, rgba(62,11,220,1) 100%);
+}
+.gr-tw-2 {
+  background: rgb(255,212,0);
+  background: linear-gradient(90deg, rgba(255,212,0,1) 0%, rgba(255,46,151,1) 100%);
+}
+.gr-tw-3 {
+  background: rgb(1,240,227);
+  background: linear-gradient(90deg, rgba(1,240,227,1) 0%, rgba(255,42,252,1) 100%);
+}
+.gr-tw-4 {
+  background: rgb(1,240,97);
+  background: linear-gradient(90deg, rgba(1,240,97,1) 0%, rgba(100,148,169,1) 100%);
+}
+.gr-tw-5 {
+  background: rgb(163,214,224);
+  background: linear-gradient(90deg, rgba(163,214,224,1) 0%, rgba(59,65,103,1) 100%);
+}

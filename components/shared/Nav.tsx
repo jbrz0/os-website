@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import ReactTooltip from "react-tooltip"
 import {useRouter, NextRouter} from 'next/router'
-import MenuButton from './MenuButton'
+import MenuButton from './MenuBtn'
 import {titleCase} from '../../helpers/format-text'
+import {Howl, Howler} from 'howler'
 
 interface Content {
   url: string
@@ -41,12 +42,16 @@ export const mobileSocial: Content[] = [
   { url: "https://reddit.com/r/oddscenes", icon: 'icons/profile.svg', title: 'Email'},
 ]
 
-const NavItem: React.FC<Content> = ({url, icon, title}) => {
+const menuHover = new Howl({
+  src: ['sounds/menuHover.m4a']
+})
+
+const NavItem: React.FC<Content> = ({url, icon, title}, enter) => {
   const router: NextRouter = useRouter()
   const path: string = router.pathname
   const active: boolean = path === url ? true : false
 
-  return <li className="md:mx-2 lg:mx-3 xl:mx-4" key={title}>
+  return <li className="md:mx-2 lg:mx-3 xl:mx-4" key={title} onMouseEnter={() => menuHover.play()}>
     <Link href={url}>
       <a
         className="flex items-stretch py-1 nav-item-link">
@@ -59,6 +64,8 @@ const NavItem: React.FC<Content> = ({url, icon, title}) => {
 }
 
 const Nav: React.FC = () => {
+
+
 
   return <div className="fixed w-full top-0 z-10">
     <nav className="bg-gray-900 rounded-sm m-1 p-2 grid grid-cols-12 gap-1 shadow-lg">

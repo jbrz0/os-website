@@ -9,6 +9,7 @@
 
 /* Design */
 @import "./gradients.css";
+@import "./icons.css";
 
 /* Components */
 @import "./nav";

@@ -40,3 +40,13 @@ pre {
   color: #00f0e3;
   background: #3e0bdc;
 }
+
+/* text aliasing */
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+path {
+  shape-rendering: geometricPrecision;
+}

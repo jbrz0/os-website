@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useRouter, NextRouter } from 'next/router'
 import Head from 'next/head'
-import darkMode from '../helpers/dark-mode'
-import {titleCase} from '../helpers/format-text'
+import darkMode from '../../helpers/dark-mode'
+import {titleCase} from '../../helpers/format-text'
 
 const Header: React.FC = () => {
 
@@ -14,7 +14,7 @@ const Header: React.FC = () => {
 
   // Get page name for tab
   const router: NextRouter = useRouter()
-  const path: string = titleCase(router.pathname)
+  const path: string = titleCase(router.pathname.substr(1))
 
   return (<>
     <Head>

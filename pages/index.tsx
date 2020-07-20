@@ -1,4 +1,4 @@
-import Header from '../components/Header'
+import Header from '../components/shared/Header'
 import Nav from '../components/shared/Nav'
 import Intro from '../components/home/Intro'
 import About from '../components/home/About'
@@ -16,8 +16,8 @@ export default function Home() {
 
   return (
     <div>
-      <Header />
       <Nav />
+      <Header />
       <Intro />
       <About />
       <Line />
@@ -159,27 +159,6 @@ export default function Home() {
             width: 100%;
             flex-direction: column;
           }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-        }
-
-        path {
-          shape-rendering: geometricPrecision;
         }
       `}</style>
     </div>
