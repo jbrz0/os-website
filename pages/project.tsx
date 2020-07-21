@@ -5,6 +5,9 @@ import Footer from '../components/shared/Footer'
 import Line from '../components/shared/Line'
 import Concept from '../components/project/Concept'
 import Drafts from '../components/project/Drafts'
+import Branding from '../components/project/Branding'
+import Mockups from '../components/project/Mockups'
+import Devices from '../components/project/Devices'
 
 const Project: React.FC<React.ReactNode> = () => {
 
@@ -16,6 +19,10 @@ const Project: React.FC<React.ReactNode> = () => {
     <Concept />
     <Drafts />
     <Line />
+    <Branding />
+    <Mockups />
+    <Line />
+    <Devices />
     <Footer />
   </>
 }

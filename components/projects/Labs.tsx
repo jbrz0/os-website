@@ -17,7 +17,7 @@ const Labs: React.FC<React.ReactNode> = () => {
       </div>
 
       <div className="col-span-1 pl-16">
-        <Button href="#" className="text-white gr-tw-3 block">View Labs</Button>
+        <Button href="#" className="text-white bg-purple block">View Labs</Button>
       </div>
     </div>
   </div>
