@@ -1,11 +1,13 @@
 import Link from 'next/link'
 
-function Footer() {
+const Footer: React.FC<React.ReactNode> = () => {
 
+  // Scroll to top of page
   function scrollTop() {
     const pos: object = {top: 0, left: 0, behavior: 'smooth'}
     if (window) window.scrollTo(pos)
   }
+
   return <div className="bg-gray-900 shadow-lg relative flex justify-center">
     <img src="balance.svg" alt="Odd Scenes Favicon" className="absolute left-0 bottom-0" />
 

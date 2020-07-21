@@ -1,4 +1,11 @@
-function RightArrow(props) {
+interface Props {
+  RightArrow: JSX.Element,
+  arrowHover: string,
+  txtHover: string,
+}
+
+const RightArrow: React.FC<Props> = (props) => {
+
   return <>
     <svg className={`fill-current text-purple ${props.arrowHover} inline-block mr-3`}
       width="22" height="23" viewBox="0 0 22 23" xmlns="http://www.w3.org/2000/svg">

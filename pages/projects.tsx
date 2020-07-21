@@ -1,22 +1,22 @@
 import Header from '../components/shared/Header'
 import Nav from '../components/shared/Nav'
+import Intro from '../components/projects/Intro'
+import Project1 from '../components/projects/Project1'
+import Labs from '../components/projects/Labs'
+import Project2 from '../components/projects/Project2'
+import Footer from '../components/shared/Footer'
 
-export default function Projects() {
+const Projects: React.FC<React.ReactNode> = () => {
+
   return <>
     <Header />
     <Nav />
-
-    <div className="h-screen bg-black">
-      <div className="container mx-auto px-24">
-        <div className="h-screen flex justify-center items-center">
-          <h3 className="text-white text-center m-3 text-right mt-4">Web Design &amp;<br />Development</h3>
-          <h1 className="text-white text-6xl">Projects</h1>
-        </div>
-
-        <img src="icons/arrow-down.svg" alt="See More"
-          className="absolute mx-auto left-0 right-0" style={{bottom: `2rem`}} />
-      </div>
-    </div>
-
+    <Intro />
+    <Project1 />
+    <Labs />
+    <Project2 />
+    <Footer />
   </>
 }
+
+export default Projects

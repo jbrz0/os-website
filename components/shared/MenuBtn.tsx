@@ -31,7 +31,7 @@ const MenuButton: React.FC<Viewport> = ({mobile}) => {
 
   return (<>
     <li className={`bg-gray-700 hover:bg-gray-800 cursor-pointer rounded-sm
-      flex self-center py-2 px-2 ${viewport}`} onClick={() => setShow(true)}>
+      flex self-center py-2 px-2 ${viewport}`} onClick={() => setShow(!show)}>
       <Link href="/"><a className="w-4">
         <img src="icons/menu.svg" alt="Menu" />
       </a></Link>

@@ -3,7 +3,7 @@ import ReactTooltip from "react-tooltip"
 import {useRouter, NextRouter} from 'next/router'
 import MenuButton from './MenuBtn'
 import {titleCase} from '../../helpers/format-text'
-import {Howl, Howler} from 'howler'
+import {Howl} from 'howler'
 
 interface Content {
   url: string
@@ -63,9 +63,7 @@ const NavItem: React.FC<Content> = ({url, icon, title}, enter) => {
   </li>
 }
 
-const Nav: React.FC = () => {
-
-
+const Nav: React.FC<React.ReactNode> = () => {
 
   return <div className="fixed w-full top-0 z-10">
     <nav className="bg-gray-900 rounded-sm m-1 p-2 grid grid-cols-12 gap-1 shadow-lg">

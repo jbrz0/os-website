@@ -1,7 +1,7 @@
 import labData from './labData'
 import RightArrow from './RightArrow'
 
-function Labs() {
+const Labs: React.FC<React.ReactNode> = () => {
 
   return <>
     <div className="py-40 bg-gray-1000">

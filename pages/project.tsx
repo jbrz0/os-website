@@ -1,0 +1,23 @@
+import Header from '../components/shared/Header'
+import Nav from '../components/shared/Nav'
+import Intro from '../components/project/Intro'
+import Footer from '../components/shared/Footer'
+import Line from '../components/shared/Line'
+import Concept from '../components/project/Concept'
+import Drafts from '../components/project/Drafts'
+
+const Project: React.FC<React.ReactNode> = () => {
+
+  return <>
+    <Header />
+    <Nav />
+    <Intro />
+    <Line />
+    <Concept />
+    <Drafts />
+    <Line />
+    <Footer />
+  </>
+}
+
+export default Project

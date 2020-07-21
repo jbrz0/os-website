@@ -1,6 +1,6 @@
 import Slider from 'react-slick'
 
-function RecentProj() {
+const RecentProj: React.FC<React.ReactNode> = () => {
 
   const settings = {
     centerMode: true,

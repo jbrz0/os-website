@@ -1,4 +1,5 @@
-function Features() {
+const Features: React.FC<React.ReactNode> = () => {
+
   return <div className="p-40 bg-gray-1000">
     <div className="container mx-auto px-24">
 

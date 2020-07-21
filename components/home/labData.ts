@@ -1,6 +1,14 @@
 // Demo lab data for homepage, feed this from an API
 
-const labData = [
+type Item = {
+  category: string,
+  title: string,
+  image: string,
+  excerpt: string,
+  date: string,
+}
+
+const labData: Array<Item> = [
   {
     "category": "Frontend",
     "title": "Page layout is where these components come together",

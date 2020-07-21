@@ -4,7 +4,7 @@ import Head from 'next/head'
 import darkMode from '../../helpers/dark-mode'
 import {titleCase} from '../../helpers/format-text'
 
-const Header: React.FC = () => {
+const Header: React.FC<React.ReactNode> = () => {
 
   // Detect dark mode for favicon
   const [dark, setDark] = useState<boolean>(true)
@@ -18,7 +18,7 @@ const Header: React.FC = () => {
 
   return (<>
     <Head>
-      <title>Odd Scenes: {path === '/' ? 'Home' : path}</title>
+      <title>Odd Scenes: {path === '' ? 'Home' : path}</title>
       {dark === true && <link rel="icon" href="/favicon.ico" />}
       {dark === false && <link rel="icon" href="/favicon-light.ico" />}
     </Head>

@@ -1,4 +1,5 @@
-function About() {
+const About: React.FC<React.ReactNode> = () => {
+
   return <div className="h-screen bg-gray-1000">
     <div className="container mx-auto px-24">
       <div className="grid grid-cols-12 h-screen">

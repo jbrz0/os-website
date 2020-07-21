@@ -1,4 +1,5 @@
-function Intro() {
+const Intro: React.FC<React.ReactNode> = () => {
+
   return <div className="h-screen w-full">
     <div className="container mx-auto">
       <div className="grid grid-cols-12 h-screen">

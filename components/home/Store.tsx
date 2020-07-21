@@ -1,4 +1,5 @@
-function Store() {
+const Store: React.FC<React.ReactNode> = () => {
+
   return <>
     <div className="py-40 bg-gray-1000">
       <div className="container mx-auto px-24">

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
-function Tech() {
+const Tech: React.FC<React.ReactNode> = () => {
+
   return <div className="py-40 bg-black shadow-2xl">
     <h4 className="text-white text-center text-2xl mb-12">Tech &amp; Software</h4>
 
