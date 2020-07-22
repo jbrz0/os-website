@@ -30,6 +30,9 @@
 .css-1okebmr-indicatorSeparator {
   display: none;
 }
+.css-1pahdxg-control {
+  box-shadow: none !important;
+}
 .css-6q0nyr-Svg {
   fill: #546a90 !important;
 }
@@ -42,6 +45,11 @@
   cursor: pointer;
   padding: 0;
 }
+/* select (sort posts) */
+.selector.sort-posts {
+  max-width: 14rem;
+}
+
 /* hover select item */
 .css-1n7v3ny-option {
   background-color: #0c0a20 !important;
@@ -67,6 +75,7 @@
   display: inline-block;
   cursor: pointer;
   font-size: 0.9rem;
+  user-select: none;
 }
 .tags span.active {
   text-shadow: 1px 1px 1px black;
@@ -195,9 +204,25 @@
 }
 
 /* cards */
-/* .lab-cards > div:nth-child(2n) {
-  padding-left: 0.75rem;
+.card-triangle {
+  width: 25px;
+  height: 25px;
+  border-style: solid;
+  border-width: 15px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-left-radius: 0.125rem;
+  transform: rotate(180deg);
+  margin-right: 0.5rem;
 }
-.lab-cards > div:nth-child(2n+1) {
-  padding-right: 0.75rem;
-} */
+.card-overlay {
+  border-top: 1px solid rgba(1,240,227,1);
+  border-bottom: 1px solid rgba(64,40,251,1);
+  background-image:
+    linear-gradient(rgba(1,240,227,1), rgba(64,40,251,1)),
+    linear-gradient(rgba(1,240,227,1), rgba(64,40,251,1));
+  background-size: 1px 100%;
+  background-position:0 0, 100% 0;
+  background-repeat: no-repeat;
+  border-radius: 0.125rem;
+}

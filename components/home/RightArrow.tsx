@@ -1,5 +1,5 @@
 interface Props {
-  RightArrow: JSX.Element,
+  RightArrow?: any,
   arrowHover: string,
   txtHover: string,
 }

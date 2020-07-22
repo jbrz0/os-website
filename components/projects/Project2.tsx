@@ -17,8 +17,8 @@ const Project2: React.FC<React.ReactNode> = () => {
             Possimus similique sapiente ipsam commodi doloribus ipsam commodi doloribus.
           </p>
           <div className="mt-8 mb-24">
-            <Button href="#" className="text-gray-200 btn-default mr-4">Visit Site</Button>
-            <Button href="#" className="text-white gr-tw-2">View Project</Button>
+            <Button href="#" className="text-gray-200 btn-default mr-4 text-lg">Visit Site</Button>
+            <Button href="#" className="text-white gr-tw-2 text-lg">View Project</Button>
           </div>
         </div>
       </div>

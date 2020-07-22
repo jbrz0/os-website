@@ -1,4 +1,5 @@
 import Sidebar from './Sidebar'
+import BtnStatic from '../shared/BtnStatic'
 import Card from './Card'
 
 const Container: React.FC<React.ReactNode> = () => {
@@ -16,6 +17,10 @@ const Container: React.FC<React.ReactNode> = () => {
           <Card />
           <Card />
           <Card />
+
+          <BtnStatic className="border-solid border border-gray-300
+          text-lg w-1/2 text-white clear-both block cursor-pointer
+          hover:bg-gray-300 mx-auto mt-10">Load More</BtnStatic>
         </div>
 
       </div>

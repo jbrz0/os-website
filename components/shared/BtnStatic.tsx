@@ -2,16 +2,17 @@ import Link from 'next/link'
 
 interface Props {
   children: React.ReactNode,
-  href: string,
   className?: string
 }
 
-const Button: React.FC<Props> = (props) => {
-  return <Link href={props.href}>
+// Static version of button (without link)
+
+const BtnStatic: React.FC<Props> = (props) => {
+  return <div>
     <a className={`${props.className} py-3 px-8 rounded-sm text-center`}>
       <>{props.children}</>
     </a>
-  </Link>
+  </div>
 }
 
-export default Button
+export default BtnStatic
