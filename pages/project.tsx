@@ -8,6 +8,9 @@ import Drafts from '../components/project/Drafts'
 import Branding from '../components/project/Branding'
 import Mockups from '../components/project/Mockups'
 import Devices from '../components/project/Devices'
+import Screenshots from '../components/project/Screenshots'
+import Features from '../components/project/Features'
+import Next from '../components/project/Next'
 
 const Project: React.FC<React.ReactNode> = () => {
 
@@ -23,6 +26,10 @@ const Project: React.FC<React.ReactNode> = () => {
     <Mockups />
     <Line />
     <Devices />
+    <Screenshots />
+    <Line />
+    <Features />
+    <Next />
     <Footer />
   </>
 }

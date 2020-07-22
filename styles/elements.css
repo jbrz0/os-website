@@ -1,0 +1,203 @@
+/* lists */
+.features li span {
+  top: -0.3rem;
+}
+.features li:before {
+  content: '';
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-image: url('/icons/feature.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* select */
+.selector > div {
+  cursor: pointer;
+  background: #090819;
+  border: none;
+  border-radius: 0.125rem;
+  padding: 0.65rem 0.8rem;
+  outline: none !important;
+  border: none !important;
+  font-size: 1.125rem;
+}
+.selector > div > div,
+.selector > div > div > div {
+  color: #f2f3f7;
+}
+.css-1okebmr-indicatorSeparator {
+  display: none;
+}
+.css-6q0nyr-Svg {
+  fill: #546a90 !important;
+}
+.css-g1d714-ValueContainer {
+  padding-top: 0;
+  padding-bottom: 0 !important;
+}
+.css-26l3qy-menu {
+  border-radius: 0.125rem;
+  cursor: pointer;
+  padding: 0;
+}
+/* hover select item */
+.css-1n7v3ny-option {
+  background-color: #0c0a20 !important;
+  background: #0c0a20 !important;
+  border-radius: 0.125rem;
+}
+/* selected item */
+.css-9gakcf-option {
+  background-color: #3e0bdc !important;
+  background: #3e0bdc !important;
+  border-radius: 0.125rem;
+}
+
+/* tags */
+.tags span {
+  border-width: 1px;
+  border-radius: 0.125rem;
+  border-style: solid;
+  color: #f2f3f7;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.tags span.active {
+  text-shadow: 1px 1px 1px black;
+}
+.tags span:hover {
+  opacity: 0.95;
+}
+.tags span:nth-child(1) {
+  border-color: #01F0E3;
+  text-shadow: 0 0 10px #01F0E3;
+}
+.tags span.active:nth-child(1) {
+  background-color: #01F0E3;
+}
+.tags span:nth-child(2) {
+  border-color: #4028fb;
+  text-shadow: 0 0 10px #4028fb;
+}
+.tags span.active:nth-child(2) {
+  background-color: #4028fb;
+}
+.tags span:nth-child(3) {
+  border-color: #fe0081;
+  text-shadow: 0 0 10px #fe0081;
+}
+.tags span.active:nth-child(3) {
+  background-color: #fe0081;
+}
+.tags span:nth-child(4) {
+  border-color: #a6e22e;
+  text-shadow: 0 0 10px #a6e22e;
+}
+.tags span.active:nth-child(4) {
+  background-color: #a6e22e;
+}
+.tags span:nth-child(5) {
+  border-color: #456b7c;
+  text-shadow: 0 0 10px #456b7c;
+}
+.tags span.active:nth-child(5) {
+  background-color: #456b7c;
+}
+.tags span:nth-child(6) {
+  border-color: #664e4d;
+  text-shadow: 0 0 10px #664e4d;
+}
+.tags span.active:nth-child(6) {
+  background-color: #664e4d;
+}
+.tags span:nth-child(7) {
+  border-color: #8a45a3;
+  text-shadow: 0 0 10px #8a45a3;
+}
+.tags span.active:nth-child(7) {
+  background-color: #8a45a3;
+}
+.tags span:nth-child(8) {
+  border-color: #f3164c;
+  text-shadow: 0 0 10px #f3164c;
+}
+.tags span.active:nth-child(8) {
+  background-color: #f3164c;
+}
+.tags span:nth-child(9) {
+  border-color: #ffd400;
+  text-shadow: 0 0 10px #ffd400;
+}
+.tags span.active:nth-child(9) {
+  background-color: #ffd400;
+}
+.tags span:nth-child(10) {
+  border-color: #06f061;
+  text-shadow: 0 0 10px #06f061;
+}
+.tags span.active:nth-child(10) {
+  background-color: #06f061;
+}
+.tags span:nth-child(11) {
+  border-color: #376dff;
+  text-shadow: 0 0 10px #376dff;
+}
+.tags span.active:nth-child(11) {
+  background-color: #376dff;
+}
+.tags span:nth-child(12) {
+  border-color: #ff29fc;
+  text-shadow: 0 0 10px #ff29fc;
+}
+.tags span.active:nth-child(12) {
+  background-color: #ff29fc;
+}
+.tags span:nth-child(13) {
+  border-color: #546a90;
+  text-shadow: 0 0 10px #546a90;
+}
+.tags span.active:nth-child(13) {
+  background-color: #546a90;
+}
+.tags span:nth-child(14) {
+  border-color: #f7b83d;
+  text-shadow: 0 0 10px #f7b83d;
+}
+.tags span.active:nth-child(14) {
+  background-color: #f7b83d;
+}
+.tags span:nth-child(15) {
+  border-color: #a875ff;
+  text-shadow: 0 0 10px #a875ff;
+}
+.tags span.active:nth-child(15) {
+  background-color: #a875ff;
+}
+.tags span:nth-child(16) {
+  border-color: #34cef9;
+  text-shadow: 0 0 10px #34cef9;
+}
+.tags span.active:nth-child(16) {
+  background-color: #34cef9;
+}
+.tags span:nth-child(17) {
+  border-color: #e5db74;
+  text-shadow: 0 0 10px #e5db74;
+}
+.tags span.active:nth-child(17) {
+  background-color: #e5db74;
+}
+
+/* cards */
+/* .lab-cards > div:nth-child(2n) {
+  padding-left: 0.75rem;
+}
+.lab-cards > div:nth-child(2n+1) {
+  padding-right: 0.75rem;
+} */
