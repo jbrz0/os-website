@@ -1,18 +1,19 @@
+<!-- Metadata -->
+import posts from './0-index'
+
+<!-- Components -->
 import Button from '../components/shared/Button'
 
-export const meta = {
-  "date": '22-07-2020',
-  "title": 'My First Test Post',
-  "description": 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil libero placeat fuga rem illum molestias quae.',
-  "slug": 'test-post',
-  "coolness": '3',
-  "tags": ['animation', 'fun', 'experimental'],
-}
+<!-- Content -->
 
 # hiii
 
-## Yooo
-## toooooo
+<p>{posts[0].slug}</p>
+
+<div className="container ml-20">
+  ## Yooo
+  ## toooooo
+</div>
 
 <Button href="#" className="bg-red">Test</Button>
 
