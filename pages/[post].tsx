@@ -59,6 +59,7 @@ const Project: React.FC<React.ReactNode> = () => {
       <Nav />
       <div className="h-full w-full bg-green">
         <h1 className="m-20 text-white">Content wooo</h1>
+        <h1>{process.env.AUTH_SECRET}</h1>
         <Post />
       </div>
       <Footer />
