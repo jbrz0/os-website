@@ -13,33 +13,33 @@ interface Content {
 }
 
 const navItems: Content[] = [
-  { url: "/", icon: 'icons/home', title: 'Home' },
-  { url: "/projects", icon: 'icons/projects', title: 'Projects' },
-  { url: "/labs", icon: 'icons/labs', title: 'Labs' },
-  { url: "/blog", icon: 'icons/blog', title: 'Blog' },
-  { url: "/shop", icon: 'icons/shop', title: 'Shop' },
+  { url: "/", icon: '/icons/home', title: 'Home' },
+  { url: "/projects", icon: '/icons/projects', title: 'Projects' },
+  { url: "/labs", icon: '/icons/labs', title: 'Labs' },
+  { url: "/blog", icon: '/icons/blog', title: 'Blog' },
+  { url: "/shop", icon: '/icons/shop', title: 'Shop' },
 ]
 
 export const btnItems: Content[] = [
-  { url: "/profile", icon: 'icons/profile.svg', title: 'Profile', isNew: false },
-  { url: "/cart", icon: 'icons/cart.svg', title: 'Cart', isNew: true },
-  { url: "/chat", icon: 'icons/chat.svg', title: 'Chat', isNew: false },
-  { url: "/mode", icon: 'icons/light.svg', title: 'Light Mode', isNew: false },
+  { url: "/profile", icon: '/icons/profile.svg', title: 'Profile', isNew: false },
+  { url: "/cart", icon: '/icons/cart.svg', title: 'Cart', isNew: true },
+  { url: "/chat", icon: '/icons/chat.svg', title: 'Chat', isNew: false },
+  { url: "/mode", icon: '/icons/light.svg', title: 'Light Mode', isNew: false },
 ]
 
 export const mobileMenu: Content[] = [
-  { url: "/", icon: 'icons/profile.svg', title: 'Home'},
-  { url: "/projects", icon: 'icons/profile.svg', title: 'Projects'},
-  { url: "/labs", icon: 'icons/profile.svg', title: 'Labs'},
-  { url: "/blog", icon: 'icons/profile.svg', title: 'Blog'},
-  { url: "/shop", icon: 'icons/profile.svg', title: 'Shop'},
+  { url: "/", icon: '/icons/profile.svg', title: 'Home'},
+  { url: "/projects", icon: '/icons/profile.svg', title: 'Projects'},
+  { url: "/labs", icon: '/icons/profile.svg', title: 'Labs'},
+  { url: "/blog", icon: '/icons/profile.svg', title: 'Blog'},
+  { url: "/shop", icon: '/icons/profile.svg', title: 'Shop'},
 ]
 
 export const mobileSocial: Content[] = [
-  { url: "https://reddit.com/r/oddscenes", icon: 'icons/profile.svg', title: 'Reddit'},
-  { url: "https://reddit.com/r/oddscenes", icon: 'icons/profile.svg', title: 'Twitter'},
-  { url: "https://reddit.com/r/oddscenes", icon: 'icons/profile.svg', title: 'Github'},
-  { url: "https://reddit.com/r/oddscenes", icon: 'icons/profile.svg', title: 'Email'},
+  { url: "https://reddit.com/r/oddscenes", icon: '/icons/profile.svg', title: 'Reddit'},
+  { url: "https://reddit.com/r/oddscenes", icon: '/icons/profile.svg', title: 'Twitter'},
+  { url: "https://reddit.com/r/oddscenes", icon: '/icons/profile.svg', title: 'Github'},
+  { url: "https://reddit.com/r/oddscenes", icon: '/icons/profile.svg', title: 'Email'},
 ]
 
 const menuHover = new Howl({
@@ -85,7 +85,7 @@ const Nav: React.FC<React.ReactNode> = () => {
           <li className={`bg-gray-700 hover:bg-gray-800 cursor-pointer
             rounded-sm mr-1 flex self-center py-2 px-2`}>
             <Link href="/"><a className="w-4">
-              <img src="icons/search.svg" alt="Menu" className="nav-search" />
+              <img src="/icons/search.svg" alt="Menu" className="nav-search" />
             </a></Link>
           </li>
         </ul>
@@ -127,7 +127,7 @@ const Nav: React.FC<React.ReactNode> = () => {
           <input type="text" placeholder="Search..."
             className="bg-gray-700 rounded-sm py-1
             px-2 text-sm text-gray-100 flex justify-end search-input" />
-          <img src="icons/search.svg" alt="Search"
+          <img src="/icons/search.svg" alt="Search"
             className="absolute mr-2 mt-2" />
         </div>
       </div>
