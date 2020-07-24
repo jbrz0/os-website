@@ -1,14 +1,14 @@
 import {useState, useEffect} from 'react'
 import dynamic from 'next/dynamic'
-import Header from '../components/shared/Header'
-import Intro from '../components/blog/Intro'
-import Wrapper from '../components/blog/Wrapper'
-import Error404 from './Error404'
-import Nav from '../components/shared/Nav'
-import Footer from '../components/shared/Footer'
+import Header from '../../components/shared/Header'
+import Intro from '../../components/blog/Intro'
+import Wrapper from '../../components/blog/Wrapper'
+import Error404 from '../Error404'
+import Nav from '../../components/shared/Nav'
+import Footer from '../../components/shared/Footer'
 
 // Post metadata
-import posts from '../markdown/0-index'
+import posts from '../../markdown/0-index'
 
 const Project: React.FC<React.ReactNode> = () => {
 
@@ -19,13 +19,13 @@ const Project: React.FC<React.ReactNode> = () => {
 
 
   // Dynamic mdx file grab
-  const Post = dynamic(() => import(`../markdown/${filename}`))
+  const Post = dynamic(() => import(`../../markdown/${filename}`))
 
   useEffect(() => {
 
     let path: string
     if (window) {
-      path = window.location.pathname.substr(1)
+      path = window.location.pathname.substr(6)
 
       for (const item of posts) {
 

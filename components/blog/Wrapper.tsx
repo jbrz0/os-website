@@ -3,7 +3,7 @@ interface Props {
 }
 
 const Wrapper: React.FC<Props> = (props) => {
-  return <div className="text-white container mx-auto p-10 max-w-screen-md post">
+  return <div className="text-white container mx-auto p-10 pb-32 max-w-screen-md post">
     {props.children}
   </div>
 }
