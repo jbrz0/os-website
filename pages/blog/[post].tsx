@@ -3,7 +3,9 @@ import dynamic from 'next/dynamic'
 import Header from '../../components/shared/Header'
 import Intro from '../../components/blog/Intro'
 import Wrapper from '../../components/blog/Wrapper'
+import Prev from '../../components/blog/Prev'
 import Error404 from '../Error404'
+import Loading from '../Loading'
 import Nav from '../../components/shared/Nav'
 import Footer from '../../components/shared/Footer'
 
@@ -52,17 +54,19 @@ const Project: React.FC<React.ReactNode> = () => {
 
   if (!loaded && found === null) {
 
-    // Searching via url & post directory
-    return <>
-      <Header />
-      <Nav />
-      <div className="h-screen w-full">
-        <h1 className="text-white py-32 px-10 text-center">Loading</h1>
-      </div>
-      <Footer />
-    </>
+    return <Loading />
   }
   else if (loaded && found) {
+
+    // Get the previous post ID
+    let prevId: number = id - 1
+    const latestId: number = posts.length - 1
+    let subtext: string = ''
+
+    if (prevId <= 0) {
+      prevId = latestId
+      subtext = 'Recent Post'
+    }
 
     // Found and loaded our metadata & mdx content
     return <>
@@ -75,6 +79,7 @@ const Project: React.FC<React.ReactNode> = () => {
         cover={posts[id].cover}
       />
       <Wrapper><Post /></Wrapper>
+      <Prev href={`/blog/${posts[prevId].slug}`} title={`${posts[prevId].title}`} subtext={subtext} />
       <Footer />
     </>
   }
@@ -85,8 +90,8 @@ const Project: React.FC<React.ReactNode> = () => {
     return <Error404 />
   }
 
-  // Catch-all 404 response, possibly refactor
-  else return <Error404 />
+  // Catch-all
+  else return <Loading />
 }
 
 export default Project

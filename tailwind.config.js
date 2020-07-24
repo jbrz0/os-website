@@ -8,8 +8,12 @@
 // }
 module.exports = {
   // purge: ['./components/**/*.js', './pages/**/*.js'],
+  // variants: ['responsive', 'group-hover', 'group-focus', 'focus-within', 'first', 'last', 'odd', 'even', 'hover', 'focus', 'active', 'visited', 'disabled'],
+
   variants: {
     textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+    backgroundColor: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+    opacity: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
   },
   theme: {
     // screens: {

@@ -41,6 +41,19 @@ const posts: Array<Post> = [
     "cover": "https://picsum.photos/1440/900",
     "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil libero placeat fuga rem illum molestias quae.",
   },
+  {
+    "id": 2,
+    "number": '003',
+    "slug": "test3",
+    "isLab": false,
+    "filename": "000-test.mdx",
+    "date": "Jul 23, 2020",
+    "coolness": 2,
+    "tags": ["animation", "fun"],
+    "title": "The navigation system provides a set of screen elements.",
+    "cover": "https://picsum.photos/1440/900",
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil libero placeat fuga rem illum molestias quae.",
+  },
 ]
 
 export default posts
