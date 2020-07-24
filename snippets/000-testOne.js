@@ -1,3 +1,6 @@
+const codeOne = `
+console.log('hello')
+
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/
 })
@@ -14,3 +17,6 @@ module.exports = withMDX({
     S3_BUCKET: process.env.S3_BUCKET,
   }
 })
+`
+
+export default codeOne

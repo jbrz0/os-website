@@ -2,26 +2,122 @@
 import posts from './0-index'
 
 <!-- Components -->
+import Highlight from 'react-highlight.js'
+import codeOne from '../snippets/000-testOne'
+import ImageOne from '../components/blog/ImageOne'
+import ImageTwo from '../components/blog/ImageTwo'
+import Video from '../components/blog/Video'
 import Button from '../components/shared/Button'
 
 <!-- Content -->
 
-# hiii
+### Wireframes can be pencil drawings or sketches on
 
-<p>{posts[0].slug}</p>
+&nbsp;&nbsp;
+-----
 
-<div className="container ml-20">
-  ## Yooo
-  ## toooooo
-</div>
+Wireframes can be pencil drawings or sketches on a whiteboard,
+or they can be produced by means of a broad array of free or
+commercial software applications. Wireframes are generally
+created by business analysts, user experience designers,
+developers, visual designers, and by those with expertise
+in interaction design
 
-<p>{process.env.AUTH_SECRET}</p>
+&nbsp;&nbsp;
+-----
 
-<Button href="#" className="bg-red">Test</Button>
+Pencil drawings or sketches on a whiteboard, or they can be
+produced by means of a broad array of free or commercial software
+applications. Wireframes are generally created by business analysts,
 
-- one
-- two
+&nbsp;&nbsp;
+-----
 
-```js
-console.log('heyyy')
-```
+# Wireframes are generally created by business analysts, user experience designers
+
+&nbsp;&nbsp;
+-----
+
+## Secondary Header 2
+
+&nbsp;&nbsp;
+-----
+
+#### Really Smallery Header
+
+&nbsp;&nbsp;
+-----
+
+<ImageOne src="os.png" alt="OS Spinner"
+  caption="Image or code snippet, and this text here is a caption" />
+
+&nbsp;&nbsp;
+-----
+
+### User experience designers
+
+&nbsp;&nbsp;
+-----
+
+The navigation system provides a set of screen elements that allow the user
+to move page to page through the website. The navigation design should communicate
+the relationship between the links it contains so that users understand the
+options they have.
+
+&nbsp;&nbsp;
+-----
+
+<ImageTwo
+  srcOne="os.png"
+  altOne="OS Spinner 1"
+  srcTwo="os.png"
+  altTwo="OS Spinner 2" />
+
+&nbsp;&nbsp;
+-----
+
+The navigation system provides a set of screen elements that allow the user to
+move page to page through the website. The navigation design should communicate
+the relationship between the links it contains so that users understand the
+options they have.
+
+&nbsp;&nbsp;
+-----
+
+<Highlight language="javascript">{codeOne}</Highlight>
+
+&nbsp;&nbsp;
+-----
+
+- List one
+- List two
+
+&nbsp;&nbsp;
+-----
+
+<Video src="sjkrrmBnpGE" />
+
+&nbsp;&nbsp;
+-----
+
+### Metadata reference
+<p className="mt-3"><strong>slug: </strong>/{posts[0].slug}</p>
+<pre className="text-gray-500">(index == post number)</pre>
+
+&nbsp;&nbsp;
+-----
+
+<Button href="//google.com" className="inline-block bg-purple" target="_blank">
+<span className="text-white">Check It Out</span></Button>
+
+&nbsp;&nbsp;
+-----
+
+within the text a [link](/about) can be here
+
+&nbsp;&nbsp;
+-----
+
+> block quote...
+> more of the quote text continued
+

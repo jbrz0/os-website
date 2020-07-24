@@ -15,9 +15,11 @@
 
 /* Components */
 @import "./nav";
+@import "./code";
 
 /* Sections */
 @import "./intro";
+@import "./post";
 
 body {
   @apply bg-black;

@@ -1,6 +1,8 @@
 import {useState, useEffect} from 'react'
 import dynamic from 'next/dynamic'
 import Header from '../components/shared/Header'
+import Intro from '../components/blog/Intro'
+import Wrapper from '../components/blog/Wrapper'
 import Error404 from './Error404'
 import Nav from '../components/shared/Nav'
 import Footer from '../components/shared/Footer'
@@ -13,6 +15,8 @@ const Project: React.FC<React.ReactNode> = () => {
   const [found, setFound] = useState<boolean>(null)
   const [loaded, setLoaded] = useState<boolean>(false)
   const [filename, setFilename] = useState<string>('000-ph.mdx')
+  const [id, setId] = useState<number>(null)
+
 
   // Dynamic mdx file grab
   const Post = dynamic(() => import(`../markdown/${filename}`))
@@ -23,13 +27,19 @@ const Project: React.FC<React.ReactNode> = () => {
     if (window) {
       path = window.location.pathname.substr(1)
 
-      posts.map(item => {
+      for (const item of posts) {
+
         if (item.slug !== path) setFound(false)
+
         else if (item.slug === path) {
+          // Set post details to component state
           setFound(true)
           setFilename(item.filename)
+          setId(item.id)
+          break;
         }
-      })
+      }
+
     }
   }, [])
 
@@ -37,7 +47,6 @@ const Project: React.FC<React.ReactNode> = () => {
 
     if (found !== null) setLoaded(true)
   }, [found])
-
 
   //* Post render logic
 
@@ -47,7 +56,9 @@ const Project: React.FC<React.ReactNode> = () => {
     return <>
       <Header />
       <Nav />
-      <div className="h-full w-full bg-red"><h1 className="m-20 text-white">Loading</h1></div>
+      <div className="h-screen w-full">
+        <h1 className="text-white py-32 px-10 text-center">Loading</h1>
+      </div>
       <Footer />
     </>
   }
@@ -57,11 +68,13 @@ const Project: React.FC<React.ReactNode> = () => {
     return <>
       <Header />
       <Nav />
-      <div className="h-full w-full bg-green">
-        <h1 className="m-20 text-white">Content wooo</h1>
-        <h1>{process.env.AUTH_SECRET}</h1>
-        <Post />
-      </div>
+      <Intro
+        tags={posts[id].tags}
+        date={posts[id].date}
+        title={posts[id].title}
+        cover={posts[id].cover}
+      />
+      <Wrapper><Post /></Wrapper>
       <Footer />
     </>
   }
