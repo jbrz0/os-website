@@ -1,35 +1,34 @@
 import {useState, useEffect} from 'react'
 import dynamic from 'next/dynamic'
-import Header from '../../components/shared/Header'
-import Intro from '../../components/blog/Intro'
-import Wrapper from '../../components/blog/Wrapper'
-import Prev from '../../components/blog/Prev'
 import Error404 from '../Error404'
+import Overlay from '../../components/lab/Overlay'
 import Loading from '../Loading'
-import Nav from '../../components/shared/Nav'
-import Footer from '../../components/shared/Footer'
 
 // Post metadata
 import posts from '../../markdown/0-index'
 
-const Post: React.FC<React.ReactNode> = () => {
+const Lab: React.FC<React.ReactNode> = () => {
+
+  let labs: any
 
   const [found, setFound] = useState<boolean>(null)
   const [loaded, setLoaded] = useState<boolean>(false)
   const [filename, setFilename] = useState<string>('000-ph')
   const [id, setId] = useState<number>(null)
 
-
-  // Dynamic mdx file grab
-  const Post = dynamic(() => import(`../../markdown/${filename}.mdx`))
+  // Dynamic lab component file grab
+  const LabIn = dynamic(() => import(`../../laboratory/${filename}.tsx`))
 
   useEffect(() => {
+    // Get labs from all posts metadata
+    labs = posts.filter(post => post.isLab === true)
 
     let path: string
-    if (window) {
-      path = window.location.pathname.substr(6)
 
-      for (const item of posts) {
+    if (window) {
+      path = window.location.pathname.substr(5)
+
+      for (const item of labs) {
 
         if (item.slug !== path) setFound(false)
 
@@ -42,6 +41,7 @@ const Post: React.FC<React.ReactNode> = () => {
         }
       }
     }
+
   }, [])
 
   useEffect(() => {
@@ -57,29 +57,10 @@ const Post: React.FC<React.ReactNode> = () => {
   }
   else if (loaded && found) {
 
-    // Get the previous post ID
-    let prevId: number = id - 1
-    const latestId: number = posts.length - 1
-    let subtext: string = ''
-
-    if (prevId < 0) {
-      prevId = latestId
-      subtext = 'Recent Post'
-    }
-
     // Found and loaded our metadata & mdx content
     return <>
-      <Header />
-      <Nav />
-      <Intro
-        tags={posts[id].tags}
-        date={posts[id].date}
-        title={posts[id].title}
-        cover={posts[id].cover}
-      />
-      <Wrapper><Post /></Wrapper>
-      <Prev href={`/blog/${posts[prevId].slug}`} title={`${posts[prevId].title}`} subtext={subtext} />
-      <Footer />
+      {/* <Overlay href="/"><Lab /></Overlay> */}
+      <Overlay href={`/blog/${posts[id].slug}`}><LabIn /></Overlay>
     </>
   }
 
@@ -93,4 +74,4 @@ const Post: React.FC<React.ReactNode> = () => {
   else return <Loading />
 }
 
-export default Post
+export default Lab

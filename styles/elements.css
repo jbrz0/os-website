@@ -70,7 +70,8 @@
   border-style: solid;
   color: #f2f3f7;
   padding: 0.25rem 0.5rem;
-  margin-right: 0.5rem;
+  margin-right: 0.25rem;
+  margin-left: 0.25rem;
   margin-bottom: 0.5rem;
   display: inline-block;
   cursor: pointer;
@@ -225,4 +226,9 @@
   background-position:0 0, 100% 0;
   background-repeat: no-repeat;
   border-radius: 0.125rem;
+}
+
+/* shop modal */
+.ReactModal__Body--open {
+  overflow: hidden !important;
 }

@@ -56,12 +56,12 @@ const Intro: React.FC<React.ReactNode> = () => {
         inputId={'1'}
       />
 
-      <Item colour="#456b7c" href="#" />
-      <Item colour="#f3164c" href="#" />
-      <Item colour="#376dff" href="#" />
-      <Item colour="#546a90" href="#" />
-      <Item colour="#f7b83d" href="#" />
-      <Item colour="#34cef9" href="#" />
+      <Item href="#" />
+      <Item href="#" />
+      <Item href="#" />
+      <Item href="#" />
+      <Item href="#" />
+      <Item href="#" />
       <BtnStatic className="border-solid border border-gray-300
         text-lg w-1/2 text-white clear-both block cursor-pointer
         hover:bg-gray-300 mx-auto mt-10">Load More</BtnStatic>

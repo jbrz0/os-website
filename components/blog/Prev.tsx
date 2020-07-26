@@ -16,7 +16,7 @@ const Prev: React.FC<Props> = (props) => {
       <div className="grid grid-cols-8 group">
         <div className="col-span-6 group-hover:opacity-75">
           <div className="text-gray-100 text-lg">{props.subtext === '' ? 'Previous Post' : props.subtext}</div>
-          <h3 className="text-gray-100 text-4xl mb-10">
+          <h3 className="text-gray-100 text-4xl">
             {props.title}
           </h3>
         </div>

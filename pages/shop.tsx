@@ -1,16 +1,18 @@
 import Header from '../components/shared/Header'
 import Nav from '../components/shared/Nav'
-import Container from '../components/labs/Container'
+import Intro from '../components/shop/Intro'
+import Items from '../components/shop/Items'
 import Footer from '../components/shared/Footer'
 
-const Labs: React.FC<React.ReactNode> = () => {
+const Shop: React.FC<React.ReactNode> = () => {
 
   return <>
     <Header />
     <Nav />
-    <Container />
+    <Intro />
+    <Items />
     <Footer />
   </>
 }
 
-export default Labs
+export default Shop

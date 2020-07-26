@@ -25,7 +25,7 @@ const Intro: React.FC<Props> = (props) => {
           </p>
         </div>
 
-        <h1 className="text-white text-3xl">{props.title} oyoooo t333</h1>
+        <h1 className="text-white text-3xl">{props.title}</h1>
       </div>
     </div>
 

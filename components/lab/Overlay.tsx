@@ -17,16 +17,16 @@ const Overlay: React.FC<Props> = (props) => {
       style={{borderRight: '1px solid #131033'}}>
         <div className="text-gray-100 text-xs font-bold text-center">VIEW</div>
         <div>
-          <img src="icons/blog-active.svg" className="inline w-3" />
-          <img src="icons/blog-active.svg" className="inline w-3" />
-          <img src="icons/blog-active.svg" className="inline w-3" />
+          <img src="/icons/blog-active.svg" className="inline w-3" />
+          <img src="/icons/blog-active.svg" className="inline w-3" />
+          <img src="/icons/blog-active.svg" className="inline w-3" />
         </div>
         <div className="text-gray-100 text-xs font-bold text-center">POST</div>
       </div>
 
       <div className="inline-block px-3">
         <div className="text-gray-100 text-xs text-center mb-2">🧪 A Web Experiment 🧪</div>
-        <div><img src="logo.svg" className="w-40" /></div>
+        <div><img src="/logo.svg" className="w-40" /></div>
       </div>
     </div>
     </a></Link>
