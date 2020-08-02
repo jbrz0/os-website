@@ -232,3 +232,85 @@
 .ReactModal__Body--open {
   overflow: hidden !important;
 }
+
+/* about section */
+@media (max-width: 400px) {
+  .about {
+    padding: 2.5rem 2rem 3rem;
+  }
+}
+
+/* features max width */
+@media (max-width: 400px) {
+  .features {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+.features-col {
+  max-width: 730px;
+}
+
+/* homepage tech & software */
+@media (max-width: 400px) {
+  .tech-card {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* homepage projects & slider */
+.projects-list {
+  display: none;
+}
+.projects-list .p-6 {
+  padding: 0;
+}
+.projects-list p {
+  padding-bottom: 2.75rem;
+}
+.slider img {
+  height: 60vh;
+}
+.projects-list .p-6:last-child p {
+  padding-bottom: 2.25rem;
+}
+@media (max-width: 1015px) {
+  .projects {
+    padding: 3rem;
+  }
+  .projects .slider {
+    display: none;
+  }
+  .projects-list {
+    display: block;
+  }
+  .projects-list img {
+    height: 22rem;
+  }
+}
+@media (max-width: 767px) {
+  .projects-list img {
+    height: 18rem;
+  }
+}
+@media (max-width: 400px) {
+  .projects {
+    padding: 2.5rem 2rem 3rem;
+  }
+  .projects-list img {
+    height: 12rem;
+  }
+}
+
+/* homepage labs */
+@media (max-width: 400px) {
+  .home-labs,
+  .home-labs-below {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .home-labs-below > a > div {
+    padding: 1.5rem;
+  }
+}

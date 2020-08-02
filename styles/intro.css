@@ -2,8 +2,38 @@
   font-size: 10.25rem;
   line-height: 1;
   left: 4vw;
-  opacity: 0.875;
+  opacity: 0.75;
 }
 .intro-subtext {
-  max-width: 26rem;
+  max-width: 18rem;
+}
+@media (min-width: 1024px) {
+
+  .intro-subtext {
+    max-width: 24rem;
+  }
+}
+@media (min-width: 1280px) {
+
+  .intro-subtext {
+    max-width: 26rem;
+  }
+}
+/* adjust min height to accomodate intro content */
+@media (max-width: 767px) {
+
+  .intro {
+    margin-top: 2rem;
+    min-height: 750px;
+  }
+}
+@media (max-width: 650px) {
+
+  .intro {
+    margin-top: 3rem;
+    min-height: 520px;
+  }
+  .intro-squares {
+    max-width: 320px;
+  }
 }

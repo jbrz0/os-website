@@ -9,9 +9,9 @@ const Footer: React.FC<React.ReactNode> = () => {
   }
 
   return <div className="bg-gray-900 shadow-lg relative flex justify-center">
-    <img src="/balance.svg" alt="Odd Scenes Favicon" className="absolute left-0 bottom-0" />
+    <img src="/balance.svg" alt="Odd Scenes Favicon" className="w-20 h-20 sm:w-auto sm:h-auto absolute left-0 bottom-0" />
 
-    <span className="text-gray-400 text-sm ml-32 absolute left-0 mt-5">v12</span>
+    <span className="text-gray-400 text-sm hidden sm:block ml-32 absolute left-0 mt-5">v12</span>
 
     <div className="max-w-md py-5">
       <Link href="#"><a className="float-left mx-2 hover:opacity-75"><img src="/social/a-email.svg" alt=""/></a></Link>
@@ -21,7 +21,7 @@ const Footer: React.FC<React.ReactNode> = () => {
       <Link href="#"><a className="float-left mx-2 hover:opacity-75"><img src="/social/e-reddit.svg" className="reddit" alt=""/></a></Link>
     </div>
 
-    <span className="mr-10 text-white absolute right-0
+    <span className="mr-0 sm:mr-10 text-white absolute right-0
       h-full w-16 cursor-pointer hover:bg-gray-800 flex"
       onClick={scrollTop}>
       <img src="/icons/arrow-up.svg" className="self-center block mx-auto" alt=""/>

@@ -23,10 +23,14 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
+    padding: '0',
+    border: '0',
+    background: 'transparent',
   },
   overlay: {
     backgroundColor: 'rgba(0,0,0,0.7)',
+    zIndex: '10',
   }
 }
 
@@ -67,7 +71,7 @@ const Items: React.FC<React.ReactNode> = () => {
 
         {items.map((item, i) => {
           return <div className="col-span-1 rounded-sm mb-10 hover:bg-red cursor-pointer" onClick={() => setIsOpen(true)} key={i}>
-            <div className="bg-gray-500 h-40 w-full rounded-sm shadow-lg">Card</div>
+            <div className="bg-gray-500 h-64 w-full rounded-sm shadow-lg">Card</div>
             <div className="text-gray-100 font-bold mt-4">Red Sweater</div>
             <span className="text-lg text-yellow">$25</span>
           </div>
@@ -79,8 +83,15 @@ const Items: React.FC<React.ReactNode> = () => {
           contentLabel="Product"
           style={customStyles}
           shouldCloseOnOverlayClick={true}
+          onRequestClose={() => setIsOpen(false)}
         >
-          <p className="text-white bg-gray-700" onClick={() => setIsOpen(false)}>Modal</p>
+          <div className="bg-gray-700 p-10 rounded">
+            Modal
+            <img src="icons/close.svg" alt="Close Menu"
+                onClick={() => setIsOpen(false)}
+                className="w-10 cursor-pointer" />
+            {/* https://picsum.photos/1440/900 */}
+          </div>
         </Modal>
 
       </div>

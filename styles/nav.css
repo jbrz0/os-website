@@ -3,6 +3,11 @@
     padding-left: calc(100% / 12);
   }
 }
+@media (min-width: 1200px) {
+  .top-menu {
+    padding-left: calc(100% / 5);
+  }
+}
 .nav-badge {
   white-space: nowrap;
   overflow: hidden;

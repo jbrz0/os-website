@@ -91,10 +91,10 @@ const Nav: React.FC<React.ReactNode> = () => {
         </ul>
 
         {/* Optional Badge */}
-        {/* <div className="text-white ml-2 hidden md:block
+        <div className="text-white ml-2 hidden md:block
           text-xs bg-blue px-1 rounded-sm nav-badge">
           This is message!
-        </div> */}
+        </div>
       </div>
 
       <div className="hidden md:block md:col-span-7 lg:col-span-5">

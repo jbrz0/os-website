@@ -1,4 +1,47 @@
 import Slider from 'react-slick'
+import Link from 'next/link'
+
+const Content1: React.FC<React.ReactNode> = () => {
+  return <>
+    <div className="p-6">
+      <img
+        src="/projects/placeholder.png"
+        className="w-full object-cover shadow-xl rounded-lg"
+      />
+      <p className="text-gray-100 text-lg max-w-screen-md mt-6">
+        The navigation design should communicate the relationship between the links it contains so that users understand the options they have for navigating the site.
+      </p>
+    </div>
+  </>
+}
+
+const Content2: React.FC<React.ReactNode> = () => {
+  return <>
+    <div className="p-6">
+      <img
+        src="/projects/placeholder.png"
+        className="w-full object-cover shadow-xl rounded-lg"
+      />
+      <p className="text-gray-100 text-lg max-w-screen-md mt-6">
+        The navigation design should communicate the relationship between the links it contains so that users understand the options they have for navigating the site.
+      </p>
+    </div>
+  </>
+}
+
+const Content3: React.FC<React.ReactNode> = () => {
+  return <>
+    <div className="p-6">
+      <img
+        src="/projects/placeholder.png"
+        className="w-full object-cover shadow-xl rounded-lg"
+      />
+      <p className="text-gray-100 text-lg max-w-screen-md mt-6">
+        The navigation design should communicate the relationship between the links it contains so that users understand the options they have for navigating the site.
+      </p>
+    </div>
+  </>
+}
 
 const RecentProj: React.FC<React.ReactNode> = () => {
 
@@ -10,7 +53,7 @@ const RecentProj: React.FC<React.ReactNode> = () => {
     slidesToShow: 1,
     arrows: false,
     variableWidth: true,
-    dots: true,
+    dots: false,
 
     // Autoplay settings
     autoplaySpeed: 13000,
@@ -18,29 +61,30 @@ const RecentProj: React.FC<React.ReactNode> = () => {
     pauseOnHover: true,
   }
 
-  return <div className="py-40 gr-rad-rose shadow-2xl">
-    <div className="container mx-auto px-24">
-      <h4>See Some</h4>
-      <h2 className="text-2xl">Recent Projects</h2>
+  return <div className="py-16 lg:py-24 gr-rad-rose shadow-2xl projects">
+    <div className="container mx-auto max-w-screen-md">
+      <h4 className="text-gray-200">See Some</h4>
+      <h2 className="text-2xl text-gray-100">Recent Projects</h2>
     </div>
 
+    {/* Desktop Slider */}
     <Slider {...settings}>
-      <div className="p-6">
-        <div className="bg-blue h-64"></div>
-        <p>The navigation design should communicate the relationship between the links it contains so that users understand the options they have for navigating the site.</p>
-      </div>
-      <div className="p-6">
-        <div className="bg-orange h-64"></div>
-        <p>The navigation design should communicate the relationship between the links it contains so that users understand the options they have for navigating the site.</p>
-      </div>
-      <div className="p-6">
-        <div className="bg-green h-64"></div>
-        <p>navigation design should communicate the relationship between the links it contains so that users understand the options they have for navigating the site.</p>
-      </div>
+      <Content1 />
+      <Content2 />
+      <Content3 />
     </Slider>
 
-    <div className="container mx-auto px-24 mt-10">
-      <h3>See More Projects</h3>
+    {/* Mobile List */}
+    <div className="projects-list container mx-auto max-w-screen-md mt-6">
+      <Content1 />
+      <Content2 />
+      <Content3 />
+    </div>
+
+    <div className="container mx-auto max-w-screen-md">
+      <Link href="/projects"><a className="hover:underline text-yellow inline-block">
+        <h3 className="container mx-auto max-w-screen-md text-yellow font-bold">See More Projects</h3>
+      </a></Link>
     </div>
 
   </div>
