@@ -1,4 +1,6 @@
+import { useState, useEffect } from 'react'
 import Select from 'react-select'
+import posts from '../../markdown/0-index'
 
 interface Content {
   value: string,
@@ -11,31 +13,40 @@ const difficulty: Content[] = [
   { value: 'hard', label: 'Hard' }
 ]
 
-const tech: Content[] = [
-  { value: 'any-tech', label: 'Any Tech' },
-  { value: 'figma', label: 'Figma' },
-  { value: 'node', label: 'Node' },
-  { value: 'react', label: 'React' },
-  { value: 'typescript', label: 'Typescript' }
-]
-
-const tags: Content[] = [
-  { value: 'animation', label: 'Animation' },
-  { value: 'tool', label: 'Tool' },
-  { value: 'fun', label: 'Fun' },
-  { value: 'experimental', label: 'Experiments' },
-  { value: 'dashboard', label: 'Dashboard' },
-  { value: 'component', label: 'Component' },
-  { value: 'resource', label: 'Resource' },
-]
-
 const Sidebar: React.FC<React.ReactNode> = () => {
 
   function activeClass(e: any) {
     e.target.classList.toggle('active')
   }
 
-  return <div className="bg-gray-800 rounded-sm w-full p-10">
+  // Get tags, tech from all posts metadata
+  const [tags, setTags] = useState<Array<string>>([])
+  const [tech, setTech] = useState<Array<string>>([])
+
+  useEffect(() => {
+    // Get and filter our duplicate tags
+    const allTags: Array<string> = posts.map(post => post.tags).flat(1)
+    const filteredTags: Array<string> = allTags.filter((value, i) => allTags.indexOf(value) === i)
+    setTags([...filteredTags])
+
+    // Get and filter our duplicate tech
+    const allTech: Array<string> = posts.map(post => post.tech).flat(1)
+    const allTechT: Array<string> = allTech.filter((truthy) => truthy)
+    const filteredTech: Array<string> = allTechT.filter((value, i) => allTechT.indexOf(value) === i)
+
+    let techFormat = []
+    filteredTech.map(item => {
+
+      techFormat.push({
+        value: item,
+        label: item,
+      })
+    })
+    setTech(techFormat)
+
+  }, [])
+
+  return <div className="bg-gray-800 rounded-sm w-full p-8 xl:p-10">
       <h1 className="text-white text-3xl mb-3">Labs</h1>
       <p className="text-gray-200 mb-8">Experimental demos using various web technologies</p>
 
@@ -69,7 +80,7 @@ const Sidebar: React.FC<React.ReactNode> = () => {
 
       <div className="tags">
         {tags.map((tag, i) => {
-          return <span onClick={(e) => activeClass(e)} key={i}>{tag.label}</span>
+          return <span onClick={(e) => activeClass(e)} key={i}>{tag}</span>
         })}
       </div>
     </div>

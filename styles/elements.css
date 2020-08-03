@@ -314,3 +314,17 @@
     padding: 1.5rem;
   }
 }
+
+/* labs section */
+@media (max-width: 768px) {
+  .labs-container {
+    max-width: 28rem;
+  }
+}
+@media (max-width: 400px) {
+
+  .labs-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
