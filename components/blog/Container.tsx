@@ -1,6 +1,9 @@
+import {useState, useEffect} from 'react'
 import Item from './Item'
 import BtnStatic from '../shared/BtnStatic'
 import Select from 'react-select'
+
+import posts from '../../markdown/0-index'
 
 interface Content {
   value: string,
@@ -28,25 +31,36 @@ const Intro: React.FC<React.ReactNode> = () => {
     e.target.classList.toggle('active')
   }
 
+  // Get tags, tech from all posts metadata
+  const [tags, setTags] = useState<Array<string>>([])
+
+  useEffect(() => {
+    // Get and filter our duplicate tags
+    const allTags: Array<string> = posts.map(post => post.tags).flat(1)
+    const filteredTags: Array<string> = allTags.filter((value, i) => allTags.indexOf(value) === i)
+    setTags([...filteredTags])
+  }, [])
+
   return <>
-    <div className="bg-gray-1000" style={{height: '60vh'}}>
-      <div className="container mx-auto px-24 h-full">
+    <div className="bg-gray-1000 blog-header">
+      <div className="container mx-auto px-16 sm:px-24 h-full">
         <div className="flex items-center h-full">
           <div className="block mx-auto">
-            <h1 className="text-white text-6xl text-center">Visual Jargon</h1>
+            <h1 className="text-white text-4xl sm:text-5xl md:text-6xl text-center">Visual Jargon</h1>
             <h3 className="text-white text-center text-center mx-3 mt-3 mb-8">A blog about design, tech and new projects</h3>
 
-            <div className="tags">
+            <div className="tags text-center">
               {tags.map((tag, i) => {
-                return <span onClick={(e) => activeClass(e)} key={i}>{tag.label}</span>
+                return <span onClick={(e) => activeClass(e)} key={i}>{tag}</span>
               })}
             </div>
+
           </div>
         </div>
       </div>
     </div>
 
-    <div className="container mx-auto px-24 h-full max-w-screen-md py-32">
+    <div className="container mx-auto px-24 h-full max-w-screen-md py-24">
       <Select
         className="selector sort-posts mb-16"
         options={sort}

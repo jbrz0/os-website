@@ -328,3 +328,14 @@
     padding-right: 2rem;
   }
 }
+
+/* blog list */
+.blog-header {
+  height: 60vh;
+}
+@media (max-width: 1000px) {
+  .blog-header {
+    height: auto;
+    padding: 5rem 0;
+  }
+}
