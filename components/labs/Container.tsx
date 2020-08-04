@@ -19,7 +19,10 @@ const Container: React.FC<React.ReactNode> = () => {
 
         <div className="md:col-span-1 lg:col-span-2 lab-cards">
 
-          {labs.map(lab => <Card difficulty={lab.difficulty} />)}
+          {labs.map((lab, i: number) => <Card
+            difficulty={lab.difficulty}
+            slug={lab.slug}
+            key={i} />)}
 
           <BtnStatic className="border-solid border border-gray-300
           text-lg w-1/2 text-white clear-both block cursor-pointer
