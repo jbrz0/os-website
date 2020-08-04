@@ -43,7 +43,7 @@ export const mobileSocial: Content[] = [
 ]
 
 const menuHover = new Howl({
-  src: ['sounds/menuHover.m4a']
+  src: ['/sounds/menuHover.m4a']
 })
 
 const NavItem: React.FC<Content> = ({url, icon, title}, enter) => {

@@ -323,7 +323,9 @@
 }
 @media (max-width: 400px) {
 
-  .labs-container {
+  .labs-container,
+  .blog-list,
+  .post {
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -337,5 +339,14 @@
   .blog-header {
     height: auto;
     padding: 5rem 0;
+  }
+}
+
+/* store section */
+@media (max-width: 400px) {
+
+  .store-items {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }

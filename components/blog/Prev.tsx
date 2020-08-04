@@ -14,13 +14,13 @@ const Prev: React.FC<Props> = (props) => {
 
     <Link href={props.href}><a>
       <div className="grid grid-cols-8 group">
-        <div className="col-span-6 group-hover:opacity-75">
+        <div className="col-span-10 md:col-span-6 group-hover:opacity-75">
           <div className="text-gray-100 text-lg">{props.subtext === '' ? 'Previous Post' : props.subtext}</div>
           <h3 className="text-gray-100 text-4xl">
             {props.title}
           </h3>
         </div>
-        <div className="col-span-2">
+        <div className="col-span-2 hidden md:block">
           <div className="bg-purple group-hover:bg-dark-purple
           group-hover:opacity-100 float-right w-20 h-20 rounded-full
           flex align-center mt-10">

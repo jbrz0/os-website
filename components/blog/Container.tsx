@@ -43,7 +43,7 @@ const Intro: React.FC<React.ReactNode> = () => {
 
   return <>
     <div className="bg-gray-1000 blog-header">
-      <div className="container mx-auto px-16 sm:px-24 h-full">
+      <div className="container mx-auto px-12 sm:px-24 h-full">
         <div className="flex items-center h-full">
           <div className="block mx-auto">
             <h1 className="text-white text-4xl sm:text-5xl md:text-6xl text-center">Visual Jargon</h1>
@@ -60,7 +60,7 @@ const Intro: React.FC<React.ReactNode> = () => {
       </div>
     </div>
 
-    <div className="container mx-auto px-24 h-full max-w-screen-md py-24">
+    <div className="container mx-auto px-16 md:px-24 h-full max-w-screen-md py-16 md:py-24 blog-list">
       <Select
         className="selector sort-posts mb-16"
         options={sort}

@@ -50,7 +50,7 @@ const Items: React.FC<React.ReactNode> = () => {
   // }, [])
 
   return <div className="bg-black">
-    <div className="container mx-auto py-16 px-24">
+    <div className="container mx-auto py-16 px-12 lg:px-24 store-items">
 
       <div className="tags flex items-center justify-center mb-16">
           <div>
@@ -60,23 +60,17 @@ const Items: React.FC<React.ReactNode> = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-24 grid grid-cols-4 gap-6">
-        {/* <Link><a>
-          <div className="col-span-1 rounded-sm">
-            <div className="bg-gray-500 h-40 w-full rounded-sm shadow-lg">Card</div>
-            <div className="text-gray-100 font-bold mt-4">Red Sweater</div>
-            <span className="text-lg text-yellow">$25</span>
-          </div>
-        </a></Link> */}
+      <div className="container mx-auto grid grid-cols-4 gap-6 max-w-screen-lg">
 
         {items.map((item, i) => {
-          return <div className="col-span-1 rounded-sm mb-10 hover:bg-red cursor-pointer" onClick={() => setIsOpen(true)} key={i}>
-            <div className="bg-gray-500 h-64 w-full rounded-sm shadow-lg">Card</div>
+          return <div className="col-span-4 sm:col-span-2 md:col-span-1
+          rounded-sm mb-6 cursor-pointer max-w-sm mx-auto w-full sm:max-w-none"
+          onClick={() => setIsOpen(true)} key={i}>
+            <div className="bg-gray-500 h-56 md:h-40 lg:h-56 xl:h-64 w-full rounded-sm shadow-lg">Card</div>
             <div className="text-gray-100 font-bold mt-4">Red Sweater</div>
             <span className="text-lg text-yellow">$25</span>
           </div>
         })}
-
 
         <Modal
           isOpen={isOpen}
@@ -90,7 +84,6 @@ const Items: React.FC<React.ReactNode> = () => {
             <img src="icons/close.svg" alt="Close Menu"
                 onClick={() => setIsOpen(false)}
                 className="w-10 cursor-pointer" />
-            {/* https://picsum.photos/1440/900 */}
           </div>
         </Modal>
 
