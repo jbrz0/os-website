@@ -5,6 +5,7 @@ export type Product = {
   image: string,
   price: string,
   type: string,
+  description: string,
 }
 
 const products: Array<Product> = [
@@ -15,6 +16,7 @@ const products: Array<Product> = [
     image: 'empty-shirt-women.jpg',
     price: '50',
     type: 'shirt',
+    description: 'High fidelity wireframes include more real content, specific typography choices, and information on image dimensions.',
   },
   {
     id: 2,
@@ -23,6 +25,7 @@ const products: Array<Product> = [
     image: 'empty-shirt-men.jpg',
     price: '50',
     type: 'shirt',
+    description: 'High fidelity wireframes include more real content, specific typography choices, and information on image dimensions.',
   },
   {
     id: 3,
@@ -31,6 +34,7 @@ const products: Array<Product> = [
     image: 'ribcage-shirt-women.jpg',
     price: '50',
     type: 'shirt',
+    description: 'High fidelity wireframes include more real content, specific typography choices, and information on image dimensions.',
   },
   {
     id: 4,
@@ -39,6 +43,7 @@ const products: Array<Product> = [
     image: 'ribcage-shirt-men.png',
     price: '50',
     type: 'shirt',
+    description: 'High fidelity wireframes include more real content, specific typography choices, and information on image dimensions.',
   },
   {
     id: 5,
@@ -47,6 +52,7 @@ const products: Array<Product> = [
     image: 'sacred-geometry-women.png',
     price: '50',
     type: 'shirt',
+    description: 'High fidelity wireframes include more real content, specific typography choices, and information on image dimensions.',
   },
   {
     id: 6,
@@ -55,6 +61,7 @@ const products: Array<Product> = [
     image: 'sacred-geometry-men.png',
     price: '50',
     type: 'shirt',
+    description: 'High fidelity wireframes include more real content, specific typography choices, and information on image dimensions.',
   },
   {
     id: 7,
@@ -63,6 +70,7 @@ const products: Array<Product> = [
     image: 'logo-jacket.png',
     price: '60',
     type: 'jacket',
+    description: 'High fidelity wireframes include more real content, specific typography choices, and information on image dimensions.',
   },
   {
     id: 8,
@@ -71,6 +79,7 @@ const products: Array<Product> = [
     image: 'logo-hoodie.png',
     price: '40',
     type: 'sweater',
+    description: 'High fidelity wireframes include more real content, specific typography choices, and information on image dimensions.',
   },
   {
     id: 9,
@@ -79,6 +88,7 @@ const products: Array<Product> = [
     image: 'logo-shirt.png',
     price: '25',
     type: 'shirt',
+    description: 'High fidelity wireframes include more real content, specific typography choices, and information on image dimensions.',
   },
   {
     id: 10,
@@ -87,6 +97,7 @@ const products: Array<Product> = [
     image: 'logo-touque.png',
     price: '25',
     type: 'hat',
+    description: 'High fidelity wireframes include more real content, specific typography choices, and information on image dimensions.',
   },
   {
     id: 11,
@@ -95,6 +106,7 @@ const products: Array<Product> = [
     image: 'logo-baseball-hat.png',
     price: '25',
     type: 'hat',
+    description: 'High fidelity wireframes include more real content, specific typography choices, and information on image dimensions.',
   },
   {
     id: 12,
@@ -103,6 +115,7 @@ const products: Array<Product> = [
     image: 'logo-sticker.png',
     price: '3.50',
     type: 'sticker',
+    description: 'High fidelity wireframes include more real content, specific typography choices, and information on image dimensions.',
   },
 ]
 

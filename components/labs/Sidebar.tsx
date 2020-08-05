@@ -66,7 +66,8 @@ const Sidebar: React.FC<React.ReactNode> = () => {
         placeholder="Difficulty"
         id={'1'}
 				instanceId={'1'}
-				inputId={'1'}
+        inputId={'1'}
+        isSearchable={false}
       />
 
       <Select
@@ -75,7 +76,8 @@ const Sidebar: React.FC<React.ReactNode> = () => {
         placeholder="Tech"
         id={'2'}
 				instanceId={'2'}
-				inputId={'2'}
+        inputId={'2'}
+        isSearchable={false}
       />
 
       <div className="tags">

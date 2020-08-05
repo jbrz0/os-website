@@ -275,9 +275,15 @@
 .projects-list .p-6:last-child p {
   padding-bottom: 2.25rem;
 }
+.slick-track {
+  display: flex !important;
+}
 @media (max-width: 1015px) {
   .projects {
     padding: 3rem;
+  }
+  .slick-slider {
+    display: none !important;
   }
   .projects .slider {
     display: none;
@@ -348,5 +354,53 @@
   .store-items {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+}
+
+/* product select */
+.select-size {
+  width: 8.15rem;
+}
+.select-qty {
+  width: 7rem;
+}
+
+/* React Modal shop page, override component */
+.Modal {
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  max-height: 840px;
+  position: fixed;
+}
+.Overlay {
+  background-color: rgba(0,0,0,0.7);
+  z-index: 10;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+}
+@media (max-width: 1023px) {
+  .Modal {
+    transform: none;
+    top: 0;
+    left: 0;
+    margin-right: 0;
+  }
+  .product-box {
+    transform: none !important;
+    top: 0 !important;
+    margin: auto !important;
+    display: block;
   }
 }

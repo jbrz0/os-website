@@ -68,6 +68,7 @@ const Intro: React.FC<React.ReactNode> = () => {
         id={'1'}
         instanceId={'1'}
         inputId={'1'}
+        isSearchable={false}
       />
 
       <Item href="#" />

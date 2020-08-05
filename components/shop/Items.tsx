@@ -1,29 +1,74 @@
 import {useState, useEffect, useRef} from 'react'
+import Slider from 'react-slick'
 import Modal from 'react-modal'
+import Select from 'react-select'
 import products, {Product} from './products'
+import BtnStatic from '../shared/BtnStatic'
+import SliderArrow from './SliderArrow'
 
 interface Content {
   value: string,
   label: string,
 }
 
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    padding: '0',
-    border: '0',
-    background: 'transparent',
-  },
-  overlay: {
-    backgroundColor: 'rgba(0,0,0,0.7)',
-    zIndex: '10',
-  }
+// Modal styling
+// const customStyles = {
+//   content: {
+//     top: '50%',
+//     left: '50%',
+//     right: 'auto',
+//     bottom: 'auto',
+//     marginRight: '-50%',
+//     transform: 'translate(-50%, -50%)',
+//     padding: '0',
+//     border: '0',
+//     background: 'transparent',
+//     width: '100%',
+//     maxWidth: '1400px',
+//     height: '100%',
+//     maxHeight: '840px',
+//   },
+//   overlay: {
+//     backgroundColor: 'rgba(0,0,0,0.7)',
+//     zIndex: '10',
+//   }
+// }
+
+// Modal bg slider settings
+const settings = {
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+
+  // Autoplay settings
+  autoplaySpeed: 13000,
+  autoplay: true,
+  pauseOnHover: true,
+
+  // Arrows
+  prevArrow: <SliderArrow />,
+  nextArrow: <SliderArrow right />,
 }
+
+const sizes: Content[] = [
+  { value: 'xs', label: 'XS' },
+  { value: 's', label: 'S' },
+  { value: 'm', label: 'M' },
+  { value: 'l', label: 'L' },
+  { value: 'xl', label: 'XL' },
+  { value: '2xl', label: '2XL' },
+  { value: '3xl', label: '3XL' },
+]
+
+const quantity: Content[] = [
+  { value: '1', label: '1' },
+  { value: '2', label: '2' },
+  { value: '3', label: '3' },
+  { value: '4', label: '4' },
+  { value: '5', label: '5' },
+  { value: '6', label: '6' },
+]
 
 const Items: React.FC<React.ReactNode> = () => {
 
@@ -44,8 +89,15 @@ const Items: React.FC<React.ReactNode> = () => {
     setActive(current)
   }
 
+  function addToCart() {
+    alert('added!')
+  }
+
   const [items, setItems] = useState<Array<Product>>([...products])
   const [isOpen, setIsOpen] = useState<boolean>(false)
+
+  // Our active product (for modal)
+  const [product, setProduct] = useState<Product|any>('')
 
   // Bind our modal to top element for a11y
   Modal.setAppElement('#__next')
@@ -84,7 +136,7 @@ const Items: React.FC<React.ReactNode> = () => {
         }).map((item, i) => {
           return <div className="col-span-4 sm:col-span-2 md:col-span-1
           rounded-sm mb-6 cursor-pointer max-w-sm mx-auto w-full sm:max-w-none"
-          onClick={() => setIsOpen(true)} key={i}>
+          onClick={() => {setIsOpen(true); setProduct(item)}} key={i}>
             <div className="bg-gray-500 h-56 md:h-40 lg:h-56 xl:h-64 w-full rounded-sm shadow-lg">Card</div>
             <div className="text-gray-100 font-bold mt-4">{item.name}</div>
             <span className="text-lg text-yellow">$25</span>
@@ -94,15 +146,80 @@ const Items: React.FC<React.ReactNode> = () => {
         <Modal
           isOpen={isOpen}
           contentLabel="Product"
-          style={customStyles}
+          // style={customStyles}
+          className="Modal"
+          overlayClassName="Overlay"
           shouldCloseOnOverlayClick={true}
           onRequestClose={() => setIsOpen(false)}
         >
-          <div className="bg-gray-700 p-10 rounded">
-            Modal
-            <img src="icons/close.svg" alt="Close Menu"
-                onClick={() => setIsOpen(false)}
-                className="w-10 cursor-pointer" />
+          <div className="rounded relative">
+
+          <div className="hidden lg:block lg:p-16">
+            <Slider {...settings}>
+                <img
+                  src="/projects/placeholder.png"
+                  className="w-full object-cover shadow-xl rounded"
+                />
+                <img
+                  src="/projects/placeholder.png"
+                  className="w-full object-cover shadow-xl rounded"
+                />
+                <img
+                  src="/projects/placeholder.png"
+                  className="w-full object-cover shadow-xl rounded"
+                />
+            </Slider>
+          </div>
+
+          <div className="h-screen bg-purple block lg:hidden"></div>
+
+          <div className="bg-gray-700 absolute top-0 left-0 ml-40 p-8
+            rounded-sm max-w-xs product-box"
+            style={{top: '50%', transform: 'translateY(-50%)'}}>
+            <h2 className="text-white text-2xl mb-12">{product.name}</h2>
+            <h3 className="text-teal text-xl font-bold mb-1">${product.price}</h3>
+            <p className="text-gray-200 text-sm mb-10">{product.description}</p>
+
+            <Select
+              className="selector float-left mb-10 select-size"
+              options={sizes}
+              placeholder="Size"
+              id={'1'}
+              instanceId={'1'}
+              inputId={'1'}
+              isSearchable={false}
+            />
+
+            <Select
+              className="selector float-right select-qty"
+              options={quantity}
+              placeholder="Qty"
+              id={'2'}
+              instanceId={'2'}
+              inputId={'2'}
+              isSearchable={false}
+            />
+
+            <div className="clearfix"></div>
+
+            <BtnStatic
+              onClick={() => setIsOpen(false)}
+              className="bg-gray-400 text-white font-bold cursor-pointer float-left text-sm"
+              >Back</BtnStatic>
+
+            <BtnStatic
+              onClick={addToCart}
+              className="bg-gray-400 text-white font-bold cursor-pointer float-right text-sm"
+              >Add to Card</BtnStatic>
+          </div>
+
+          <img src="icons/close.svg" alt="Close Menu"
+            onClick={() => setIsOpen(false)}
+            className="w-10 cursor-pointer absolute
+            right-0 top-0 mt-24 mr-24"
+            style={{filter: 'drop-shadow(black 0px 0px 3px)'}}
+          />
+
           </div>
         </Modal>
 
