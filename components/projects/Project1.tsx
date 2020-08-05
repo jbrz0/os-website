@@ -2,17 +2,17 @@ import Button from '../shared/Button'
 
 const Project1: React.FC<React.ReactNode> = () => {
 
-  return <div className="pt-40 bg-gray-1000 shadow-2xl">
-    <div className="container mx-auto px-24">
+  return <div className="pt-16 sm:pt-24 lg:pt-40 bg-gray-1000 shadow-2xl">
+    <div className="container mx-auto px-12 sm:px-24">
       <div className="max-w-xl mx-auto block">
-        <h2 className="text-white text-center text-3xl mb-4">Great Lake</h2>
-        <p className="text-gray-200 text-center">
+        <h2 className="text-white sm:text-center text-3xl mb-4">Great Lake</h2>
+        <p className="text-gray-200 sm:text-center">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           Possimus similique sapiente ipsam commodi doloribus ipsam commodi doloribus.
         </p>
-        <div className="flex justify-center mt-8 mb-24">
-          <Button href="#" className="text-gray-200 btn-default mr-4 text-lg">Visit Site</Button>
-          <Button href="#" className="text-white gr-tw-1 text-lg">View Project</Button>
+        <div className="sm:flex sm:justify-center mt-8 mb-16 sm:mb-24">
+          <Button href="#" className="inline-block mr-4 mb-4 sm:mb-auto text-gray-200 btn-default text-lg">Visit Site</Button>
+          <Button href="#" className="inline-block text-white gr-tw-1 text-lg">View Project</Button>
         </div>
       </div>
 
