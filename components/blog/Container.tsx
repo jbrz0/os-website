@@ -22,7 +22,7 @@ const tags: Content[] = [
 
 const sort: Content[] = [
   { value: 'recent', label: 'Recent' },
-  { value: 'popular', label: 'Popular' },
+  { value: 'coolness', label: 'Coolness' },
 ]
 
 const Intro: React.FC<React.ReactNode> = () => {

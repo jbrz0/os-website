@@ -6,7 +6,7 @@ const Project2: React.FC<React.ReactNode> = () => {
     <div className="container mx-auto px-10 lg:px-24 grid grid-cols-2">
 
       <div className="col-span-2 lg:col-span-1">
-        <img src="projects/display2.png" className="block mx-auto max-w-lg lg:max-w-full mb-4 lg:mb-auto" />
+        <img src="projects/display2.png" className="block mx-auto max-w-lg lg:max-w-full mb-4 lg:mb-auto w-full" />
       </div>
 
       <div className="col-span-2 lg:col-span-1 pl-6 lg:pl-20 pt-6">

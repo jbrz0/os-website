@@ -23,8 +23,8 @@ const navItems: Content[] = [
 export const btnItems: Content[] = [
   { url: "/profile", icon: '/icons/profile.svg', title: 'Profile', isNew: false },
   { url: "/cart", icon: '/icons/cart.svg', title: 'Cart', isNew: true },
-  { url: "/chat", icon: '/icons/chat.svg', title: 'Chat', isNew: false },
-  { url: "/mode", icon: '/icons/light.svg', title: 'Light Mode', isNew: false },
+  // { url: "/chat", icon: '/icons/chat.svg', title: 'Chat', isNew: false },
+  // { url: "/mode", icon: '/icons/light.svg', title: 'Light Mode', isNew: false },
 ]
 
 export const mobileMenu: Content[] = [
@@ -65,7 +65,7 @@ const NavItem: React.FC<Content> = ({url, icon, title}, enter) => {
 
 const Nav: React.FC<React.ReactNode> = () => {
 
-  return <div className="fixed w-full top-0 z-10">
+  return <div className="fixed w-full top-0 z-20">
     <nav className="bg-gray-900 rounded-sm m-1 p-2 grid grid-cols-12 gap-1 shadow-lg">
 
       <ReactTooltip uuid="tooltip" />
@@ -91,10 +91,10 @@ const Nav: React.FC<React.ReactNode> = () => {
         </ul>
 
         {/* Optional Badge */}
-        <div className="text-white ml-2 hidden md:block
+        {/* <div className="text-white ml-2 hidden md:block
           text-xs bg-blue px-1 rounded-sm nav-badge">
           This is message!
-        </div>
+        </div> */}
       </div>
 
       <div className="hidden md:block md:col-span-7 lg:col-span-5">

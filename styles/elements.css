@@ -366,45 +366,18 @@
 }
 
 /* React Modal shop page, override component */
-/* .Modal {
-  top: 50%;
-  left: 50%;
-  right: auto;
-  bottom: auto;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  padding: 0;
-  border: 0;
-  background: transparent;
-  width: 100%;
-  max-width: 1400px;
-  height: 100%;
-  max-height: 840px;
-  position: fixed;
-}
-.Overlay {
-  background-color: rgba(0,0,0,0.7);
-  z-index: 10;
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-} */
-
-/* filter background while modal is open */
-.ReactModal__Body--open #__next {
-  filter: blur(10px);
-}
 .Modal {
   max-width: 1200px;
   margin: 1.75rem auto;
   position: relative;
   width: auto;
-
-  /* maybe child el */
   position: relative;
   display: flex;
   flex-direction: column;
+}
+/* filter background while modal is open */
+.ReactModal__Body--open #__next {
+  filter: blur(10px);
 }
 .Overlay {
   background-color: rgba(0,0,0,0.7);
@@ -426,10 +399,118 @@
     margin: 0;
   }
   .product-box {
-    /* transform: none !important;
-    top: 0 !important;
-    margin: auto !important; */
     display: none;
   }
 }
 
+/* project */
+.proj-intro-img {
+  height: 100vh;
+}
+.proj-intro-txt {
+  top: 7rem;
+}
+@media (min-width: 1024px) {
+
+  .proj-intro-img {
+    height: 50vh;
+  }
+  .proj-intro-txt {
+    bottom: 60vh;
+    top: auto;
+  }
+}
+@media (max-width: 400px) {
+  .proj-intro-txt {
+    top: 5rem;
+  }
+}
+@media (max-width: 400px) {
+
+  .concept {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+.device-1 {
+  height: 300px;
+}
+.device-2 {
+  height: 400px;
+}
+.device-3 {
+  height: 450px;
+}
+.device-4 {
+  height: 300px;
+}
+@media (max-width: 639px) {
+  .device-1 {
+    height: 200px;
+  }
+  .device-2 {
+    height: 300px;
+  }
+  .device-3 {
+    height: 250px;
+  }
+  .device-4 {
+    height: 200px;
+  }
+}
+@media (max-width: 400px) {
+  .device-1 {
+    height: 150px;
+  }
+  .device-2 {
+    height: 250px;
+  }
+  .device-3 {
+    height: 200px;
+  }
+  .device-4 {
+    height: 150px;
+  }
+}
+.screenshot-1,
+.screenshot-2 {
+  height: 370px;
+}
+.screenshot-3,
+.screenshot-4,
+.screenshot-5 {
+  height: 580px;
+}
+@media (max-width: 1279px) {
+  .screenshot-1,
+  .screenshot-2 {
+    height: 320px;
+  }
+  .screenshot-3,
+  .screenshot-4,
+  .screenshot-5 {
+    height: 440px;
+  }
+}
+@media (max-width: 1023px) {
+  .screenshot-1,
+  .screenshot-2 {
+    height: 220px;
+  }
+  .screenshot-3,
+  .screenshot-4,
+  .screenshot-5 {
+    height: 300px;
+  }
+}
+@media (max-width: 767px) {
+  .screenshot-1,
+  .screenshot-2 {
+    height: 180px;
+  }
+  .screenshot-3,
+  .screenshot-4,
+  .screenshot-5 {
+    height: 240px;
+  }
+}
