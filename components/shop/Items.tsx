@@ -11,29 +11,6 @@ interface Content {
   label: string,
 }
 
-// Modal styling
-// const customStyles = {
-//   content: {
-//     top: '50%',
-//     left: '50%',
-//     right: 'auto',
-//     bottom: 'auto',
-//     marginRight: '-50%',
-//     transform: 'translate(-50%, -50%)',
-//     padding: '0',
-//     border: '0',
-//     background: 'transparent',
-//     width: '100%',
-//     maxWidth: '1400px',
-//     height: '100%',
-//     maxHeight: '840px',
-//   },
-//   overlay: {
-//     backgroundColor: 'rgba(0,0,0,0.7)',
-//     zIndex: '10',
-//   }
-// }
-
 // Modal bg slider settings
 const settings = {
   infinite: true,
@@ -146,13 +123,71 @@ const Items: React.FC<React.ReactNode> = () => {
         <Modal
           isOpen={isOpen}
           contentLabel="Product"
-          // style={customStyles}
           className="Modal"
           overlayClassName="Overlay"
           shouldCloseOnOverlayClick={true}
           onRequestClose={() => setIsOpen(false)}
         >
           <div className="rounded relative">
+
+          {/* Mobile */}
+          <div className="h-screen block lg:hidden">
+            <img
+              src="/projects/placeholder.png"
+              className="w-full object-cover shadow-xl mb-6"
+              style={{borderBottomLeftRadius: '0.25rem', borderBottomRightRadius: '0.25rem'}}
+            />
+            <div className="p-4 sm:pl-12 max-w-sm pb-20">
+              <h2 className="text-white text-2xl mb-12">{product.name}</h2>
+              <h3 className="text-teal text-xl font-bold mb-1">${product.price}</h3>
+              <p className="text-gray-200 text-sm mb-10">{product.description}</p>
+
+            <Select
+              className="selector float-left mr-3 select-size"
+              options={sizes}
+              placeholder="Size"
+              id={'1'}
+              instanceId={'1'}
+              inputId={'1'}
+              isSearchable={false}
+            />
+
+            <Select
+              className="selector float-left select-qty"
+              options={quantity}
+              placeholder="Qty"
+              id={'2'}
+              instanceId={'2'}
+              inputId={'2'}
+              isSearchable={false}
+            />
+
+            <div className="clearfix"></div>
+
+            <div className="block mt-8">
+
+            <BtnStatic
+              onClick={() => setIsOpen(false)}
+              className="bg-gray-400 text-white font-bold cursor-pointer float-left text-sm mr-3"
+              >Back</BtnStatic>
+
+            <BtnStatic
+              onClick={addToCart}
+              className="bg-gray-400 text-white font-bold cursor-pointer float-left text-sm"
+              >Add to Card</BtnStatic>
+
+            </div>
+
+              <div className="clearfix"></div>
+            </div>
+
+            <img src="icons/close.svg" alt="Close Menu"
+              onClick={() => setIsOpen(false)}
+              className="w-10 cursor-pointer absolute
+              right-0 top-0 mt-8 mr-8 lg:hidden"
+              style={{filter: 'drop-shadow(black 0px 0px 3px)'}}
+            />
+          </div>
 
           <div className="hidden lg:block lg:p-16">
             <Slider {...settings}>
@@ -171,8 +206,7 @@ const Items: React.FC<React.ReactNode> = () => {
             </Slider>
           </div>
 
-          <div className="h-screen bg-purple block lg:hidden"></div>
-
+          {/* Desktop */}
           <div className="bg-gray-700 absolute top-0 left-0 ml-40 p-8
             rounded-sm max-w-xs product-box"
             style={{top: '50%', transform: 'translateY(-50%)'}}>
@@ -215,13 +249,15 @@ const Items: React.FC<React.ReactNode> = () => {
 
           <img src="icons/close.svg" alt="Close Menu"
             onClick={() => setIsOpen(false)}
-            className="w-10 cursor-pointer absolute
-            right-0 top-0 mt-24 mr-24"
+            className="w-10 cursor-pointer fixed
+            right-0 top-0 mt-8 mr-8 hidden lg:block"
             style={{filter: 'drop-shadow(black 0px 0px 3px)'}}
           />
 
           </div>
         </Modal>
+
+        isOpen
 
       </div>
 
