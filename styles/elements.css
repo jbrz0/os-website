@@ -506,11 +506,11 @@
 @media (max-width: 767px) {
   .screenshot-1,
   .screenshot-2 {
-    height: 180px;
+    height: 25vw;
   }
   .screenshot-3,
   .screenshot-4,
   .screenshot-5 {
-    height: 240px;
+    height: 38vw;
   }
 }

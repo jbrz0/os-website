@@ -10,19 +10,19 @@ const Devices: React.FC<React.ReactNode> = () => {
         </div>
         <div className="hidden lg:block col-span-1"></div>
         <div className="col-span-12 lg:col-span-8">
-          <div className="grid grid-cols-2 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 gap-3 sm:gap-6">
             <div className="col-span-1">
-              <div className="bg-gray-500 rounded-sm mb-4 shadow-xl device-1"></div>
+              <div className="bg-gray-500 rounded-sm mb-3 sm:mb-4 shadow-xl device-1"></div>
               <div className="text-gray-200 mb-6 hidden sm:block">Web Monitor Mockup</div>
 
-              <div className="bg-gray-500 rounded-sm mb-4 shadow-xl device-2"></div>
+              <div className="bg-gray-500 rounded-sm mb-3 sm:mb-4 shadow-xl device-2"></div>
               <div className="text-gray-200 hidden sm:block">Tablet Mockup</div>
             </div>
             <div className="col-span-1">
-              <div className="bg-gray-500 rounded-sm mb-4 shadow-xl device-3"></div>
+              <div className="bg-gray-500 rounded-sm mb-3 sm:mb-4 shadow-xl device-3"></div>
               <div className="text-gray-200 mb-6 hidden sm:block">Mobile Phone Mockup</div>
 
-              <div className="bg-gray-500 rounded-sm mb-4 shadow-xl device-4"></div>
+              <div className="bg-gray-500 rounded-sm mb-3 sm:mb-4 shadow-xl device-4"></div>
               <div className="text-gray-200 mb-6 hidden sm:block">Laptop Mockup</div>
             </div>
           </div>
