@@ -1,8 +1,8 @@
 /* lists */
-.features li span {
+.proj-features li span {
   top: -0.3rem;
 }
-.features li:before {
+.proj-features li:before {
   content: '';
   display: inline-block;
   height: 1.5rem;
@@ -10,6 +10,23 @@
   background-image: url('/icons/feature.svg');
   background-repeat: no-repeat;
   background-position: center center;
+}
+@media (max-width: 400px) {
+
+  .proj-features-wrap {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+  }
+  .proj-features-wrap .container {
+    padding-left: 0;
+  }
+  .proj-features li span {
+    margin-left: 0 !important;
+  }
+  .proj-features li:before {
+    display: none;
+  }
 }
 
 /* select */
