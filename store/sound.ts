@@ -1,9 +1,10 @@
 import { action, thunk } from 'easy-peasy'
+import type {SoundModel} from '../model/SoundModel'
 import Cookies from 'js-cookie'
 
 let soundCookie = Cookies.get('sound')
 
-export default {
+const sound: SoundModel = {
 
   //* State
   sound: true,
@@ -35,3 +36,5 @@ export default {
   }),
 
 }
+
+export default sound

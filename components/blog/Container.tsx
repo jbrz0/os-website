@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react'
 import Item from './Item'
 import BtnStatic from '../shared/BtnStatic'
 import Select from 'react-select'
-
+import type {Post} from '../../markdown/0-index'
 import posts from '../../markdown/0-index'
 
 interface Content {
@@ -34,11 +34,44 @@ const Intro: React.FC<React.ReactNode> = () => {
   // Get tags, tech from all posts metadata
   const [tags, setTags] = useState<Array<string>>([])
 
+  // Blog post sorting
+  const [sortType, setSortType] = useState<string>('recent')
+
+  function sortRecent() {
+    const recentSort: Array<Post> = posts.sort((a, b) => {
+      return b.id - a.id
+    })
+    return recentSort
+  }
+  function sortCoolness() {
+    const coolnessSort: Array<Post> = posts.sort((a, b) => {
+      return b.coolness - a.coolness
+    })
+    return coolnessSort
+  }
+
+  const [recent, setRecent] = useState<Array<Post>>([...sortRecent()])
+  const [coolness, setCoolness] = useState<Array<Post>>([...sortCoolness()])
+
+  function sortPosts(value: Content) {
+    const selected: string = value.value
+
+    if (selected === 'recent') {
+      setSortType('recent')
+    }
+    else if (selected === 'coolness') {
+      setSortType('coolness')
+    }
+  }
+
   useEffect(() => {
     // Get and filter our duplicate tags
     const allTags: Array<string> = posts.map(post => post.tags).flat(1)
     const filteredTags: Array<string> = allTags.filter((value, i) => allTags.indexOf(value) === i)
     setTags([...filteredTags])
+
+    // Set posts default to most recent
+    setSortType('recent')
   }, [])
 
   return <>
@@ -69,14 +102,21 @@ const Intro: React.FC<React.ReactNode> = () => {
         instanceId={'1'}
         inputId={'1'}
         isSearchable={false}
+        onChange={sortPosts}
       />
 
-      <Item href="#" />
-      <Item href="#" />
-      <Item href="#" />
-      <Item href="#" />
-      <Item href="#" />
-      <Item href="#" />
+      {sortType === 'recent' && recent.map((post, i) => <Item title={post.title}
+        date={post.date}
+        description={post.description}
+        href={`blog/${post.slug}`}
+        key={i} />)}
+
+      {sortType === 'coolness' && coolness.map((post, i) => <Item title={post.title}
+        date={post.date}
+        description={post.description}
+        href={`blog/${post.slug}`}
+        key={i} />)}
+
       <BtnStatic className="border-solid border border-gray-300
         text-lg w-1/2 text-white clear-both block cursor-pointer
         hover:bg-gray-300 mx-auto mt-10">Load More</BtnStatic>

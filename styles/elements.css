@@ -366,8 +366,12 @@
 }
 @media (max-width: 1000px) {
   .blog-header {
-    height: auto;
-    padding: 5rem 0;
+    padding: 8.5rem 0;
+  }
+}
+@media (max-width: 6000px) {
+  .blog-header {
+    padding: 6.25rem 0 5rem;
   }
 }
 

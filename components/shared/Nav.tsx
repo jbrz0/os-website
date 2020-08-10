@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import {useStoreState, useStoreActions} from 'easy-peasy'
+import {useStoreState, useStoreActions} from '../../hooks/useStore'
 import Link from 'next/link'
 import ReactTooltip from "react-tooltip"
 import Cookies from 'js-cookie'
@@ -148,7 +148,7 @@ const Nav: React.FC<React.ReactNode> = () => {
               data-tip={"Sound"}
               data-background-color="#4028fb"
               data-arrow-color="#4028fb"
-              onClick={toggleSound}>
+              onClick={(e) => {toggleSound(); e.persist()}}>
                 <img src={soundIcon} alt="Sound"
                 className="flex flex-none w-4" />
             </li>

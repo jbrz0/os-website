@@ -50,7 +50,7 @@ const MenuButton: React.FC<Viewport> = ({mobile}) => {
         <div className="m-5">
           <ul className="flex justify-between">
             <li className="w-12 h-12 flex justify-center">
-              <img src="icons/close.svg" alt="Close Menu"
+              <img src="/icons/close.svg" alt="Close Menu"
                 onClick={() => setShow(false)}
                 className="w-10 cursor-pointer" />
             </li>
