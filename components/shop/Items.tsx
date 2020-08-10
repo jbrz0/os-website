@@ -85,6 +85,9 @@ const Items: React.FC<React.ReactNode> = () => {
   // Set active tags based on user action (empty === all items)
   const [active, setActive] = useState<Array<string>>([])
 
+  // Turn the product or model around
+  const [slide, setSlide] = useState<number>(1)
+
   useEffect(() => {
     const allTags: Array<string> = products.map(product => product.type)
     const filteredTags: Array<string> = allTags.filter((value, i) => allTags.indexOf(value) === i)
@@ -114,7 +117,9 @@ const Items: React.FC<React.ReactNode> = () => {
           return <div className="col-span-4 sm:col-span-2 md:col-span-1
           rounded-sm mb-6 cursor-pointer max-w-sm mx-auto w-full sm:max-w-none"
           onClick={() => {setIsOpen(true); setProduct(item)}} key={i}>
-            <div className="bg-gray-500 h-56 md:h-40 lg:h-56 xl:h-64 w-full rounded-sm shadow-lg">Card</div>
+            <div className="h-56 md:h-40 lg:h-56 xl:h-64 w-full rounded-sm shadow-lg
+              bg-cover bg-center"
+              style={{backgroundImage: `url(${item.image}-${slide}.jpg)`}}></div>
             <div className="text-gray-100 font-bold mt-4">{item.name}</div>
             <span className="text-lg text-yellow">$25</span>
           </div>
@@ -130,55 +135,58 @@ const Items: React.FC<React.ReactNode> = () => {
         >
           <div className="rounded relative">
 
-          {/* Mobile */}
-          <div className="h-screen block lg:hidden">
-            <img
-              src="/projects/placeholder.png"
-              className="w-full object-cover shadow-xl mb-6"
-              style={{borderBottomLeftRadius: '0.25rem', borderBottomRightRadius: '0.25rem'}}
-            />
-            <div className="p-4 sm:pl-12 max-w-sm pb-20">
-              <h2 className="text-white text-2xl mb-12">{product.name}</h2>
-              <h3 className="text-teal text-xl font-bold mb-1">${product.price}</h3>
-              <p className="text-gray-200 text-sm mb-10">{product.description}</p>
+            {/* Mobile */}
+            <div className="h-screen block lg:hidden">
+              <img
+                src="/projects/placeholder.png"
+                className="w-full object-cover shadow-xl mb-6"
+                style={{borderBottomLeftRadius: '0.25rem', borderBottomRightRadius: '0.25rem'}}
+              />
+              <div className="p-4 mx-auto max-w-xs pb-20 shop-modal-txt">
+                <h2 className="text-white text-2xl mb-12">{product.name}</h2>
+                <h3 className="text-teal text-xl font-bold mb-1">${product.price}</h3>
+                <p className="text-gray-200 text-sm mb-10">{product.description}</p>
 
-            <Select
-              className="selector float-left mr-3 select-size"
-              options={sizes}
-              placeholder="Size"
-              id={'1'}
-              instanceId={'1'}
-              inputId={'1'}
-              isSearchable={false}
-            />
+              <div className="grid grid-cols-2 gap-4 mb-4">
+                <div className="col-span-1">
+                  <Select
+                    className="selector w-full"
+                    options={sizes}
+                    placeholder="Size"
+                    id={'1'}
+                    instanceId={'1'}
+                    inputId={'1'}
+                    isSearchable={false}
+                  />
+                </div>
+                <div className="col-span-1">
+                  <Select
+                    className="selector w-full"
+                    options={quantity}
+                    placeholder="Qty"
+                    id={'2'}
+                    instanceId={'2'}
+                    inputId={'2'}
+                    isSearchable={false}
+                  />
+                </div>
+              </div>
 
-            <Select
-              className="selector float-left select-qty"
-              options={quantity}
-              placeholder="Qty"
-              id={'2'}
-              instanceId={'2'}
-              inputId={'2'}
-              isSearchable={false}
-            />
+              <div className="grid grid-cols-2 gap-4">
+                <div className="col-span-1">
+                  <BtnStatic
+                    onClick={() => setIsOpen(false)}
+                    className="bg-gray-400 text-white font-bold cursor-pointer float-left text-sm w-full block"
+                    >Back to Shop</BtnStatic>
+                </div>
+                <div className="col-span-1">
+                  <BtnStatic
+                    onClick={addToCart}
+                    className="gr-tw-3 text-white font-bold cursor-pointer text-sm w-full block"
+                    >Add to Cart</BtnStatic>
+                </div>
+              </div>
 
-            <div className="clearfix"></div>
-
-            <div className="block mt-8">
-
-            <BtnStatic
-              onClick={() => setIsOpen(false)}
-              className="bg-gray-400 text-white font-bold cursor-pointer float-left text-sm mr-3"
-              >Back</BtnStatic>
-
-            <BtnStatic
-              onClick={addToCart}
-              className="bg-gray-400 text-white font-bold cursor-pointer float-left text-sm"
-              >Add to Card</BtnStatic>
-
-            </div>
-
-              <div className="clearfix"></div>
             </div>
 
             <img src="icons/close.svg" alt="Close Menu"
@@ -214,37 +222,46 @@ const Items: React.FC<React.ReactNode> = () => {
             <h3 className="text-teal text-xl font-bold mb-1">${product.price}</h3>
             <p className="text-gray-200 text-sm mb-10">{product.description}</p>
 
-            <Select
-              className="selector float-left mb-10 select-size"
-              options={sizes}
-              placeholder="Size"
-              id={'1'}
-              instanceId={'1'}
-              inputId={'1'}
-              isSearchable={false}
-            />
+            <div className="grid grid-cols-2 gap-4 mb-4">
+              <div className="col-span-1">
+                <Select
+                  className="selector block w-full"
+                  options={sizes}
+                  placeholder="Size"
+                  id={'1'}
+                  instanceId={'1'}
+                  inputId={'1'}
+                  isSearchable={false}
+                />
+              </div>
+              <div className="col-span-1">
+                <Select
+                  className="selector block w-full"
+                  options={quantity}
+                  placeholder="Qty"
+                  id={'2'}
+                  instanceId={'2'}
+                  inputId={'2'}
+                  isSearchable={false}
+                />
+              </div>
+            </div>
 
-            <Select
-              className="selector float-right select-qty"
-              options={quantity}
-              placeholder="Qty"
-              id={'2'}
-              instanceId={'2'}
-              inputId={'2'}
-              isSearchable={false}
-            />
+            <div className="grid grid-cols-2 gap-4 mb-2">
+              <div className="col-span-1">
+                <BtnStatic
+                  onClick={() => setIsOpen(false)}
+                  className="bg-gray-400 text-white font-bold cursor-pointer float-left text-sm"
+                  >Back to Shop</BtnStatic>
+              </div>
+              <div className="col-span-1">
+                <BtnStatic
+                  onClick={addToCart}
+                  className="gr-tw-3 text-white font-bold cursor-pointer float-right text-sm"
+                  >Add to Cart</BtnStatic>
+              </div>
+            </div>
 
-            <div className="clearfix"></div>
-
-            <BtnStatic
-              onClick={() => setIsOpen(false)}
-              className="bg-gray-400 text-white font-bold cursor-pointer float-left text-sm"
-              >Back</BtnStatic>
-
-            <BtnStatic
-              onClick={addToCart}
-              className="bg-gray-400 text-white font-bold cursor-pointer float-right text-sm"
-              >Add to Card</BtnStatic>
           </div>
 
           <img src="icons/close.svg" alt="Close Menu"

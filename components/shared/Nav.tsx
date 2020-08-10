@@ -17,12 +17,13 @@ const navItems: Content[] = [
   { url: "/projects", icon: '/icons/projects', title: 'Projects' },
   { url: "/labs", icon: '/icons/labs', title: 'Labs' },
   { url: "/blog", icon: '/icons/blog', title: 'Blog' },
-  { url: "/shop", icon: '/icons/shop', title: 'Shop' },
+  // { url: "/shop", icon: '/icons/shop', title: 'Shop' },
 ]
 
 export const btnItems: Content[] = [
-  { url: "/profile", icon: '/icons/profile.svg', title: 'Profile', isNew: false },
-  { url: "/cart", icon: '/icons/cart.svg', title: 'Cart', isNew: true },
+  { url: "/sound", icon: '/icons/soundon.svg', title: 'Sound', isNew: false },
+  // { url: "/profile", icon: '/icons/profile.svg', title: 'Profile', isNew: false },
+  // { url: "/cart", icon: '/icons/cart.svg', title: 'Cart', isNew: true },
   // { url: "/chat", icon: '/icons/chat.svg', title: 'Chat', isNew: false },
   // { url: "/mode", icon: '/icons/light.svg', title: 'Light Mode', isNew: false },
 ]
@@ -32,7 +33,7 @@ export const mobileMenu: Content[] = [
   { url: "/projects", icon: '/icons/profile.svg', title: 'Projects'},
   { url: "/labs", icon: '/icons/profile.svg', title: 'Labs'},
   { url: "/blog", icon: '/icons/profile.svg', title: 'Blog'},
-  { url: "/shop", icon: '/icons/profile.svg', title: 'Shop'},
+  // { url: "/shop", icon: '/icons/profile.svg', title: 'Shop'},
 ]
 
 export const mobileSocial: Content[] = [
@@ -64,6 +65,10 @@ const NavItem: React.FC<Content> = ({url, icon, title}, enter) => {
 }
 
 const Nav: React.FC<React.ReactNode> = () => {
+
+  function toggleSound() {
+    console.log('toggle sound')
+  }
 
   return <div className="fixed w-full top-0 z-20">
     <nav className="bg-gray-900 rounded-sm m-1 p-2 grid grid-cols-12 gap-1 shadow-lg">
@@ -115,11 +120,18 @@ const Nav: React.FC<React.ReactNode> = () => {
                 data-tip={titleCase(url.substring(1))}
                 data-background-color="#4028fb"
                 data-arrow-color="#4028fb">
+                {url !== "/sound" &&
                 <Link href={url}><a className="self-center relative">
                   {isNew && <span className="absolute bg-red w-1 h-1
                     rounded-full right-0 top-0" />}
                   <img src={icon} alt={title} className="flex flex-none w-4" />
                 </a></Link>
+                }
+                { url === "/sound" &&
+                  <img src={icon} alt={title}
+                  onClick={toggleSound}
+                  className="flex flex-none w-4" />
+                }
               </li>
             )}
           </ul>

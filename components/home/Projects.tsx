@@ -8,7 +8,7 @@ const Content1: React.FC<React.ReactNode> = () => {
         src="/projects/placeholder.png"
         className="w-full object-cover shadow-xl rounded-lg"
       />
-      <p className="text-gray-100 text-lg max-w-screen-md mt-6">
+      <p className="text-gray-100 text-lg max-w-screen-md mt-6 mx-auto">
         The navigation design should communicate the relationship between the links it contains so that users understand the options they have for navigating the site.
       </p>
     </div>
@@ -22,7 +22,7 @@ const Content2: React.FC<React.ReactNode> = () => {
         src="/projects/placeholder.png"
         className="w-full object-cover shadow-xl rounded-lg"
       />
-      <p className="text-gray-100 text-lg max-w-screen-md mt-6">
+      <p className="text-gray-100 text-lg max-w-screen-md mt-6 mx-auto">
         The navigation design should communicate the relationship between the links it contains so that users understand the options they have for navigating the site.
       </p>
     </div>
@@ -36,7 +36,7 @@ const Content3: React.FC<React.ReactNode> = () => {
         src="/projects/placeholder.png"
         className="w-full object-cover shadow-xl rounded-lg"
       />
-      <p className="text-gray-100 text-lg max-w-screen-md mt-6">
+      <p className="text-gray-100 text-lg max-w-screen-md mt-6 mx-auto">
         The navigation design should communicate the relationship between the links it contains so that users understand the options they have for navigating the site.
       </p>
     </div>

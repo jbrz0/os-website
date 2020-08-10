@@ -249,6 +249,12 @@
 .ReactModal__Body--open {
   overflow: hidden !important;
 }
+@media (max-width: 350px) {
+
+  .shop-modal-txt {
+    padding-left: 1rem;
+  }
+}
 
 /* about section */
 @media (max-width: 400px) {

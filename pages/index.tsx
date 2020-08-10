@@ -24,8 +24,8 @@ const Home: React.FC<React.ReactNode> = () => {
       <Tech />
       <Line />
       <Labs />
-      <Line />
-      <Store />
+      {/* <Line /> */}
+      {/* <Store /> */}
       <Footer />
     </>
   )
