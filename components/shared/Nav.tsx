@@ -1,5 +1,8 @@
+import {useState, useEffect} from 'react'
+import {useStoreState, useStoreActions} from 'easy-peasy'
 import Link from 'next/link'
 import ReactTooltip from "react-tooltip"
+import Cookies from 'js-cookie'
 import {useRouter, NextRouter} from 'next/router'
 import MenuButton from './MenuBtn'
 import {titleCase} from '../../helpers/format-text'
@@ -21,7 +24,7 @@ const navItems: Content[] = [
 ]
 
 export const btnItems: Content[] = [
-  { url: "/sound", icon: '/icons/soundon.svg', title: 'Sound', isNew: false },
+  // { url: "/sound", icon: '/icons/soundon.svg', title: 'Sound', isNew: false },
   // { url: "/profile", icon: '/icons/profile.svg', title: 'Profile', isNew: false },
   // { url: "/cart", icon: '/icons/cart.svg', title: 'Cart', isNew: true },
   // { url: "/chat", icon: '/icons/chat.svg', title: 'Chat', isNew: false },
@@ -48,11 +51,14 @@ const menuHover = new Howl({
 })
 
 const NavItem: React.FC<Content> = ({url, icon, title}, enter) => {
+
+  const sound = useStoreState(state => state.sound.sound)
   const router: NextRouter = useRouter()
   const path: string = router.pathname
   const active: boolean = path === url ? true : false
 
-  return <li className="md:mx-2 lg:mx-3 xl:mx-4" key={title} onMouseEnter={() => menuHover.play()}>
+  return <li className="md:mx-2 lg:mx-3 xl:mx-4" key={title}
+    onMouseEnter={() => sound ? menuHover.play() : ''}>
     <Link href={url}>
       <a
         className="flex items-stretch py-1 nav-item-link">
@@ -66,9 +72,15 @@ const NavItem: React.FC<Content> = ({url, icon, title}, enter) => {
 
 const Nav: React.FC<React.ReactNode> = () => {
 
-  function toggleSound() {
-    console.log('toggle sound')
-  }
+  const soundIcon = useStoreState(state => state.sound.soundIcon)
+  const setSound = useStoreActions(actions => actions.sound.setSound)
+  const toggleSound = useStoreActions(actions => actions.sound.toggleSound)
+
+  useEffect(() => {
+
+    // Setup the sound cookie & icon on load
+    setSound()
+  }, [])
 
   return <div className="fixed w-full top-0 z-20">
     <nav className="bg-gray-900 rounded-sm m-1 p-2 grid grid-cols-12 gap-1 shadow-lg">
@@ -121,19 +133,25 @@ const Nav: React.FC<React.ReactNode> = () => {
                 data-background-color="#4028fb"
                 data-arrow-color="#4028fb">
                 {url !== "/sound" &&
-                <Link href={url}><a className="self-center relative">
-                  {isNew && <span className="absolute bg-red w-1 h-1
-                    rounded-full right-0 top-0" />}
-                  <img src={icon} alt={title} className="flex flex-none w-4" />
-                </a></Link>
-                }
-                { url === "/sound" &&
-                  <img src={icon} alt={title}
-                  onClick={toggleSound}
-                  className="flex flex-none w-4" />
+                  <Link href={url}><a className="self-center relative">
+                    {isNew && <span className="absolute bg-red w-1 h-1
+                      rounded-full right-0 top-0" />}
+                    <img src={icon} alt={title} className="flex flex-none w-4" />
+                  </a></Link>
                 }
               </li>
             )}
+
+            {/* Sound */}
+            <li className="bg-gray-700 hover:bg-gray-800 cursor-pointer
+              rounded-sm mr-1 flex flex-none py-1 xl:px-2 lg:px-1"
+              data-tip={"Sound"}
+              data-background-color="#4028fb"
+              data-arrow-color="#4028fb"
+              onClick={toggleSound}>
+                <img src={soundIcon} alt="Sound"
+                className="flex flex-none w-4" />
+            </li>
           </ul>
 
           <input type="text" placeholder="Search..."
