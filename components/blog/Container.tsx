@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useRef} from 'react'
 import Item from './Item'
 import BtnStatic from '../shared/BtnStatic'
 import Select from 'react-select'
@@ -27,12 +27,39 @@ const sort: Content[] = [
 
 const Intro: React.FC<React.ReactNode> = () => {
 
+  const tagBox = useRef<HTMLDivElement>(null)
+
   function activeClass(e: any) {
+    // Set active color to tag box in UI
     e.target.classList.toggle('active')
+
+    // Set active tags to component state
+    const tList = Array.from(tagBox.current.children)
+    let current: Array<string> = []
+
+    tList.map(tag => {
+      if (tag.classList.contains('active')) current.push(tag.innerHTML)
+    })
+
+    setActive(current)
+  }
+
+  function filterPosts(post) {
+    const postHasTag: Array<boolean | undefined> = post.tags.map(tag => {
+      if (active.includes(tag)) return true
+    })
+    const postCheck: boolean = postHasTag.includes(true) ? true : false
+
+    if (active.length === 0) return true
+    else if (postCheck) return true
+    else return false
   }
 
   // Get tags, tech from all posts metadata
   const [tags, setTags] = useState<Array<string>>([])
+
+  // Set active tags based on user action (empty === all items)
+  const [active, setActive] = useState<Array<string>>([])
 
   // Blog post sorting
   const [sortType, setSortType] = useState<string>('recent')
@@ -82,7 +109,7 @@ const Intro: React.FC<React.ReactNode> = () => {
             <h1 className="text-white text-4xl sm:text-5xl md:text-6xl text-center">Visual Jargon</h1>
             <h3 className="text-white text-center text-center mx-3 mt-3 mb-8">A blog about design, tech and new projects</h3>
 
-            <div className="tags text-center">
+            <div className="tags text-center" ref={tagBox}>
               {tags.map((tag, i) => {
                 return <span onClick={(e) => activeClass(e)} key={i}>{tag}</span>
               })}
@@ -105,13 +132,15 @@ const Intro: React.FC<React.ReactNode> = () => {
         onChange={sortPosts}
       />
 
-      {sortType === 'recent' && recent.map((post, i) => <Item title={post.title}
+      {sortType === 'recent' && recent.filter(post => filterPosts(post))
+        .map((post, i) => <Item title={post.title}
         date={post.date}
         description={post.description}
         href={`blog/${post.slug}`}
         key={i} />)}
 
-      {sortType === 'coolness' && coolness.map((post, i) => <Item title={post.title}
+      {sortType === 'coolness' && coolness.filter(post => filterPosts(post))
+      .map((post, i) => <Item title={post.title}
         date={post.date}
         description={post.description}
         href={`blog/${post.slug}`}
