@@ -1,14 +1,17 @@
 import Button from '../shared/Button'
+import posts, { Post } from '../../markdown/0-index'
 
 interface Props {
   Card?: any,
   difficulty?: string,
+  cover?: string,
+  post?: Post,
   slug?: string,
 }
 
 const Card: React.FC<Props> = (props) => {
 
-  const high: string = '#f3164c'
+  const hard: string = '#f3164c'
   const medium: string = '#ff9b50'
   const low: string = '#ffd400'
   const neutral: string = '#b6bfcc'
@@ -16,23 +19,24 @@ const Card: React.FC<Props> = (props) => {
   let colour: string
 
   if (props.difficulty === null) colour = neutral
-  else if (props.difficulty === "high") colour = high
+  else if (props.difficulty === "hard") colour = hard
   else if (props.difficulty === "medium") colour = medium
   else if (props.difficulty === "low") colour = low
 
-  return <div className="w-full md:w-1/2 float-left px-2 mb-4 relative group">
+  return <div className="w-full col-span-2 md:col-span-1 relative group">
     <div className="absolute right-0 top-0 card-triangle"
       style={{borderBottomColor: colour, borderLeftColor: colour}}
     ></div>
-    <div className="bg-gray-800 rounded-sm group-hover:bg-gray-700">
-      <img src="https://picsum.photos/800/500"
+    <div className="bg-gray-900 group-hover:bg-gray-700"
+      style={{borderRadius: '2rem'}}>
+      <img src={props.post.cover}
         className="w-full h-24 lg:h-40 object-cover"
-        style={{borderTopLeftRadius: '0.125rem', borderTopRightRadius: '0.125rem'}}
+        style={{borderTopLeftRadius: '2rem', borderTopRightRadius: '0.125rem'}}
       />
-      {/* <div className="p-8 xl:p-10 overflow-auto"> */}
+
       <div className="px-6 py-4 overflow-auto">
-        <h2 className="text-white mb-3">Personal Dashboard with Google Sheets More text yaaa yaya wor...</h2>
-        <p className="text-gray-200 mb-8">Aside from websites, wireframes are utilized for the prototyping are utilized for the prototyping</p>
+        <h2 className="text-white mb-3">{props.post.title}</h2>
+        <p className="text-gray-200 mb-8">{props.post.description}</p>
 
         <div className="ml-1">
         <Button href={`/blog/${props.slug}`}

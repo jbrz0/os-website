@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import {useStoreState, useStoreActions} from '../../hooks/useStore'
 import Select from 'react-select'
 import posts from '../../markdown/0-index'
 
@@ -6,7 +7,7 @@ interface Content {
   value: string,
   label: string,
 }
-const difficulty: Content[] = [
+const difficultyOptions: Content[] = [
   { value: 'any-difficulty', label: 'Any Difficulty' },
   { value: 'easy', label: 'Easy' },
   { value: 'medium', label: 'Medium' },
@@ -15,13 +16,41 @@ const difficulty: Content[] = [
 
 const Sidebar: React.FC<React.ReactNode> = () => {
 
+  const tagBox = useRef<HTMLDivElement>(null)
+
   function activeClass(e: any) {
+    // Set active color to tag box in UI
     e.target.classList.toggle('active')
+    setActive(Array.from(tagBox.current.children))
   }
+
+  // Store and update search variables in global state
+  const setActive = useStoreActions(actions => actions.labs.setActive)
+  const setText = useStoreActions(actions => actions.labs.setText)
+  const setDifficulty = useStoreActions(actions => actions.labs.setDifficulty)
+  const setTechFilter = useStoreActions(actions => actions.labs.setTechFilter)
 
   // Get tags, tech from all posts metadata
   const [tags, setTags] = useState<Array<string>>([])
   const [tech, setTech] = useState<Array<string>>([])
+
+  function filterText(e) {
+    setText(e.target.value)
+  }
+
+  // Adjust the difficulty setting in global store
+  function filterDifficulty(value: Content) {
+    const selected: string = value.value
+    if (selected === 'any-difficulty') setDifficulty('any-difficulty')
+    else if (selected === 'easy') setDifficulty('easy')
+    else if (selected === 'medium') setDifficulty('medium')
+    else if (selected === 'hard') setDifficulty('hard')
+  }
+
+  function filterTech(value: Content) {
+    const selected: string = value.value
+    setTechFilter(selected)
+  }
 
   useEffect(() => {
     // Get and filter our duplicate tags
@@ -55,19 +84,23 @@ const Sidebar: React.FC<React.ReactNode> = () => {
           className="bg-gray-1000 text-gray-100 text-lg focus:outline-none rounded
           py-4 pl-6 pr-16 block w-full appearance-none leading-normal"
           type="text"
-          placeholder="Search Labs" />
+          placeholder="Search Labs"
+          onChange={filterText}
+          />
         <img src="icons/search.svg" className="absolute right-0 top-0 mr-5"
           style={{width: '1.5rem', marginTop: '1.15rem'}}/>
       </div>
 
       <Select
         className="selector mb-4"
-        options={difficulty}
+        options={difficultyOptions}
         placeholder="Difficulty"
         id={'1'}
 				instanceId={'1'}
         inputId={'1'}
         isSearchable={false}
+        onChange={filterDifficulty}
+        defaultValue={{value: "any-difficulty", label: 'Any Difficulty' }}
       />
 
       <Select
@@ -78,9 +111,11 @@ const Sidebar: React.FC<React.ReactNode> = () => {
 				instanceId={'2'}
         inputId={'2'}
         isSearchable={false}
+        onChange={filterTech}
+        defaultValue={{value: "any-tech", label: 'Any Tech' }}
       />
 
-      <div className="tags">
+      <div className="tags" ref={tagBox}>
         {tags.map((tag, i) => {
           return <span onClick={(e) => activeClass(e)} key={i}>{tag}</span>
         })}

@@ -231,7 +231,6 @@
   border-top-color: transparent;
   border-bottom-left-radius: 0.125rem;
   transform: rotate(180deg);
-  margin-right: 0.5rem;
 }
 .card-overlay {
   border-top: 1px solid rgba(1,240,227,1);

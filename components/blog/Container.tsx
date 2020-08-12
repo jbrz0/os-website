@@ -64,6 +64,9 @@ const Intro: React.FC<React.ReactNode> = () => {
   // Blog post sorting
   const [sortType, setSortType] = useState<string>('recent')
 
+  // Amount of posts to show
+  const [postAmount, setPostAmount] = useState<number>(8)
+
   function sortRecent() {
     const recentSort: Array<Post> = posts.sort((a, b) => {
       return b.id - a.id
@@ -88,6 +91,17 @@ const Intro: React.FC<React.ReactNode> = () => {
     }
     else if (selected === 'coolness') {
       setSortType('coolness')
+    }
+  }
+
+  function increasePosts() {
+
+    // Increase posts based on load more btn click
+    if (posts.length >= postAmount) setPostAmount(postAmount + 6)
+    else if (posts.length < postAmount) {
+
+      const btn: HTMLElement = document.querySelector('.load-more-btn')
+      btn.remove()
     }
   }
 
@@ -132,23 +146,23 @@ const Intro: React.FC<React.ReactNode> = () => {
         onChange={sortPosts}
       />
 
-      {sortType === 'recent' && recent.filter(post => filterPosts(post))
+      {sortType === 'recent' && recent.slice(0, postAmount).filter(post => filterPosts(post))
         .map((post, i) => <Item title={post.title}
         date={post.date}
         description={post.description}
         href={`blog/${post.slug}`}
         key={i} />)}
 
-      {sortType === 'coolness' && coolness.filter(post => filterPosts(post))
+      {sortType === 'coolness' && coolness.slice(0, postAmount).filter(post => filterPosts(post))
       .map((post, i) => <Item title={post.title}
         date={post.date}
         description={post.description}
         href={`blog/${post.slug}`}
         key={i} />)}
 
-      <BtnStatic className="border-solid border border-gray-300
+      {posts.length >= postAmount && <BtnStatic className="border-solid border border-gray-300
         text-lg w-1/2 text-white clear-both block cursor-pointer
-        hover:bg-gray-300 mx-auto mt-10">Load More</BtnStatic>
+        hover:bg-gray-300 mx-auto mt-10 load-more-btn" onClick={increasePosts}>Load More</BtnStatic>}
     </div>
   </>
 }
