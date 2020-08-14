@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useEffect } from 'react'
 
 interface Item {
   src: string
@@ -46,13 +47,13 @@ const items: Item[] = [
 
 interface Props {
   Row?: any,
-  rowStart: number,
-  rowEnd: number,
+  rowStart?: number,
+  rowEnd?: number,
 }
 
 const Row: React.FC<Props> = (props) => {
   return <>
-  {items.splice(props.rowStart, props.rowEnd).map(item => <div className="col-span-1 bg-gray-1000 rounded h-16 flex justify-center">
+  {items.splice(0, 36).map((item, i) => <div className="col-span-1 bg-gray-1000 rounded h-16 flex justify-center" key={i}>
     <img src={`${item.src}.svg`} alt={item.alt} />
   </div>)}
   </>
