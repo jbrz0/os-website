@@ -123,7 +123,7 @@ const Intro: React.FC<React.ReactNode> = () => {
             <h1 className="text-white text-4xl sm:text-5xl md:text-6xl text-center">Visual Jargon</h1>
             <h3 className="text-white text-center text-center mx-3 mt-3 mb-8">A blog about design, tech and new projects</h3>
 
-            <div className="tags text-center" ref={tagBox}>
+            <div className="hidden sm:block tags text-center max-w-screen-md" ref={tagBox}>
               {tags.map((tag, i) => {
                 return <span onClick={(e) => activeClass(e)} key={i}>{tag}</span>
               })}
