@@ -1,0 +1,105 @@
+import Highlight from 'react-highlight.js'
+// import codeOne from '../snippets/000-testOne'
+
+
+This post can be used as a reference providing answers to the popular **frontend questions** github repo found [here](https://github.com/h5bp/Front-end-Developer-Interview-Questions). I've left out all the personal questions for obvious reasons (things like what you built lately).
+
+&nbsp;&nbsp;
+-----
+
+A lot of these questions can be answered in different ways, and are just touching on where to start. Also some questions can have hundreds of answers, and often I'll just provide 2 or 3 to keep it brief. But I think it would be useful to see these answers rounded up in one place.
+
+&nbsp;&nbsp;
+-----
+
+For now if theres something that can be improved (or just wrong 🤓) you can find me on github or twitter [@oddscenes](https://twitter.com/oddscenes). Here's the breakdown:
+
+&nbsp;&nbsp;
+-----
+
+### Sections
+
+&nbsp;&nbsp;
+-----
+
+- General Questions
+- HTML Questions
+- CSS Questions
+- JS Questions
+- Accessibility Questions
+- Testing Questions
+- Performance Questions
+- Network Questions
+- Coding Questions
+- Fun Questions
+
+&nbsp;&nbsp;
+-----
+
+---
+
+&nbsp;&nbsp;
+-----
+
+## General Questions
+
+&nbsp;&nbsp;
+-----
+
+<blockquote>When building a new web site or maintaining one, can you explain some techniques you have used to increase performance?</blockquote>
+
+&nbsp;&nbsp;
+-----
+
+1. Minify code, use well optimized build tools (webpack, gulp etc.)
+
+2. Be aware of any plugins, CMS systems etc you are using that can cause bloat
+
+3. Run an auditing tool such as [google lighthouse](https://developers.google.com/web/tools/lighthouse)
+
+4. Compress assets like images, svg (look into resolution, and the trade off of quality for bitmap images)
+
+5. Use CDNs and caching, whenever it's possible and makes sense
+
+&nbsp;&nbsp;
+-----
+
+<blockquote>When building a new web site or maintaining one, can you explain some techniques you have used to increase performance?</blockquote>
+
+&nbsp;&nbsp;
+-----
+
+1. Cross site scripting (XSS)
+
+2. Malware in third party libraries (like npm)
+
+3. Form validation hacks, SQL injection
+
+&nbsp;&nbsp;
+-----
+
+<blockquote>If you have 5 different stylesheets, how would you best integrate them into the site?</blockquote>
+
+&nbsp;&nbsp;
+-----
+
+1. A build tool such as webpack or gulp
+
+2. Using @import within CSS, create an `index.css` file
+
+&nbsp;&nbsp;
+-----
+
+<blockquote>Can you describe the difference between progressive enhancement and graceful degradation?</blockquote>
+
+&nbsp;&nbsp;
+-----
+
+Both involve the process of optimizing an experience from a baseline. Graceful degredation removing features, as you support lower tier browsers/devices etc. Progressive enhancement starts from the bottom, and builds up.
+
+&nbsp;&nbsp;
+-----
+
+It's important to decide which method to use based on each indiviudal project requirements.
+
+

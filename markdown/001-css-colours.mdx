@@ -1,0 +1,267 @@
+import Highlight from 'react-highlight.js'
+import {cssOne, cssTwo, cssThree, cssFour, cssFive} from '../snippets/001-css-colours'
+
+CSS has a lot of built in colour stuff, and with the addition of filters more recently, its become even more powerful. Below I've rounded up all the CSS stuff related to colour, and colour functions.
+
+&nbsp;&nbsp;
+-----
+
+This is all standard CSS, so no pre-processors like SCSS/Sass needed.
+&nbsp;&nbsp;
+-----
+
+### Sections
+
+&nbsp;&nbsp;
+-----
+
+- Values
+- Variables
+- Gradients
+- Properties
+- Functions
+- Sip (Software)
+
+&nbsp;&nbsp;
+-----
+
+---
+
+&nbsp;&nbsp;
+-----
+
+### Values
+
+&nbsp;&nbsp;
+-----
+
+#### Hex (Hexadecimal)
+
+Hex colour is a shortform version of RGB, starting with a hash (#). The next 6 characters make up **RRGGBB** (red, green & blue values).
+
+Some hex values can also be written in short form, with 3 values. So white being #ffffff, could also be #fff.
+
+&nbsp;&nbsp;
+-----
+
+Hex Red:
+
+`#FF0000`
+
+&nbsp;&nbsp;
+-----
+
+#### RGB & RGBA
+
+The RGB function takes red, green and blue values as exact numerical values. RGBA is the same, with the addition of an alpha channel (transparency). This alpha channel is from 0 to 1. So 50% transparency would be 0.5.
+
+&nbsp;&nbsp;
+-----
+
+RGB Red:
+
+`rgb(255, 0, 0)`
+
+&nbsp;&nbsp;
+-----
+
+RGBA Red (50% Transparency):
+
+`rgba(255, 0, 0, 0.5)`
+
+&nbsp;&nbsp;
+-----
+
+#### HSL & HSLA
+
+HSL or Hue Saturation Lightness is a newer one. First parameter is the hue (colour), second saturation (amount of colour), third is how light or dark. This function makes it easy to add tints and shades to existing colours, by simply modifying the last (lightness) parameter. Same as RGBA when it comes to alpha channel: 0 - 1 for transparency scale.
+
+&nbsp;&nbsp;
+-----
+
+An important note on the first parameter is that the value is not RGB value. It starts at 0 for red, then moves through the rainbow, to the value 359. 360 would be back where we started (like a circle).
+
+&nbsp;&nbsp;
+-----
+
+<div className="overflow-auto">
+  <div className="float-left text-white">0</div>
+  <div className="float-right text-white">359</div>
+</div>
+
+<div className="w-full h-5 rounded" style={{background: `linear-gradient(
+  90deg,
+  rgba(255, 0, 0, 1) 0%,
+  rgba(255, 154, 0, 1) 10%,
+  rgba(208, 222, 33, 1) 20%,
+  rgba(79, 220, 74, 1) 30%,
+  rgba(63, 218, 216, 1) 40%,
+  rgba(47, 201, 226, 1) 50%,
+  rgba(28, 127, 238, 1) 60%,
+  rgba(95, 21, 242, 1) 70%,
+  rgba(186, 12, 248, 1) 80%,
+  rgba(251, 7, 217, 1) 90%,
+  rgba(255, 0, 0, 1) 100%
+)`}}></div>
+
+&nbsp;&nbsp;
+-----
+
+HSL Red:
+
+`hsl(0, 100%, 50%)`
+
+&nbsp;&nbsp;
+-----
+
+HSLA Red (50% Transparency):
+
+`hsla(0, 100%, 50%, 0.5)`
+
+&nbsp;&nbsp;
+-----
+
+&nbsp;&nbsp;
+-----
+
+#### Colour Names
+
+The last common one, but least important, is CSS colour names. This is an old practice mostly abandoned at this point. It's fun to name your div "salmon" or whatever, but its really just making it hex value "#FA8072".
+
+&nbsp;&nbsp;
+-----
+
+<a href="https://css-tricks.com/snippets/css/named-colors-and-hex-equivalents/" target="_blank">A list of colour names</a>
+
+&nbsp;&nbsp;
+-----
+
+"Named" Red:
+
+`red`
+
+&nbsp;&nbsp;
+-----
+
+### Variables
+
+&nbsp;&nbsp;
+-----
+
+Just like in Sass, we can use variables within CSS natively. Pretty straightforward:
+
+&nbsp;&nbsp;
+-----
+
+**Step 1:**
+Set the variable in the root of your stylesheets.
+
+&nbsp;&nbsp;
+-----
+
+<Highlight language="css">{cssOne}</Highlight>
+
+&nbsp;&nbsp;
+-----
+
+**Step 2:**
+Use the variable anywhere in your stylesheets. You may need to import your variables stylesheet using @import at the top.
+
+&nbsp;&nbsp;
+-----
+
+<Highlight language="css">{cssTwo}</Highlight>
+
+&nbsp;&nbsp;
+-----
+
+**The Result:**
+This is the rendered css.
+
+&nbsp;&nbsp;
+-----
+
+<Highlight language="css">{cssThree}</Highlight>
+
+&nbsp;&nbsp;
+-----
+
+### Gradients
+
+&nbsp;&nbsp;
+-----
+
+Gradients are CSS values, but they must be set to the background property. There is two options available for gradients (linear and radial). You can also add as many colour stops as you want. Colour stops are points in the gradient to define colour and transparency.
+
+&nbsp;&nbsp;
+-----
+
+With just a few options you can achieve a lot of effects, especially being able to layer, shape and animate divs and other elements. I use an online tool to build CSS gradients, because they are somewhat tedius to write by hand. It's also nice to see how it works in an interface.
+
+&nbsp;&nbsp;
+-----
+
+Linear
+<div className="w-full h-5 rounded mb-4" style={{background: `rgb(255,42,252)`,
+background: `linear-gradient(90deg, rgba(255,42,252,1) 0%, rgba(1,240,227,1) 100%)`}}></div>
+
+Radial
+<div className="w-full h-5 rounded" style={{background: `rgb(255,42,252)`,
+background: `radial-gradient(circle, rgba(1,240,227,1) 0%, rgba(255,42,252,1) 100%)`}}></div>
+
+&nbsp;&nbsp;
+-----
+
+<a href="https://cssgradient.io/" target="_blank">Here's a good CSS Gradient tool</a>
+
+&nbsp;&nbsp;
+-----
+
+### Properties
+
+&nbsp;&nbsp;
+-----
+
+Here are all the CSS properties that will accept a colour value. I've grouped them since some are related.
+
+&nbsp;&nbsp;
+-----
+
+<Highlight language="css">{cssFour}</Highlight>
+
+&nbsp;&nbsp;
+-----
+
+### Functions
+
+&nbsp;&nbsp;
+-----
+
+CSS Functions can be used to modify values in css properties. Specific to colours there's a lot that can be done. We can edit not just css colours with these, but even images and other assets. Here is a list of the CSS functions relevant to colours:
+
+&nbsp;&nbsp;
+-----
+
+- `contrast()`
+  - Increase or decrease the contrast in any element. Works on text, divs, images etc.
+- `hue-rotate()`
+  - Scroll through the hue of any colours in in an element.
+- `grayscale()`
+  - Remove all saturation (colour) from an element. So it will be black & white.
+- `sepia()`
+  - Creates a black & white type effect, with a brownish tint.
+- `saturate()`
+  - Adds saturation (color) to an element.
+- `drop-shadow()`
+  - Add a drop shadow to an element. Different than a box or text shadow, this filter will wrap to the content. This is useful for something like an image with a transparent background.
+- `invert()`
+  - Invert all the colours to their opposite values (<a href="https://en.wikipedia.org/wiki/Complementary_colors" target="_blank">complementary colours</a>)
+- `opacity()`
+  - Lower the transparency of an image or element. This can create new colours by blending the element with its background.
+- `blur()`
+  - Similar to opacity, new colours and effects can be created by blending this filter with your background and other elements.
+
+&nbsp;&nbsp;
+-----
+
+<Highlight language="css">{cssFive}</Highlight>

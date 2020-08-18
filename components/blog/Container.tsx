@@ -101,7 +101,7 @@ const Intro: React.FC<React.ReactNode> = () => {
     else if (posts.length < postAmount) {
 
       const btn: HTMLElement = document.querySelector('.load-more-btn')
-      btn.remove()
+      if (btn !== null) btn.remove()
     }
   }
 
@@ -125,7 +125,7 @@ const Intro: React.FC<React.ReactNode> = () => {
 
             <div className="hidden sm:block tags text-center max-w-screen-md" ref={tagBox}>
               {tags.map((tag, i) => {
-                return <span onClick={(e) => activeClass(e)} key={i}>{tag}</span>
+                return <span onClick={(e) => {activeClass(e); increasePosts();}} key={i}>{tag}</span>
               })}
             </div>
 

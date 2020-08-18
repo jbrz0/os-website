@@ -19,21 +19,35 @@
   color: #00f0e3;
   font-weight: 500;
 }
+.post p code {
+  color: #fe004c;
+}
 .post blockquote {
   border-left: 5px solid #6494a9;
-  color: #b6ced8;
+  /* color: #b6ced8; */
+  color: #f2f3f7;
+  text-shadow: 0px 0px 10px #fe0081;
   padding-left: 0.75rem;
   font-style: italic;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.75rem;
+}
+.post ol {
+  margin-left: 1.5rem;
+  list-style: upper-roman;
+  color: #4028fb;
+}
+.post ol li {
+  padding-left: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 .post ul {
   list-style-type: none;
   margin-left: 1.5rem;
 }
 .post ul li {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   margin-bottom: 0.8rem;
   color: #f2f3f7;
 }
@@ -41,6 +55,17 @@
   content: "◍ ";
   color: #4028fb;
   margin-left: -1.5rem;
+  margin-right: 0.5rem;
+}
+.post ul li ul li {
+  color: #b6bfcc;
+  margin-top: 0.25rem;
+}
+.post ul li ul li:before {
+  content: "- ";
+  color: #4028fb;
+  margin-left: -1.5rem;
+  margin-right: 0.5rem;
 }
 
 /* youtube video */

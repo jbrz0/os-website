@@ -1,0 +1,120 @@
+import Button from '../components/shared/Button'
+import ImageOne from '../components/blog/ImageOne'
+import Highlight from 'react-highlight.js'
+import {compOne, compTwo} from '../snippets/003-comp-maker'
+
+This is an experiment that started out playing around in, and learning rust. I was playing with the file system a lot and parsing text files. Thinking about how the architecture is made up to begin with when making a frontend framework.
+
+&nbsp;&nbsp;
+-----
+
+> What if we made an ultra-simple text format, that can compile to entire html components
+
+&nbsp;&nbsp;
+-----
+
+So this idea took a lot of trial and error, and thought. The end result is nothing ground-breaking. But its definitely something that I think sparks an interesting idea. The thought about how you would build a framework if you had to start over.
+
+&nbsp;&nbsp;
+-----
+
+<ImageOne src="os.png" alt="OS Spinner"
+  caption="( Infographic of component flow ) input.odd -> terminal -> output.html" />
+
+&nbsp;&nbsp;
+-----
+
+My first response is to go to simple components. To build out of the box, highly designed, easy to use, but (as a trade-off) less customizeable bits. Thinking about what's the most basic syntax out there now... python, yaml, csv? Something like this to add our data into the components.
+
+&nbsp;&nbsp;
+-----
+
+Near the end there's a big pro and a big con I see. The big pro is that ultimately its super easy to fire up a webpage with custom text and possibly any other custom parameters. The big con, as it is now, is that it still needs to be compiled from the terminal.
+
+&nbsp;&nbsp;
+-----
+
+### The Experiment
+
+&nbsp;&nbsp;
+-----
+
+The project is a node/express app which runs using the filesystem. I ended up switching to NodeJS pretty quick after the initial idea mainly because I'm familiar with it, but there's also a lot of 3rd party libraries that could come in handy.
+
+&nbsp;&nbsp;
+-----
+
+After taking a basic text file with component names and data, it will loop through to check what has been passed. So lots of text parsing. After determining this, it will spit out pre-built css/js components. Made to be responsive/stackable/swappable etc.
+
+&nbsp;&nbsp;
+-----
+
+>How much further can we abstract away complexity before it becomes a hindrance, and gets in the way?
+
+&nbsp;&nbsp;
+-----
+
+The output is a _raw html_ file that can be used anywhere. Thats it. The process is pretty simple, which is the goal. This is bordering on hindrance for sure. But regardless, it was a fun experiment. Right now it supports only a few HTML elements, one theme, and specific parameters. But all this can be improved.
+
+&nbsp;&nbsp;
+-----
+
+### Usage
+
+&nbsp;&nbsp;
+-----
+
+First step is to create an input file. From an ultra simple readme or docs you could form your input file pretty easily
+
+&nbsp;&nbsp;
+-----
+
+<div className="text-yellow mb-4">input.odd</div>
+
+<Highlight language="shell">{compOne}</Highlight>
+
+&nbsp;&nbsp;
+-----
+
+In future extensions you can see how there could be stuff like theming, more components to swap etc. In some way, it could also be modified to pull dynamic data.
+
+&nbsp;&nbsp;
+-----
+
+Next step is to compile the basic input file. With the commands:
+
+&nbsp;&nbsp;
+-----
+
+**compbot <input_file> <output_file>**
+
+`compbot input.odd ./dist/output.html`
+
+&nbsp;&nbsp;
+-----
+
+From there we have the output HTML file and its ready for use.
+
+&nbsp;&nbsp;
+-----
+
+### Demo
+
+&nbsp;&nbsp;
+-----
+
+To see it in action, below is an input file. With custom data. The button below it showcases a micro-site that is the HTML result of this input file.
+
+&nbsp;&nbsp;
+-----
+
+<Highlight language="shell">{compTwo}</Highlight>
+
+&nbsp;&nbsp;
+-----
+
+&nbsp;&nbsp;
+-----
+
+<Button href="/lab/component-maker-demo" className="block gr-tw-3 py-6 px-8 max-w-xs mx-auto rounded hover:opacity-75 text-center" target="_blank">
+<span className="text-white">Check It Out</span></Button>
