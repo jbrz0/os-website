@@ -1,7 +1,15 @@
 import Slider from 'react-slick'
+import { useState } from 'react'
 import Link from 'next/link'
+import posts, { Post } from '../../markdown/0-index'
+
+function postId(id) {
+  // Returns a post based on ID
+  return posts.filter(post => post.id === id)[0]
+}
 
 const Content1: React.FC<React.ReactNode> = () => {
+
   return <>
     <div className="p-6">
       <img
@@ -9,7 +17,7 @@ const Content1: React.FC<React.ReactNode> = () => {
         className="w-full object-cover shadow-xl rounded-lg"
       />
       <p className="text-gray-100 text-lg max-w-screen-md mt-6 mx-auto">
-        The navigation design should communicate the relationship between the links it contains so that users understand the options they have for navigating the site.
+        {postId(8).description}
       </p>
     </div>
   </>
@@ -23,7 +31,7 @@ const Content2: React.FC<React.ReactNode> = () => {
         className="w-full object-cover shadow-xl rounded-lg"
       />
       <p className="text-gray-100 text-lg max-w-screen-md mt-6 mx-auto">
-        The navigation design should communicate the relationship between the links it contains so that users understand the options they have for navigating the site.
+        {postId(7).description}
       </p>
     </div>
   </>
@@ -37,7 +45,7 @@ const Content3: React.FC<React.ReactNode> = () => {
         className="w-full object-cover shadow-xl rounded-lg"
       />
       <p className="text-gray-100 text-lg max-w-screen-md mt-6 mx-auto">
-        The navigation design should communicate the relationship between the links it contains so that users understand the options they have for navigating the site.
+        {postId(2).description}
       </p>
     </div>
   </>

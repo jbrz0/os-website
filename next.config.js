@@ -12,5 +12,6 @@ module.exports = withMDX({
   // Re-map environment vars to work with next
   env: {
     S3_BUCKET: process.env.S3_BUCKET,
+    GA: process.env.GA,
   }
 })
