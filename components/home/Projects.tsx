@@ -17,7 +17,7 @@ const Content1: React.FC<React.ReactNode> = () => {
         className="w-full object-cover shadow-xl rounded-lg"
       />
       <p className="text-gray-100 text-lg max-w-screen-md mt-6 mx-auto">
-        {postId(8).description}
+        {postId(7).description}
       </p>
     </div>
   </>
@@ -31,7 +31,7 @@ const Content2: React.FC<React.ReactNode> = () => {
         className="w-full object-cover shadow-xl rounded-lg"
       />
       <p className="text-gray-100 text-lg max-w-screen-md mt-6 mx-auto">
-        {postId(7).description}
+        {postId(6).description}
       </p>
     </div>
   </>
@@ -45,7 +45,7 @@ const Content3: React.FC<React.ReactNode> = () => {
         className="w-full object-cover shadow-xl rounded-lg"
       />
       <p className="text-gray-100 text-lg max-w-screen-md mt-6 mx-auto">
-        {postId(2).description}
+        {postId(1).description}
       </p>
     </div>
   </>
