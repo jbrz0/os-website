@@ -1,0 +1,60 @@
+import Button from '../components/shared/Button'
+import Plink from '../components/shared/Plink'
+
+I'm surprised there isnt more out there focused on an optimized web homepage/new tab experience. It's the first thing you look at when you fire up a browser. I remember about 6 months ago looking desperately for something like this. Something personalized. Theres a few cool browser plugins, but in the end, classic developer solution, I felt like I needed to roll my own setup.
+
+&nbsp;&nbsp;
+-----
+
+The main goal is to give a quick overview, nothing too detailed. While also being useful as a new tab (hence the google search). The current browsers choose to use things like "Recent Tabs" in the new tab/homepage, which I find just clutters up the space. Create a dashboard that a user can easily configure & deploy for themselves.
+
+&nbsp;&nbsp;
+-----
+
+## Detailed Features
+
+&nbsp;&nbsp;
+-----
+
+- A news feed taking a custom array of keywords as topics, uses <Plink href="https://newsapi.org" text="News API" />
+- Google search integrated, same google search as always
+- 8 Customized bookmarks, which use Google favicon API to grab the icons
+- Time and calendar is displayed from config, uses <Plink href="https://momentjs.com" text="MomentJS" />
+- Weather data is displayed from config, uses <Plink href="https://openweathermap.org/api" text="Open Weather API" />
+
+&nbsp;&nbsp;
+-----
+
+The news and weather APIs are free services with rate limits on the amount of times you can hit the API per day/hour. But you shouldn't hit this limit with a free API key, it's mostly put in place to prevent it being used in a production application.
+
+&nbsp;&nbsp;
+-----
+
+## How to Use
+
+&nbsp;&nbsp;
+-----
+
+1. Clone the project
+
+2. Get your API Keys (News API, Open Weather API)
+
+3. Add your info to the config file (weather, location, bookmarks & news keywords)
+
+4. Deploy to netlify (or anywhere)
+
+5. Save the link as a homepage in your browser
+
+&nbsp;&nbsp;
+-----
+
+> <Plink href="https://github.com/oddscenes/morning-briefing" text="Get the Project on Github" />
+
+&nbsp;&nbsp;
+-----
+
+&nbsp;&nbsp;
+-----
+
+<Button href="/lab/morning-briefing" className="block gr-tw-3 py-6 px-8 max-w-xs rounded hover:opacity-75 text-center" target="_blank">
+<span className="text-white">View Demo</span></Button>

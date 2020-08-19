@@ -25,12 +25,12 @@ const sound: SoundModel = {
 
   //* Actions
   soundOn: action((state) => {
-    Cookies.set('sound', 'on')
+    Cookies.set('sound', 'on', {expires: 720})
     state.sound = true
     state.soundIcon = '/icons/soundon.svg'
   }),
   soundOff: action((state) => {
-    Cookies.set('sound', 'off')
+    Cookies.set('sound', 'off', {expires: 720})
     state.sound = false
     state.soundIcon = '/icons/soundoff.svg'
   }),

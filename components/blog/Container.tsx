@@ -65,7 +65,7 @@ const Intro: React.FC<React.ReactNode> = () => {
   const [sortType, setSortType] = useState<string>('recent')
 
   // Amount of posts to show
-  const [postAmount, setPostAmount] = useState<number>(8)
+  const [postAmount, setPostAmount] = useState<number>(7)
 
   function sortRecent() {
     const recentSort: Array<Post> = posts.sort((a, b) => {

@@ -12,7 +12,6 @@ social:
   twitch: @oddscenes
 work:
   linkedIn: linkedin.com/in/justinbrazeau
-  toptal: toptal.com/resume/justin-brazeau
 contact:
   email: oddscenes@gmail.com
 `
