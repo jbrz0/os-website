@@ -1,0 +1,56 @@
+import Button from '../components/shared/Button'
+import ImageOne from '../components/blog/ImageOne'
+import Highlight from 'react-highlight.js'
+import {meOne} from '../snippets/005-graphql-me'
+
+This is a web experiment, thinking it would be cool to expose "about me" or CV style information via a graphql endpoint. The cool thing about this is that you can go to a graphiql playground (or create your own) and explore the data. If everything is documented, in theory, it should allow for quick navigation and parsing of someones public data.
+
+&nbsp;&nbsp;
+-----
+
+Standardizing an API format whether json, graphql, csv or whatever type of endpoint would have a few interesting use cases.
+
+&nbsp;&nbsp;
+-----
+
+<ImageOne src="os.png" alt="OS Spinner"
+  caption="Exposed data being parsed by a machine, with everyones data the same" />
+
+&nbsp;&nbsp;
+-----
+
+### Easy & Unbiased Review
+
+&nbsp;&nbsp;
+-----
+
+One use I can see immediately would be companies ability to parse through candidates applying for a job, and quickly go over at a high level everyones data. If everyones data is standardized like this, then it would be formatted the same. This would eliminate any bias of things like resume design and just focus on the data associated with a person. Just one example.
+
+&nbsp;&nbsp;
+-----
+
+If something like this does become a standard, it would end up having a lot more data then the demo I'll be creating here. Data that may be industry specific, mindful of privacy, customizeable but still standardized... Regardless, it does have potential. I have actually applied to jobs before via a curl request. Imagine clicking 30 checkboxes for all the companies you liked, just to send over your graphql endpoint data.
+
+&nbsp;&nbsp;
+-----
+
+### The Experiment
+
+&nbsp;&nbsp;
+-----
+
+Basically we take some public data like below (visualized as yaml for simplicity), and build it into a GraphQL endpoint. Documenting all our types so its easy to parse in the graphiQl playground. Thats it.
+
+&nbsp;&nbsp;
+-----
+
+<Highlight language="yaml">{meOne}</Highlight>
+
+&nbsp;&nbsp;
+-----
+
+&nbsp;&nbsp;
+-----
+
+<Button href="/lab/component-maker-demo" className="block gr-tw-3 py-6 px-8 max-w-xs mx-auto rounded hover:opacity-75 text-center" target="_blank">
+<span className="text-white">Check It Out</span></Button>
