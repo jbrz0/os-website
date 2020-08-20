@@ -1,0 +1,30 @@
+/* GridJS */
+.gridjs {
+  color: white;
+}
+.gridjs th {
+  text-align: left;
+}
+.gridjs td {
+  padding-right: 1rem;
+}
+.gridjs thead tr th:nth-child(1) {
+  width: 10% !important;
+  background: orange;
+}
+.gridjs thead tr th:nth-child(2) {
+  /* width: 30%; */
+  background: red;
+}
+.gridjs thead tr th:nth-child(3) {
+  /* width: 30%; */
+  background: purple;
+}
+.gridjs thead tr th:nth-child(4) {
+  /* width: 20%; */
+  background: blue;
+}
+.gridjs thead tr th:nth-child(5) {
+  width: 12% !important;
+  background: pink;
+}

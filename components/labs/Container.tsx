@@ -9,7 +9,9 @@ import posts from '../../markdown/0-index'
 const Container: React.FC<React.ReactNode> = () => {
 
   // Get labs from all posts metadata
-  const labs: any = posts.filter(post => post.isLab === true)
+  const labs: any = posts.filter(post => post.isLab === true).sort((a, b) => {
+    return b.id - a.id
+  })
 
   // Get labs store data
   const active = useStoreState(state => state.labs.active)
