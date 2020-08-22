@@ -1,0 +1,15 @@
+/* labs specific stuff */
+.Modal-WebAPI {
+  max-width: 550px;
+  margin: 1.75rem auto;
+  position: relative;
+  width: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  outline: 0;
+}
+
+.web-apis-btn {
+  outline: 0 !important;
+}

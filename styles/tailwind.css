@@ -22,6 +22,9 @@
 @import "./intro";
 @import "./post";
 
+/* Labs */
+@import "./labs";
+
 body {
   @apply bg-black;
 }

@@ -79,6 +79,7 @@ const Container: React.FC<React.ReactNode> = () => {
           }).map((lab, i: number) => <Card
             difficulty={lab.difficulty}
             slug={lab.slug}
+            onSite={lab.onSite}
             key={i}
             post={lab} />)}
 

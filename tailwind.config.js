@@ -14,7 +14,13 @@ module.exports = {
     textColor: ['responsive', 'hover', 'focus', 'group-hover'],
     backgroundColor: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
     opacity: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+    mixBlendMode: ['responsive'],
+    backgroundBlendMode: ['responsive'],
+    isolation: ['responsive'],
   },
+  plugins: [
+    require('tailwindcss-blend-mode')(),
+  ],
   theme: {
     // screens: {
     //   sm: '640px',
