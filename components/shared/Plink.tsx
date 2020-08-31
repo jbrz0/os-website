@@ -1,5 +1,3 @@
-import { loadGetInitialProps } from "next/dist/next-server/lib/utils"
-
 interface Props {
   Plink?: any,
   href: string,

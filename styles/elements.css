@@ -574,3 +574,37 @@
     height: 38vw;
   }
 }
+
+/* Search dropdown */
+
+.search-dd:empty {
+  display: none
+}
+.search-dd li {
+  border-left-style: solid;
+  border-left-width: 2px;
+}
+.search-dd a:nth-child(1) li { border-left-color: #00f0e3; }
+.search-dd a:nth-child(2) li { border-left-color: #06f061; }
+.search-dd a:nth-child(3) li { border-left-color: #f3164c; }
+.search-dd a:nth-child(4) li { border-left-color: #ffd400; }
+.search-dd a:nth-child(5) li { border-left-color: #ff9b50; }
+
+.tablet-dd {
+  max-width: 315px;
+  width: 100%;
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0.75rem;
+}
+@media (max-width: 767px) {
+  .tablet-dd {
+    margin-top: 0.75rem;
+  }
+  .tablet-dd input {
+    padding-top: 4px;
+    padding-bottom: 3px;
+    width: 100%;
+  }
+}

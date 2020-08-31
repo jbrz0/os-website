@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useRef} from 'react'
 import {useStoreState, useStoreActions} from '../../hooks/useStore'
 import Link from 'next/link'
 import ReactTooltip from "react-tooltip"
@@ -7,6 +7,9 @@ import {useRouter, NextRouter} from 'next/router'
 import MenuButton from './MenuBtn'
 import {titleCase} from '../../helpers/format-text'
 import {Howl} from 'howler'
+import Search from './Search'
+import postfeed from '../../markdown/0-index'
+import useOnClickOutside from '../../hooks/useOnClickOutside'
 
 interface Content {
   url: string
@@ -47,7 +50,9 @@ export const mobileSocial: Content[] = [
 ]
 
 const menuHover = new Howl({
-  src: ['/sounds/menuHover.m4a']
+  // src: ['/sounds/menuHover.m4a']
+  // v2
+  src: ['']
 })
 
 const NavItem: React.FC<Content> = ({url, icon, title}, enter) => {
@@ -76,10 +81,16 @@ const Nav: React.FC<React.ReactNode> = () => {
   const setSound = useStoreActions(actions => actions.sound.setSound)
   const toggleSound = useStoreActions(actions => actions.sound.toggleSound)
 
+    // Handle click outside search menu
+    const ref = useRef()
+    useOnClickOutside(ref, () => setShow(false))
+
+    const [show, setShow] = useState<boolean>(false)
+
   useEffect(() => {
 
-    // Setup the sound cookie & icon on load
-    setSound()
+    // Setup the sound cookie & icon on load - v2
+    // setSound()
   }, [])
 
   return <div className="fixed w-full top-0 z-20">
@@ -98,9 +109,14 @@ const Nav: React.FC<React.ReactNode> = () => {
             className="w-40 xl:w-40 nav-logo" />
         </a></Link>
 
+
+        { show && <div className="absolute top-0 right-0 tablet-dd" ref={ref}>
+          <Search />
+        </div> }
+
         <ul className="absolute right-0 mr-2 md:hidden">
           <li className={`bg-gray-700 hover:bg-gray-800 cursor-pointer
-            rounded-sm mr-1 flex self-center py-2 px-2`}>
+            rounded-sm mr-1 flex self-center py-2 px-2`} onClick={() => setShow(true)}>
             <Link href="/"><a className="w-4">
               <img src="/icons/search.svg" alt="Menu" className="nav-search" />
             </a></Link>
@@ -125,7 +141,9 @@ const Nav: React.FC<React.ReactNode> = () => {
 
       <div className="hidden lg:block lg:col-span-4">
         <div className="flex justify-end">
-          <ul className="flex justify-between">
+          {/* Option Buttons - v2 */}
+
+          {/* <ul className="flex justify-between">
             {btnItems.map(({url, icon, title, isNew}, i) =>
               <li className="bg-gray-700 hover:bg-gray-800 cursor-pointer
                 rounded-sm mr-1 flex flex-none py-1 xl:px-2 lg:px-1" key={i}
@@ -142,7 +160,7 @@ const Nav: React.FC<React.ReactNode> = () => {
               </li>
             )}
 
-            {/* Sound */}
+
             <li className="bg-gray-700 hover:bg-gray-800 cursor-pointer
               rounded-sm mr-1 flex flex-none py-1 xl:px-2 lg:px-1"
               data-tip={"Sound"}
@@ -152,13 +170,9 @@ const Nav: React.FC<React.ReactNode> = () => {
                 <img src={soundIcon} alt="Sound"
                 className="flex flex-none w-4" />
             </li>
-          </ul>
+          </ul> */}
 
-          <input type="text" placeholder="Search..."
-            className="bg-gray-700 rounded-sm py-1
-            px-2 text-sm text-gray-100 flex justify-end search-input" />
-          <img src="/icons/search.svg" alt="Search"
-            className="absolute mr-2 mt-2" />
+          <Search />
         </div>
       </div>
     </nav>

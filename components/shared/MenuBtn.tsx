@@ -1,7 +1,9 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useRef} from 'react'
 import Link from 'next/link'
 import {btnItems, mobileMenu} from './Nav'
 import {useKeyPress} from '../../hooks/useKeyPress'
+import Search from '../shared/Search'
+import useOnClickOutside from '../../hooks/useOnClickOutside'
 
 interface Viewport {
   mobile?: boolean
@@ -23,10 +25,14 @@ const MenuButton: React.FC<Viewport> = ({mobile}) => {
     if (show) setShow(false)
   }, [escPress])
 
+  // Handle click outside search menu
+  const ref = useRef()
+  useOnClickOutside(ref, () => setShow(false))
+
   // Remove body scroll if menu is open
   useEffect(() => {
-    if (show) window.document.body.style.overflow = "hidden"
-    if (!show) window.document.body.style.overflow = "auto"
+    if (show && viewport === sm) window.document.body.style.overflow = "hidden"
+    if (!show && viewport === sm) window.document.body.style.overflow = "auto"
   }, [show])
 
   return (<>
@@ -38,13 +44,14 @@ const MenuButton: React.FC<Viewport> = ({mobile}) => {
     </li>
 
     {(show && viewport === md) &&
-      <div className="text-white">TABLET MENU</div>
+      <div className="absolute top-0 right-0 tablet-dd" ref={ref}>
+        <Search />
+      </div>
     }
 
     {(show && viewport === sm) &&
       <div className="fixed left-0 right-0 top-0 w-full h-full
         z-10 bg-gray-900">
-
 
       <div className="fixed w-full">
         <div className="m-5">
@@ -56,7 +63,7 @@ const MenuButton: React.FC<Viewport> = ({mobile}) => {
             </li>
             {btnItems.map(({url, icon, title}, i) => <li
               className="w-12 h-12 flex justify-center" key={i}>
-              <img src={icon}className="w-6" /></li>)}
+              <img src={icon} className="w-6" /></li>)}
           </ul>
         </div>
       </div>

@@ -21,8 +21,6 @@ const Header: React.FC<React.ReactNode> = () => {
 
     const pathVar = window.location.pathname.slice(0, 5)
 
-    console.log(pathVar)
-
     if (pathVar === '/') setPath(" Home")
     else if (pathVar === '/labs') setPath(" Labs")
     else if (pathVar === '/lab/') setPath(" Lab")
