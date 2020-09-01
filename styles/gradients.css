@@ -119,6 +119,9 @@
     background: #000;
     mix-blend-mode: screen;
   }
+  .gr-rb-dark-home {
+    background: #0c0a20;
+  }
   .gr-rb-dark::before {
     content: '';
     display: block;
@@ -133,7 +136,8 @@
     pointer-events: none;
   }
   .gr-rb-dark::before {
-    mix-blend-mode: multiply;
+    /* mix-blend-mode: multiply; */
+    mix-blend-mode: darken;
   }
 }
 
