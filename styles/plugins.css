@@ -1,30 +1,50 @@
 /* GridJS */
+.gridjs-wrapper {
+  width: 100%;
+  height: auto;
+  min-width: 768px;
+}
+.gridjs-container {
+  overflow-x: auto;
+}
 .gridjs {
   color: white;
 }
+.gridjs-search input {
+  background: #090819;
+  /* 'gray-1000': '#090819',
+  'gray-900': '#0c0a20',
+  'gray-800': '#110d26', */
+  border: 1px solid #131033;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 300;
+  padding: 0.75rem 1.25rem;
+  margin: 0rem auto 3rem;
+  display: block;
+}
 .gridjs th {
   text-align: left;
+  border-bottom: 1px solid #131033;
+  padding-bottom: 0.5rem;
+}
+.gridjs th:hover {
+  cursor: pointer;
 }
 .gridjs td {
   padding-right: 1rem;
 }
 .gridjs thead tr th:nth-child(1) {
   width: 10% !important;
-  background: orange;
-}
-.gridjs thead tr th:nth-child(2) {
-  /* width: 30%; */
-  background: red;
-}
-.gridjs thead tr th:nth-child(3) {
-  /* width: 30%; */
-  background: purple;
-}
-.gridjs thead tr th:nth-child(4) {
-  /* width: 20%; */
-  background: blue;
 }
 .gridjs thead tr th:nth-child(5) {
   width: 12% !important;
-  background: pink;
+}
+.gridjs tr td:nth-child(4) {
+  color: #b6bfcc;
+}
+/* hide pagination */
+.gridjs-summary,
+.gridjs-pages {
+  display: none;
 }

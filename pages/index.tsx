@@ -18,6 +18,7 @@ const Home: React.FC<React.ReactNode> = () => {
       <Nav />
       <Header />
       <Intro />
+      <div className="relative">
       <About />
       {/* <Line /> */}
       <Divider type="1" />
@@ -28,6 +29,7 @@ const Home: React.FC<React.ReactNode> = () => {
       <Labs />
       {/* <Line /> */}
       {/* <Store /> */}
+      </div>
       <Footer />
     </>
   )

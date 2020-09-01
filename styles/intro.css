@@ -23,14 +23,16 @@
 @media (max-width: 767px) {
 
   .intro {
-    margin-top: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
     min-height: 750px;
   }
 }
 @media (max-width: 650px) {
 
   .intro {
-    margin-top: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
     min-height: 520px;
   }
   .intro-squares {

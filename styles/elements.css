@@ -608,3 +608,15 @@
     width: 100%;
   }
 }
+.mountains {
+  max-height: 650px;
+  object-fit: cover;
+  object-position: top center;
+  /* opacity: 0.75; */
+  position: fixed;
+}
+@media (max-width: 767px) {
+  .mountains {
+    position: absolute;
+  }
+}

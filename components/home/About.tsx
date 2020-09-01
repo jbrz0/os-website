@@ -6,18 +6,17 @@ const About: React.FC<React.ReactNode> = () => {
       <div className="grid grid-cols-12 md:h-full">
         <div className="col-span-12 md:col-span-5 flex items-center">
           <img src="/art/avatar-illustration.png"
-            className="mx-auto mb-10 md:mb-0 px-4"
+            className="w-full mx-auto mb-10 md:mb-0 px-4"
             style={{maxWidth: '350px'}}
           />
         </div>
         <div className="hidden md:flex md:col-span-1"></div>
-        <div className="col-span-12 md:col-span-6 flex items-center text-white text-xl relative z-10">
+        <div className="col-span-12 md:col-span-6 flex items-center text-white text-lg lg:text-xl relative z-10">
           <div>
-            {/* <img
+            <img
               src="/home/profile.jpg"
-              className="w-20 mb-6"
-              style={{borderRadius: '1.5rem', cursor: 'crosshair'}}
-            /> */}
+              className="w-24 h-24 mb-6 rounded-full object-cover"
+            />
             <p className="mb-8">Hi, my name is Justin Brazeau and I’m a Canadian web designer.
             I've been designing and building websites since the early days of Geocities.
             <br /><br />Lately I'm focused on frontend development with CSS, Javascript, React &amp; Node. I

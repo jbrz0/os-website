@@ -30,4 +30,5 @@ body {
 }
 input {
   caret-color: rgba(62, 11, 220);
+  outline: 0;
 }

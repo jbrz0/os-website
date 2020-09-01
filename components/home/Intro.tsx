@@ -1,10 +1,15 @@
 const Intro: React.FC<React.ReactNode> = () => {
 
-  return <div className="h-full md:h-screen w-full">
-    <div className="container mx-auto py-8 px-8 md:py-auto md:px-20">
-      <div className="grid grid-cols-12 h-full md:h-screen intro">
+  return <div className="h-full md:h-screen w-full relative"
+    style={{backgroundImage: 'url(/art/star.jpg)', backgroundSize: '200px 200px'}}>
 
-        <div className="col-span-7 items-center hidden md:flex">
+
+    <img src="/art/mountains-sm.png" className="w-full left-0 right-0 bottom-0 z-0 mountains" />
+
+    <div className="container mx-auto py-8 px-8 md:py-auto md:px-20">
+      <div className="grid grid-cols-12 h-full md:h-screen intro relative sm:static">
+
+        <div className="col-span-7 items-center hidden md:flex relative z-10">
           <div>
             <h1 className="text-xl text-white relative mb-8 leading-none intro-text">Web Maker</h1>
             <h3 className="text-white lg:text-xl xl:text-2xl intro-subtext">Building the modern web with an eye for design &amp; interaction</h3>

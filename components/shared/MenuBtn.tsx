@@ -85,7 +85,7 @@ const MenuButton: React.FC<Viewport> = ({mobile}) => {
           <Link href="#"><a className="float-left mx-2"><img src="social/b-twitter.svg" alt=""/></a></Link>
           <Link href="#"><a className="float-left mx-2"><img src="social/c-github.svg" alt=""/></a></Link>
           <Link href="#"><a className="float-left mx-2"><img src="social/d-behance.svg" className="behance" alt=""/></a></Link>
-          <Link href="#"><a className="float-left mx-2"><img src="social/e-reddit.svg" className="reddit" alt=""/></a></Link>
+          <Link href="#"><a className="float-left mx-2"><img src="social/e-twitch.svg" className="twitch" alt=""/></a></Link>
         </div>
       </div>
 
