@@ -130,7 +130,8 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(124deg, #f3164c, #ff9b50, #ffd400, #06f061, #34cef9, #00f0e3, #376dff, #ff29fc, #4028fb);
+    /* background: linear-gradient(124deg, #f3164c, #ff9b50, #ffd400, #06f061, #34cef9, #00f0e3, #376dff, #ff29fc, #4028fb); */
+    background: linear-gradient(124deg, #f3164c, #ff9b50, #06f061, #34cef9, #00f0e3, #376dff, #ff29fc, #4028fb);
     background-size: 1800% 1800%;
     animation: rainbow 18s ease infinite;
     pointer-events: none;

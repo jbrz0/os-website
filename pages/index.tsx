@@ -3,6 +3,7 @@ import Nav from '../components/shared/Nav'
 import Intro from '../components/home/Intro'
 import About from '../components/home/About'
 import Line from '../components/shared/Line'
+import Divider from '../components/shared/Divider'
 import Features from '../components/home/Features'
 import RecentProj from '../components/home/Projects'
 import Tech from '../components/home/Tech'
@@ -18,11 +19,12 @@ const Home: React.FC<React.ReactNode> = () => {
       <Header />
       <Intro />
       <About />
-      <Line />
+      {/* <Line /> */}
+      <Divider type="1" />
       <Features />
       <RecentProj />
       <Tech />
-      <Line />
+      <Divider type="2" />
       <Labs />
       {/* <Line /> */}
       {/* <Store /> */}
