@@ -48,8 +48,13 @@ const Container: React.FC<React.ReactNode> = () => {
   }
 
   return <>
-    <div className="pt-24 lg:pt-40 pb-32 bg-black min-h-screen">
-      <div className="mx-auto px-12 grid md:grid-cols-1 lg:grid-cols-3 lg:gap-2 container labs-container">
+
+    <div className="pt-24 lg:pt-40 pb-32 bg-black min-h-screen bg-fixed"
+      style={{backgroundImage: 'url(/art/rockbg.jpg)', backgroundSize: '250px'}}>
+
+    <img src="/art/ribcage.png" className="opacity-50 object-contain fixed left-0 right-0 mx-auto z-0 top-0 bottom-0 h-screen" />
+
+      <div className="z-10 relative mx-auto px-12 grid md:grid-cols-1 lg:grid-cols-3 lg:gap-2 container labs-container">
 
         <div className="md:col-span-1 mb-4 px-2 lg:px-auto lg:mb-auto lg:col-span-1">
           <Sidebar />

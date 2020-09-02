@@ -116,10 +116,17 @@ const Intro: React.FC<React.ReactNode> = () => {
   }, [])
 
   return <>
-    <div className="bg-gray-1000 blog-header">
+    <div className="bg-gray-1000 blog-header bg-cover bg-center relative overflow-hidden"
+      style={{backgroundImage: 'url(/art/blog-header.jpg)'}}>
       <div className="container mx-auto px-12 sm:px-24 h-full">
         <div className="flex items-center h-full">
-          <div className="block mx-auto">
+
+          <img src="/art/blog-stuff.png"
+            className="absolute z-0 left-0 right-0 mx-auto blog-stuff"
+            style={{filter: 'drop-shadow(0px 0px 20px rgba(0,0,0,0.65))'}}
+          />
+
+          <div className="block mx-auto relative z-10">
             <h1 className="text-white text-4xl sm:text-5xl md:text-6xl text-center">Visual Jargon</h1>
             <h3 className="text-white text-center text-center mx-3 mt-3 mb-8">A blog about design, tech and new projects</h3>
 

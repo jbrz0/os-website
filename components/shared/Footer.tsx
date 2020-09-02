@@ -1,4 +1,24 @@
 import Link from 'next/link'
+import ReactTooltip from "react-tooltip"
+
+interface Props {
+  Icon?: any,
+  href?: string,
+  text?: string,
+  id?: string,
+  src?: string,
+  adjClass?: string,
+}
+
+const Icon: React.FC<Props> = (props) => {
+  return <Link href={props.href}><a
+  className="float-left mx-2 hover:opacity-75"
+  data-tip={props.text}
+  data-background-color="#4028fb"
+  data-arrow-color="#4028fb"
+  data-for={props.id}
+  ><img src={`/social/${props.src}.svg`} alt={props.id} className={props.adjClass} /></a></Link>
+}
 
 const Footer: React.FC<React.ReactNode> = () => {
 
@@ -13,12 +33,25 @@ const Footer: React.FC<React.ReactNode> = () => {
 
     <span className="text-gray-400 text-sm hidden sm:block ml-32 absolute left-0 mt-5">v12</span>
 
+    <ReactTooltip id="email" />
+    <ReactTooltip id="twitter" />
+    <ReactTooltip id="github" />
+    <ReactTooltip id="behance" />
+    <ReactTooltip id="twitch" />
+
     <div className="max-w-md py-5">
-      <Link href="#"><a className="float-left mx-2 hover:opacity-75"><img src="/social/a-email.svg" alt=""/></a></Link>
-      <Link href="#"><a className="float-left mx-2 hover:opacity-75"><img src="/social/b-twitter.svg" alt=""/></a></Link>
-      <Link href="#"><a className="float-left mx-2 hover:opacity-75"><img src="/social/c-github.svg" alt=""/></a></Link>
-      <Link href="#"><a className="float-left mx-2 hover:opacity-75"><img src="/social/d-behance.svg" className="behance" alt=""/></a></Link>
-      <Link href="#"><a className="float-left mx-2 hover:opacity-75"><img src="/social/e-twitch.svg" className="twitch" alt=""/></a></Link>
+      <a
+        href="mailto:oddscenes@gmail.com"
+        className="float-left mx-2 hover:opacity-75"
+        data-tip="oddscenes@gmail.com"
+        data-background-color="#4028fb"
+        data-arrow-color="#4028fb"
+        data-for="email"
+      ><img src="/social/a-email.svg" alt=""/></a>
+      <Icon href="//twitter.com/oddscenes" text="Twitter @oddscenes" id="twitter" src="b-twitter" />
+      <Icon href="//github.com/oddscenes" text="Github @oddscenes" id="github" src="c-github" />
+      <Icon href="//behance.com/oddscenes" text="Behance @oddscenes" adjClass="behance" id="behance" src="d-behance" />
+      <Icon href="//twitch.tv/oddscenes" text="Twitch @oddscenes" id="twitch" src="e-twitch" />
     </div>
 
     <span className="mr-0 sm:mr-10 text-white absolute right-0

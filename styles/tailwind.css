@@ -17,6 +17,7 @@
 @import "./nav";
 @import "./code";
 @import "./plugins";
+@import "./animations";
 
 /* Sections */
 @import "./intro";

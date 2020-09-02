@@ -2,6 +2,9 @@
 .behance {
   margin-top: 0.175rem;
 }
+.behance-mobile {
+  margin-top: 1.275rem;
+}
 .reddit {
   max-width: 90%;
   margin-top: -0.1rem;
