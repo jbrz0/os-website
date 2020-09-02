@@ -125,10 +125,12 @@ const Intro: React.FC<React.ReactNode> = () => {
       <div className="container mx-auto px-12 sm:px-24 h-full">
         <div className="flex items-center h-full">
 
+          <div className="absolute z-0 left-0 right-0 mx-auto blog-stuff">
           <img src="/art/blog-stuff.png"
-            className="absolute z-0 left-0 right-0 mx-auto blog-stuff"
+            className="fade-in"
             style={{filter: 'drop-shadow(0px 0px 20px rgba(0,0,0,0.65))'}}
           />
+          </div>
 
           <div className="block mx-auto relative z-10">
             <h1 className="text-white text-4xl sm:text-5xl md:text-6xl text-center">Visual Jargon</h1>

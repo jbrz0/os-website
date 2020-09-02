@@ -6,7 +6,6 @@ import Cookies from 'js-cookie'
 import {useRouter, NextRouter} from 'next/router'
 import MenuButton from './MenuBtn'
 import {titleCase} from '../../helpers/format-text'
-import {Howl} from 'howler'
 import Search from './Search'
 import postfeed from '../../markdown/0-index'
 import useOnClickOutside from '../../hooks/useOnClickOutside'
@@ -49,12 +48,6 @@ export const mobileSocial: Content[] = [
   { url: "https://reddit.com/r/oddscenes", icon: '/icons/profile.svg', title: 'Email'},
 ]
 
-const menuHover = new Howl({
-  // src: ['/sounds/menuHover.m4a']
-  // v2
-  src: ['']
-})
-
 const NavItem: React.FC<Content> = ({url, icon, title}, enter) => {
 
   const sound = useStoreState(state => state.sound.sound)
@@ -62,8 +55,7 @@ const NavItem: React.FC<Content> = ({url, icon, title}, enter) => {
   const path: string = router.pathname
   const active: boolean = path === url ? true : false
 
-  return <li className="md:mx-2 lg:mx-3 xl:mx-4" key={title}
-    onMouseEnter={() => sound ? menuHover.play() : ''}>
+  return <li className="md:mx-2 lg:mx-3 xl:mx-4" key={title}>
     <Link href={url}>
       <a
         className="flex items-stretch py-1 nav-item-link">
