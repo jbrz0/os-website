@@ -81,11 +81,11 @@ const MenuButton: React.FC<Viewport> = ({mobile}) => {
 
       <div className="fixed w-full bottom-0 bg-gray-800 py-3 flex justify-center">
         <div className="max-w-md">
-          <a href="mailto:oddscenes@gmail.com" className="float-left mx-2"><img src="social/a-email.svg" className="my-4 w-6" alt="email"/></a>
+          <a href="mailto:oddscenes@gmail.com" className="float-left mx-2"><img src="social/a-email.svg" className="my-4 w-6 email-mobile" alt="email"/></a>
           <Link href="//twitter.com/oddscenes"><a className="float-left mx-2"><img src="social/b-twitter.svg" className="my-4 w-6" alt="twitter"/></a></Link>
-          <Link href="//github.com/oddscenes"><a className="float-left mx-2"><img src="social/c-github.svg" className="my-4 w-6" alt="github"/></a></Link>
+          <Link href="//github.com/oddscenes"><a className="float-left mx-2"><img src="social/c-github.svg" className="my-4 w-6 github-mobile" alt="github"/></a></Link>
           <Link href="//behance.com/oddscenes"><a className="float-left mx-2"><img src="social/d-behance.svg" className="my-4 w-6 behance-mobile" alt="behance"/></a></Link>
-          <Link href="//twitch.tv/oddscenes"><a className="float-left mx-2"><img src="social/e-twitch.svg" className="my-4 w-5" alt="twitch"/></a></Link>
+          <Link href="//twitch.tv/oddscenes"><a className="float-left mx-2"><img src="social/e-twitch.svg" className="my-4 w-5 twitch-mobile" alt="twitch"/></a></Link>
         </div>
       </div>
 

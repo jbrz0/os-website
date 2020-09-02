@@ -82,6 +82,7 @@ const Intro: React.FC<React.ReactNode> = () => {
 
   const [recent, setRecent] = useState<Array<Post>>([...sortRecent()])
   const [coolness, setCoolness] = useState<Array<Post>>([...sortCoolness()])
+  const [ready, setReady] = useState<boolean>(false)
 
   function sortPosts(value: Content) {
     const selected: string = value.value
@@ -113,9 +114,12 @@ const Intro: React.FC<React.ReactNode> = () => {
 
     // Set posts default to most recent
     setSortType('recent')
+
+    // Set loaded
+    setReady(true)
   }, [])
 
-  return <>
+  return ready && <>
     <div className="bg-gray-1000 blog-header bg-cover bg-center relative overflow-hidden"
       style={{backgroundImage: 'url(/art/blog-header.jpg)'}}>
       <div className="container mx-auto px-12 sm:px-24 h-full">

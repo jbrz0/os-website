@@ -28,7 +28,7 @@ const Footer: React.FC<React.ReactNode> = () => {
     if (window) window.scrollTo(pos)
   }
 
-  return <div className="bg-gray-900 shadow-lg relative flex justify-center">
+  return <div className="bg-gray-900 shadow-lg relative flex justify-center z-20">
     <img src="/balance.svg" alt="Odd Scenes Favicon" className="w-20 h-20 sm:w-auto sm:h-auto absolute left-0 bottom-0" />
 
     <span className="text-gray-400 text-sm hidden sm:block ml-32 absolute left-0 mt-5">v12</span>

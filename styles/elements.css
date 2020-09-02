@@ -620,3 +620,10 @@
     position: absolute;
   }
 }
+@media (max-width: 767px) {
+
+  .about-profile {
+    margin-left: 7.5rem;
+    margin-top: -13rem;
+  }
+}

@@ -1,12 +1,20 @@
 const Intro: React.FC<React.ReactNode> = () => {
 
-  return <div className="h-full md:h-screen w-full relative"
-    style={{backgroundImage: 'url(/art/star.jpg)', backgroundSize: '200px 200px'}}>
+  // return <div className="h-full md:h-screen w-full relative"
+  //   style={{backgroundImage: 'url(/art/star.jpg)', backgroundSize: '200px 200px'}}>
 
+  return <>
+
+  <div className="z-0 star-sky absolute left-0 right-0 bottom-0 top-0 w-full md:h-screen">
+    <div className="stars"></div>
+    <div className="twinkling"></div>
+  </div>
+
+  <div className="h-full md:h-screen w-full relative z-10">
 
     <img src="/art/mountains-sm.png" className="w-full left-0 right-0 bottom-0 z-0 mountains" />
 
-    <div className="container mx-auto py-8 px-8 md:py-auto md:px-20">
+    <div className="container mx-auto py-8 px-8 md:py-auto md:px-20 relative md:static">
       <div className="grid grid-cols-12 h-full md:h-screen intro relative sm:static">
 
         <div className="col-span-7 items-center hidden md:flex relative z-10">
@@ -48,7 +56,7 @@ const Intro: React.FC<React.ReactNode> = () => {
       </div>
     </div>
   </div>
-
+  </>
 }
 
 export default Intro

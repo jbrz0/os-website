@@ -18,9 +18,9 @@ const Home: React.FC<React.ReactNode> = () => {
       <Nav />
       <Header />
       <Intro />
-      <div className="relative">
       <About />
       {/* <Line /> */}
+      <div className="relative z-20">
       <Divider type="1" />
       <Features />
       <RecentProj />

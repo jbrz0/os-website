@@ -9,3 +9,12 @@
   max-width: 90%;
   margin-top: -0.1rem;
 }
+.github-mobile {
+  width: 1.35rem;
+}
+.twitch-mobile {
+  margin-top: 1.2rem;
+}
+.email-mobile {
+  margin-top: 1.12rem;
+}
