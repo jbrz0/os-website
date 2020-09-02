@@ -1,5 +1,6 @@
 import Button from '../components/shared/Button'
 import ImageOne from '../components/blog/ImageOne'
+import Plink from '../components/shared/Plink'
 import Highlight from 'react-highlight.js'
 import {compOne, compTwo} from '../snippets/002-comp-maker'
 
@@ -64,7 +65,7 @@ The output is a _raw html_ file that can be used anywhere. Thats it. The process
 &nbsp;&nbsp;
 -----
 
-First step is to create an input file. From an ultra simple readme or docs you could form your input file pretty easily
+First step is to create an input file. From an ultra simple readme or docs you could form your input file pretty easily. Add in your logo and image assets in the same `/build` folder.
 
 &nbsp;&nbsp;
 -----
@@ -81,19 +82,19 @@ In future extensions you can see how there could be stuff like theming, more com
 &nbsp;&nbsp;
 -----
 
-Next step is to compile the basic input file. With the commands:
+Next step is to compile the basic input file. Simply running the index script:
 
 &nbsp;&nbsp;
 -----
 
-**compbot <input_file> <output_file>**
+** <input_file> <output_file>**
 
-`compbot input.odd ./dist/output.html`
+`node index.js`
 
 &nbsp;&nbsp;
 -----
 
-From there we have the output HTML file and its ready for use.
+From there we have the output HTML file and its ready for use. All the required files have been copied into the `/dist` folder. Images, css, html. With a few clicks I deployed it to netlify (point to `/dist` folder) - and thats it.
 
 &nbsp;&nbsp;
 -----
@@ -103,12 +104,12 @@ From there we have the output HTML file and its ready for use.
 &nbsp;&nbsp;
 -----
 
-To see it in action, below is an input file. With custom data. The button below it showcases a micro-site that is the HTML result of this input file.
+This is the output HTML from the above `input.odd` text file
 
 &nbsp;&nbsp;
 -----
 
-<Highlight language="shell">{compTwo}</Highlight>
+<Highlight language="html">{compTwo}</Highlight>
 
 &nbsp;&nbsp;
 -----
@@ -116,5 +117,13 @@ To see it in action, below is an input file. With custom data. The button below 
 &nbsp;&nbsp;
 -----
 
-<Button href="/lab/component-maker-demo" className="block gr-tw-3 py-6 px-8 max-w-xs mx-auto rounded hover:opacity-75 text-center" target="_blank">
-<span className="text-white">Check It Out</span></Button>
+> <Plink href="https://github.com/oddscenes/component-compiler" text="Get the Project on Github" />
+
+&nbsp;&nbsp;
+-----
+
+&nbsp;&nbsp;
+-----
+
+<Button href="/lab/component-compiler-with-node" className="block gr-tw-3 py-6 px-8 max-w-xs rounded hover:opacity-75 text-center" target="_blank">
+<span className="text-white">See the Output</span></Button>
