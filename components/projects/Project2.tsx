@@ -13,8 +13,7 @@ const Project2: React.FC<React.ReactNode> = () => {
         <div className="max-w-xl mx-auto block">
           <h2 className="text-white text-3xl mb-4">Buck Net</h2>
           <p className="text-gray-200 max-w-sm mb-10 mt-8">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Possimus similique sapiente ipsam commodi doloribus ipsam commodi doloribus.
+            Using the vast amounts of financial data out there, this project builds a crypto dashboard overview
           </p>
           <div className="mt-8 mb-24">
             <Button href="#" className="mb-4 inline-block text-gray-200 btn-default mr-4 text-lg">Visit Site</Button>

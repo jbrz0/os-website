@@ -128,7 +128,7 @@ const posts: Array<Post> = [
     tech: ["Any Tech", "NextJS", "React", "D3"],
     title: "Crypto Briefing Dashboard with Node, Redis & React",
     cover: "buck-net.jpg",
-    description: "Using D3 we can visalize and play with the vast amounts of crypto market data out there",
+    description: "Using the vast amounts of financial data out there, this project builds a crypto dashboard overview",
   },
   {
     id: 7,
@@ -144,7 +144,7 @@ const posts: Array<Post> = [
     tech: ["Any Tech", "NextJS", "NodeJS", "React"],
     title: "Morning Briefing Dashboard with React & NextJS",
     cover: "morning-briefing.jpg",
-    description: "I love the idea of a browser dashboard, this lab connects some tailored APIs into a UI",
+    description: "A browser homepage dashboard, this project connects some tailored APIs for a quick briefing",
   },
 ]
 

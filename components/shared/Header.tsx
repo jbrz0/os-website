@@ -23,6 +23,7 @@ const Header: React.FC<React.ReactNode> = () => {
 
     if (pathVar === '/') setPath(" Home")
     else if (pathVar === '/labs') setPath(" Labs")
+    else if (pathVar === '/proj') setPath(" Projects")
     else if (pathVar === '/lab/') setPath(" Lab")
     else if (pathVar === '/blog') setPath(" Blog")
     else setPath(pageTitle)

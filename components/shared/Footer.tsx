@@ -33,11 +33,11 @@ const Footer: React.FC<React.ReactNode> = () => {
 
     <span className="text-gray-400 text-sm hidden sm:block ml-32 absolute left-0 mt-5">v12</span>
 
-    <ReactTooltip uuid="email" id="email" />
-    <ReactTooltip uuid="twitter" id="twitter" />
-    <ReactTooltip uuid="github" id="github" />
-    <ReactTooltip uuid="behance" id="behance" />
-    <ReactTooltip uuid="twitch" id="twitch" />
+    <ReactTooltip uuid="TT-email" id="email" />
+    <ReactTooltip uuid="TT-twitter" id="twitter" />
+    <ReactTooltip uuid="TT-github" id="github" />
+    <ReactTooltip uuid="TT-behance" id="behance" />
+    <ReactTooltip uuid="TT-twitch" id="twitch" />
 
     <div className="max-w-md py-5">
       <a
