@@ -10,12 +10,12 @@ const Project1: React.FC<React.ReactNode> = () => {
           A browser homepage dashboard, this project connects some tailored APIs for a quick briefing
         </p>
         <div className="sm:flex sm:justify-center mt-8 mb-16 sm:mb-24">
-          <Button href="#" className="inline-block mr-4 mb-4 sm:mb-auto text-gray-200 btn-default text-lg">Visit Site</Button>
-          <Button href="#" className="inline-block text-white gr-tw-1 text-lg">View Project</Button>
+          <Button href="/lab/morning-briefing" className="inline-block mr-4 mb-4 sm:mb-auto text-gray-200 btn-default text-lg">View Site</Button>
+          <Button href="/blog/morning-briefing" className="inline-block text-white gr-tw-1 text-lg">View Post</Button>
         </div>
       </div>
 
-      <img src="projects/display1.png" className="block mx-auto" />
+      <img src="projects/display1.png" className="block mx-auto w-full" style={{maxWidth: '750px'}} />
     </div>
   </div>
 }

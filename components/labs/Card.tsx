@@ -30,7 +30,7 @@ const Card: React.FC<Props> = (props) => {
     ></div>
     <div className="bg-gray-900 group-hover:bg-gray-700 h-full"
       style={{borderRadius: '2rem'}}>
-      <img src={props.post.cover}
+      <img src={`${process.env.S3_BUCKET}/${props.post.cover}`}
         className="w-full h-24 lg:h-40 object-cover"
         style={{borderTopLeftRadius: '2rem', borderTopRightRadius: '0.125rem'}}
       />

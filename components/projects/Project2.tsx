@@ -16,8 +16,8 @@ const Project2: React.FC<React.ReactNode> = () => {
             Using the vast amounts of financial data out there, this project builds a crypto dashboard overview
           </p>
           <div className="mt-8 mb-24">
-            <Button href="#" className="mb-4 inline-block text-gray-200 btn-default mr-4 text-lg">Visit Site</Button>
-            <Button href="#" className="mb-4 inline-block text-white gr-tw-2 text-lg">View Project</Button>
+            <Button href="/lab/crypto-dashboard" className="mb-4 inline-block text-gray-200 btn-default mr-4 text-lg">View Site</Button>
+            <Button href="/blog/crypto-dashboard" className="mb-4 inline-block text-white gr-tw-2 text-lg">View Post</Button>
           </div>
         </div>
       </div>
