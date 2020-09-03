@@ -13,7 +13,7 @@ const Content1: React.FC<React.ReactNode> = () => {
   return <>
     <div className="p-6">
       <img
-        src="/projects/placeholder.png"
+        src={`${process.env.S3_BUCKET}/${postId(7).cover}`}
         className="w-full object-cover shadow-xl rounded-lg"
       />
       <p className="text-gray-100 text-lg max-w-screen-md mt-6 mx-auto">
@@ -27,7 +27,7 @@ const Content2: React.FC<React.ReactNode> = () => {
   return <>
     <div className="p-6">
       <img
-        src="/projects/placeholder.png"
+        src={`${process.env.S3_BUCKET}/${postId(6).cover}`}
         className="w-full object-cover shadow-xl rounded-lg"
       />
       <p className="text-gray-100 text-lg max-w-screen-md mt-6 mx-auto">
@@ -41,7 +41,7 @@ const Content3: React.FC<React.ReactNode> = () => {
   return <>
     <div className="p-6">
       <img
-        src="/projects/placeholder.png"
+        src={`${process.env.S3_BUCKET}/${postId(1).cover}`}
         className="w-full object-cover shadow-xl rounded-lg"
       />
       <p className="text-gray-100 text-lg max-w-screen-md mt-6 mx-auto">

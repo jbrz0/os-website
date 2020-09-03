@@ -29,7 +29,7 @@ const Labs: React.FC<React.ReactNode> = () => {
 
         <Link href={`/blog/${sorted[sorted.length - 1].slug}`}><a className="hover:opacity-75">
           <div className="rounded-sm lg:mb-6 xl:mb-8 bg-cover bg-center"
-            style={{backgroundImage: `url(${sorted[sorted.length - 1].cover})`}}>
+            style={{backgroundImage: `url(${process.env.S3_BUCKET}/${sorted[sorted.length - 1].cover})`}}>
             <div className="w-full h-full gr-tp-purple  py-10 px-6 sm:px-24 sm:pt-20 sm:pb-64 bg-fixed">
 
               {sorted[sorted.length - 1].tags.slice(0, 2).map((tag, i) => {
@@ -46,7 +46,7 @@ const Labs: React.FC<React.ReactNode> = () => {
 
           <div className="col-span-3 sm:col-span-1 rounded-sm">
             <Link href={`/blog/${sorted[sorted.length - 2].slug}`}><a className="hover:opacity-75">
-              <img src={sorted[sorted.length - 2].cover}
+              <img src={`${process.env.S3_BUCKET}/${sorted[sorted.length - 2].cover}`}
                 className="xl:mt-auto lg:w-16 lg:h-16 xl:w-20 xl:h-20 float-left
                 mr-4 mt-2 mb-2 lg:mb-16 rounded-sm object-cover h-24 sm:h-32 w-1/3 sm:w-full" />
 
@@ -59,7 +59,7 @@ const Labs: React.FC<React.ReactNode> = () => {
 
           <div className="col-span-3 sm:col-span-1 rounded-sm">
             <Link href={`/blog/${sorted[sorted.length - 3].slug}`}><a className="hover:opacity-75">
-              <img src={sorted[sorted.length - 3].cover}
+              <img src={`${process.env.S3_BUCKET}/${sorted[sorted.length - 3].cover}`}
                 className="xl:mt-auto lg:w-16 lg:h-16 xl:w-20 xl:h-20 float-left
                 mr-4 mt-2 mb-2 lg:mb-16 rounded-sm object-cover h-24 sm:h-32 w-1/3 sm:w-full" />
 
@@ -72,7 +72,7 @@ const Labs: React.FC<React.ReactNode> = () => {
 
           <div className="col-span-3 sm:col-span-1 rounded-sm">
             <Link href={`/blog/${sorted[sorted.length - 4].slug}`}><a className="hover:opacity-75">
-              <img src={sorted[sorted.length - 4].cover}
+              <img src={`${process.env.S3_BUCKET}/${sorted[sorted.length - 4].cover}`}
                 className="xl:mt-auto lg:w-16 lg:h-16 xl:w-20 xl:h-20 float-left
                 mr-4 mt-2 mb-2 lg:mb-16 rounded-sm object-cover h-24 sm:h-32 w-1/3 sm:w-full" />
 
