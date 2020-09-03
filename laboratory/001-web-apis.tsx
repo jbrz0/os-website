@@ -17,9 +17,16 @@ function Lab() {
 
   return <>
     {/* <Nav /> */}
+    <img src={`${process.env.S3_BUCKET}/apis-bg.jpg`}
+      className="fixed w-full left-0 right-0 top-0 bottom-0 h-screen z-0 object-cover"
+      style={{opacity: '0.1'}}
+    />
 
-    <div className="mt-16 md:mt-6 md:mb-40">
-      <h1 className="text-white text-3xl text-center mb-10 md:mt-32 md:mb-20">Web APIs Gallery</h1>
+    <div className="mt-16 md:mt-6 md:mb-40 relative z-10">
+      <h1 className="text-3xl text-center mb-10 md:mt-32 md:mb-20 gr-rb-dark headline
+        border-dashed mx-auto pb-4"
+        style={{width: '300px', borderBottomWidth: '1px', borderColor: 'rgba(255,255,255,0.5)'}}>Web APIs Gallery</h1>
+
       <div className="max-w-screen-lg mx-auto">
         <div className="grid grid-cols-4 gap-3 lg:gap-4 mb-4 px-16">
           {items.map((item, i) => {

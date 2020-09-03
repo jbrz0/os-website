@@ -29,8 +29,8 @@ const Intro: React.FC<Props> = (props) => {
       </div>
     </div>
 
-    <img src={props.cover} className="post-cover w-full object-cover object-center
-      mb-0 sm:mb-4 md:mb-12 rounded-lg mx-auto h-auto" style={{maxWidth: '1400px'}} />
+    <img src={`${process.env.S3_BUCKET}/${props.cover}`} className="post-cover w-full object-cover object-center
+      mb-0 sm:mb-4 md:mb-12 rounded-lg mx-auto h-auto" style={{maxWidth: '1150px'}} />
   </div>
 }
 

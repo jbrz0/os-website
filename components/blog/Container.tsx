@@ -127,7 +127,7 @@ const Intro: React.FC<React.ReactNode> = () => {
 
           <div className="absolute z-0 left-0 right-0 mx-auto blog-stuff">
           <img src="/art/blog-stuff.png"
-            className="fade-in"
+            className="fade-in mx-auto block"
             style={{filter: 'drop-shadow(0px 0px 20px rgba(0,0,0,0.65))'}}
           />
           </div>

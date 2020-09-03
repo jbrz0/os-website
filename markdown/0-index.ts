@@ -31,7 +31,7 @@ const posts: Array<Post> = [
     tags: ["web", "design"],
     tech: ["Any Tech", "CSS"],
     title: "In Depth Guide to CSS Colours & Functions",
-    cover: "https://picsum.photos/1440/900",
+    cover: "css-colours.jpg",
     description: "A quick and basic run through of the native CSS colour functions available, no plugins",
   },
   {
@@ -47,7 +47,7 @@ const posts: Array<Post> = [
     tags: ["gallery", "web"],
     tech: ["Any Tech", "api", "CSS"],
     title: "Built-in Web API Specifications Gallery",
-    cover: "https://picsum.photos/1440/900",
+    cover: "web-apis.jpg",
     description: "Exploring the more popular and widely adapted Web APIs, all natively supported in browser",
   },
   {
@@ -63,7 +63,7 @@ const posts: Array<Post> = [
     tags: ["tools", "framework", "experimental"],
     tech: ["Any Tech", "NodeJS", "CSS"],
     title: "Building a \"Component Compiler\" for the Web with NodeJS",
-    cover: "https://picsum.photos/1440/900",
+    cover: "component-compiler.jpg",
     description: "Trying out an idea I had to input extremely basic syntax and have it spit out components",
   },
   {
@@ -78,9 +78,9 @@ const posts: Array<Post> = [
     difficulty: "easy",
     tags: ["productivity", "tools"],
     tech: ["Any Tech", "Tailwind"],
-    title: "Uses: Hardware & Software",
-    cover: "https://picsum.photos/1440/900",
-    description: "My uses page, with as much software & hardware tools I could think of",
+    title: "Uses: Hardware",
+    cover: "uses.jpg",
+    description: "My uses page, with as much hardware tools I could think used frequently",
   },
   {
     id: 4,
@@ -95,7 +95,7 @@ const posts: Array<Post> = [
     tags: ["data", "fun"],
     tech: ["Any Tech", "React", "GraphQL", "Apollo"],
     title: "Exposing Your \"About Me\" as a GraphQL Endpoint",
-    cover: "https://picsum.photos/1440/900",
+    cover: "aboutme-graphql.jpg",
     description: "Put your public information out there in the form of a graphQL playground for the world",
   },
   {
@@ -111,7 +111,7 @@ const posts: Array<Post> = [
     tags: ["productivity", "tools", "software"],
     tech: [],
     title: "Productivity & Developer Plugins for Alfred",
-    cover: "https://picsum.photos/1440/900",
+    cover: "alfred.jpg",
     description: "Going through some of the most beneficial Alfred plugins that save so much time",
   },
   {
@@ -127,7 +127,7 @@ const posts: Array<Post> = [
     tags: ["data", "api", "project"],
     tech: ["Any Tech", "NextJS", "React", "D3"],
     title: "Crypto Briefing Dashboard with Node, Redis & React",
-    cover: "https://picsum.photos/1440/900",
+    cover: "buck-net.jpg",
     description: "Using D3 we can visalize and play with the vast amounts of crypto market data out there",
   },
   {
@@ -143,7 +143,7 @@ const posts: Array<Post> = [
     tags: ["web", "project"],
     tech: ["Any Tech", "NextJS", "NodeJS", "React"],
     title: "Morning Briefing Dashboard with React & NextJS",
-    cover: "https://picsum.photos/1440/900",
+    cover: "morning-briefing.jpg",
     description: "I love the idea of a browser dashboard, this lab connects some tailored APIs into a UI",
   },
 ]
