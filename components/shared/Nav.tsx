@@ -85,7 +85,7 @@ const Nav: React.FC<React.ReactNode> = () => {
     // setSound()
   }, [])
 
-  return <div className="fixed w-full top-0 z-20">
+  return <div className="fixed w-full top-0 z-40">
     <nav className="bg-gray-900 rounded-sm m-1 p-2 grid grid-cols-12 gap-1 shadow-lg">
 
       <ReactTooltip uuid="tooltip" />
@@ -109,9 +109,9 @@ const Nav: React.FC<React.ReactNode> = () => {
         <ul className="absolute right-0 mr-2 md:hidden">
           <li className={`bg-gray-700 hover:bg-gray-800 cursor-pointer
             rounded-sm mr-1 flex self-center py-2 px-2`} onClick={() => setShow(true)}>
-            <Link href="/"><a className="w-4">
+            <a className="w-4">
               <img src="/icons/search.svg" alt="Menu" className="nav-search" />
-            </a></Link>
+            </a>
           </li>
         </ul>
 

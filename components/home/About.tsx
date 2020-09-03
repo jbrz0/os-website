@@ -16,6 +16,7 @@ const About: React.FC<React.ReactNode> = () => {
             <img
               src="/home/profile.jpg"
               className="w-24 h-24 mb-6 rounded-full object-cover
+              hidden md:block
               absolute top-0 left-0 z-0 about-profile
               md:static md:mt-0 md:ml-0"
             />

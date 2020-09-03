@@ -10,7 +10,7 @@ const Intro: React.FC<React.ReactNode> = () => {
     <div className="twinkling"></div>
   </div>
 
-  <div className="h-full md:h-screen w-full relative z-10">
+  <div className="h-full md:h-screen w-full relative z-10" style={{minHeight: '100vh'}}>
 
     <img src="/art/mountains-sm.png" className="w-full left-0 right-0 bottom-0 z-0 mountains" />
 
