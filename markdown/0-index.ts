@@ -85,9 +85,9 @@ const posts: Array<Post> = [
   {
     id: 4,
     number: '004',
-    slug: "about-me-graphql-endpoint",
+    slug: "//d2ml5pl4d66ya9.cloudfront.net/playground",
     isLab: true,
-    onSite: true,
+    onSite: false,
     filename: "004-graphql-me",
     date: "Aug 7, 2020",
     coolness: 2,

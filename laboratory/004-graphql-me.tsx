@@ -4,9 +4,7 @@ document.getElementsByTagName('body')[0].style.overflow = 'hidden'
 
 function Lab() {
 
-  const p = `http://`
-
-  return <iframe src={`${p}54.81.247.82/playground`} frameBorder="0"
+  return <iframe src={`https://d2ml5pl4d66ya9.cloudfront.net/playground`} frameBorder="0"
   className="w-full h-screen"></iframe>
 }
 
