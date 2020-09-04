@@ -28,7 +28,7 @@ function Lab() {
         style={{width: '300px', borderBottomWidth: '1px', borderColor: 'rgba(255,255,255,0.5)'}}>Web APIs Gallery</h1>
 
       <div className="max-w-screen-lg mx-auto">
-        <div className="grid grid-cols-4 gap-3 lg:gap-4 mb-4 px-16">
+        <div className="grid grid-cols-4 gap-3 lg:gap-4 mb-24 md:mb-4 px-16">
           {items.map((item, i) => {
             return <div className="col-span-4 sm:col-span-2 md:col-span-1 bg-gray-900 w-full rounded-lg pb-4" key={i}>
 
