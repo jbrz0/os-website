@@ -8,6 +8,7 @@ interface Props {
   post?: Post,
   onSite?: boolean,
   slug?: string,
+  url?: string,
 }
 
 const Card: React.FC<Props> = (props) => {
@@ -45,7 +46,7 @@ const Card: React.FC<Props> = (props) => {
         className="text-gray-200 text-base
         hover:bg-gray-500 hover:text-white col-span-1
         border-solid border border-transparent mb-4">Blog</Button>
-      <Button href={props.onSite ? `/lab/${props.slug}` : `${props.slug}`}
+      <Button href={props.url === "" ? `/lab/${props.slug}` : `${props.url}`}
         target={props.onSite || props.slug.slice(0, 2) !== '//' ? '_self' : '_blank'}
         className="text-gray-100 text-base
         group-hover:bg-purple hover:text-white col-span-1

@@ -3,6 +3,7 @@
 export type Post = {
   id: number,
   number: string,
+  url?: string,
   slug: string,
   isLab: boolean | null,
   onSite: boolean, // within /labs URL
@@ -21,6 +22,7 @@ const posts: Array<Post> = [
   {
     id: 0,
     number: '000',
+    url: "",
     slug: "css-colour-functions",
     isLab: false,
     onSite: null,
@@ -37,6 +39,7 @@ const posts: Array<Post> = [
   {
     id: 1,
     number: '001',
+    url: "",
     slug: "web-apis-gallery",
     isLab: true,
     onSite: true,
@@ -53,6 +56,7 @@ const posts: Array<Post> = [
   {
     id: 2,
     number: '002',
+    url: "",
     slug: "component-compiler-with-node",
     isLab: true,
     onSite: true,
@@ -69,6 +73,7 @@ const posts: Array<Post> = [
   {
     id: 3,
     number: '003',
+    url: "uses",
     slug: "uses",
     isLab: true,
     onSite: false,
@@ -85,7 +90,8 @@ const posts: Array<Post> = [
   {
     id: 4,
     number: '004',
-    slug: "//d2ml5pl4d66ya9.cloudfront.net/playground",
+    url: "//d2ml5pl4d66ya9.cloudfront.net/playground",
+    slug: "about-me-graphql-endpoint",
     isLab: true,
     onSite: false,
     filename: "004-graphql-me",
@@ -101,6 +107,7 @@ const posts: Array<Post> = [
   {
     id: 5,
     number: '005',
+    url: "",
     slug: "productivity-and-developer-plugins-for-alfred",
     isLab: false,
     onSite: null,
@@ -117,6 +124,7 @@ const posts: Array<Post> = [
   {
     id: 6,
     number: '06',
+    url: "",
     slug: "crypto-dashboard",
     isLab: true,
     onSite: true,
@@ -133,6 +141,7 @@ const posts: Array<Post> = [
   {
     id: 7,
     number: '007',
+    url: "",
     slug: "morning-briefing",
     isLab: true,
     onSite: true,

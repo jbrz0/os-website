@@ -86,6 +86,7 @@ const Container: React.FC<React.ReactNode> = () => {
             slug={lab.slug}
             onSite={lab.onSite}
             key={i}
+            url={lab.url}
             post={lab} />)}
 
           {labs.length >= postAmount && <div className="col-span-2">
