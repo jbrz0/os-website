@@ -25,8 +25,6 @@ Production:
 
 `npm start`
 
-&nbsp;&nbsp;&nbsp;&nbsp;
-
 ### Depencencies:
 - NextJS / ReactJS
 - Typescript
