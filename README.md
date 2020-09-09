@@ -12,18 +12,9 @@ A Node/ReactJS portfolio website app, with a dynamic markdown blog
 
 
 ### Usage:
-
-Dev:
-
-`npm run dev`
-
-Build:
-
-`npm run build`
-
-Production:
-
-`npm start`
+- Dev: `npm run dev`
+- Build: `npm run build`
+- Production: `npm start`
 
 ### Depencencies:
 - NextJS / ReactJS
