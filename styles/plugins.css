@@ -23,9 +23,12 @@
   margin: 0rem auto 3rem;
   display: block;
 }
+.gridjs-tbody .gridjs-tr {
+  height: 80px;
+}
 .gridjs th {
   text-align: left;
-  border-bottom: 1px solid #131033;
+  border-bottom: 1px dashed #00f0e3;
   padding-bottom: 0.5rem;
 }
 .gridjs th:hover {

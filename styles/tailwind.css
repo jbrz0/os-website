@@ -33,3 +33,6 @@ input {
   caret-color: rgba(62, 11, 220);
   outline: 0;
 }
+.behind {
+  z-index: -1;
+}

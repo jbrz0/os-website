@@ -19,6 +19,7 @@ function List() {
 
   return ready && <>
 
+    <img src={`${process.env.S3_BUCKET}/desk.jpg`} className="fixed w-full top-0 bottom-0 right-0 left-0 h-screen object-cover object-center behind" />
     <div className="px-4">
     <h1 className="text-white text-3xl text-center mt-32 mb-20">Uses</h1>
     <div className="container mx-auto max-w-screen-md mb-48">
