@@ -90,7 +90,7 @@ const Labs: React.FC<React.ReactNode> = () => {
 
       <Link href={`/blog/${sorted[sorted.length - 5].slug}`}><a className="md:col-span-4 lg:col-span-1 mb-4 md:mb-auto max-w-sm md:max-w-none mx-auto">
         <div className="bg-gray-100 rounded-sm shadow-lg p-8 group cursor-pointer hover:bg-purple">
-          <h6 className="text-gray-300 text-sm mb-3 group-hover:text-gray-200">{sorted[sorted.length - 5].date}</h6>
+          {/* <h6 className="text-gray-300 text-sm mb-3 group-hover:text-gray-200">{sorted[sorted.length - 5].date}</h6> */}
           <h2 className="font-bold text-2xl mb-5 group-hover:text-gray-100">{useExcerpt(sorted[sorted.length - 5].title, 12)}</h2>
           <p className="text-md text-gray-500 mb-8 md:mb-20 group-hover:text-gray-200">
             {useExcerpt(sorted[sorted.length - 5].description, 12)}
@@ -103,7 +103,7 @@ const Labs: React.FC<React.ReactNode> = () => {
 
       <Link href={`/blog/${sorted[sorted.length - 6].slug}`}><a className="md:col-span-2 lg:col-span-1 mb-4 md:mb-auto max-w-sm md:max-w-none mx-auto">
         <div className="bg-gray-100 rounded-sm shadow-lg p-8 group cursor-pointer hover:bg-purple">
-          <h6 className="text-gray-300 text-sm mb-3 group-hover:text-gray-200">{sorted[sorted.length - 6].date}</h6>
+          {/* <h6 className="text-gray-300 text-sm mb-3 group-hover:text-gray-200">{sorted[sorted.length - 6].date}</h6> */}
           <h2 className="font-bold text-2xl mb-5 group-hover:text-gray-100">{useExcerpt(sorted[sorted.length - 6].title, 12)}</h2>
           <p className="text-md text-gray-500 mb-8 md:mb-20 group-hover:text-gray-200">
             {useExcerpt(sorted[sorted.length - 6].description, 12)}
@@ -116,7 +116,7 @@ const Labs: React.FC<React.ReactNode> = () => {
 
       <Link href={`/blog/${sorted[sorted.length - 7].slug}`}><a className="md:col-span-2 lg:col-span-1 max-w-sm md:max-w-none mx-auto">
         <div className="bg-gray-100 rounded-sm shadow-lg p-8 group cursor-pointer hover:bg-purple">
-          <h6 className="text-gray-300 text-sm mb-3 group-hover:text-gray-200">{sorted[sorted.length - 7].date}</h6>
+          {/* <h6 className="text-gray-300 text-sm mb-3 group-hover:text-gray-200">{sorted[sorted.length - 7].date}</h6> */}
           <h2 className="font-bold text-2xl mb-5 group-hover:text-gray-100">{useExcerpt(sorted[sorted.length - 7].title, 12)}</h2>
           <p className="text-md text-gray-500 mb-8 md:mb-20 group-hover:text-gray-200">
             {useExcerpt(sorted[sorted.length - 7].description, 12)}

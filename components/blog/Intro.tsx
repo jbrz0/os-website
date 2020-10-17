@@ -20,9 +20,9 @@ const Intro: React.FC<Props> = (props) => {
               {tag}</span>)}
           </p>
 
-          <p className="text-white sm:text-right float-left mt-2 sm:mt-3 mb-5 sm:mb-3 text-md w-full sm:w-1/2">
+          {/* <p className="text-white sm:text-right float-left mt-2 sm:mt-3 mb-5 sm:mb-3 text-md w-full sm:w-1/2">
             {props.date}
-          </p>
+          </p> */}
         </div>
 
         <h1 className="text-white text-3xl">{props.title}</h1>
