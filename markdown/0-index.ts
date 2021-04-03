@@ -92,7 +92,7 @@ const posts: Array<Post> = [
     number: '004',
     url: "//d2ml5pl4d66ya9.cloudfront.net/playground",
     slug: "about-me-graphql-endpoint",
-    isLab: true,
+    isLab: false,
     onSite: false,
     filename: "004-graphql-me",
     date: "Aug 7, 2020",
@@ -124,7 +124,7 @@ const posts: Array<Post> = [
   {
     id: 6,
     number: '06',
-    url: "",
+    url: "/lab/crypto-dashboard",
     slug: "crypto-dashboard",
     isLab: true,
     onSite: true,
