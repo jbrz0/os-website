@@ -12,7 +12,7 @@ const Prev: React.FC<Props> = (props) => {
   return <div className="pt-40 pb-24 bg-red shadow-2xl">
     <div className="container mx-auto px-10 mb-20 max-w-screen-lg">
 
-    <Link href={props.href}><a>
+    <a href={props.href}>
       <div className="grid grid-cols-8 group">
         <div className="col-span-10 md:col-span-6 group-hover:opacity-75">
           <div className="text-gray-100 text-lg">{props.subtext === '' ? 'Previous Post' : props.subtext}</div>
@@ -28,7 +28,7 @@ const Prev: React.FC<Props> = (props) => {
           </div>
         </div>
       </div>
-    </a></Link>
+    </a>
 
     </div>
   </div>

@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@babel/core": "^7.13.14",
     "@mdx-js/loader": "^1.6.13",
     "@next/mdx": "^9.4.4",
     "autoprefixer": "^9.8.0",
