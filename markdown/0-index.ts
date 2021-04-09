@@ -123,10 +123,10 @@ const posts: Array<Post> = [
   },
   {
     id: 6,
-    number: '06',
+    number: '006',
     url: "/lab/crypto-dashboard",
     slug: "crypto-dashboard",
-    isLab: true,
+    isLab: false,
     onSite: true,
     filename: "006-crypto-dash",
     date: "Aug 20, 2020",
