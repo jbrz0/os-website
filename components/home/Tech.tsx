@@ -68,8 +68,7 @@ const Tech: React.FC<React.ReactNode> = () => {
         <a className="underline hover:no-underline hover:opacity-75">
         individual labs
       </a></Link> */}
-      {/* Just a brief overview, not an exhaustive list */}
-      A quick showcase of some relevant frontend web tools
+
     </div>
   </div>
 }
