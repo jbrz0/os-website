@@ -15,24 +15,20 @@ const Home: React.FC<React.ReactNode> = () => {
 
   return (
     <>
-      {/* <Nav /> */}
+      <Nav />
       <Header />
       <Intro />
       <About />
       {/* <Line /> */}
       <div className="relative z-20">
-      <Divider type="1" />
-      <Features />
-
-      <Divider type="2" />
-
-
-      {/* <RecentProj /> */}
-      <Tech />
-      {/* <Divider type="2" /> */}
-      {/* <Labs /> */}
-      {/* <Line /> */}
-      {/* <Store /> */}
+        <Divider type="1" />
+        <Features />
+        <RecentProj />
+        <Tech />
+        <Divider type="2" />
+        <Labs />
+        {/* <Line />
+        <Store /> */}
       </div>
       <Footer />
     </>
