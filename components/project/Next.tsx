@@ -17,7 +17,7 @@ const Next: React.FC<React.ReactNode> = () => {
           <div className="bg-purple group-hover:bg-dark-purple
             group-hover:opacity-100 float-right w-20 h-20 rounded-full
             flex align-center mt-10">
-              <img src="/icons/arrow-right.svg" className="block mx-auto" />
+              <img src="/icons/arrow-right.svg" className="block mx-auto w-6" />
           </div>
         </div>
       </div>
