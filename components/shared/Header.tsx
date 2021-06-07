@@ -41,6 +41,8 @@ const Header: React.FC<React.ReactNode> = () => {
         {path}
       </title>
 
+      <meta name="description" content="Building the modern web with an eye for design and interaction" />
+
       {/* OG Tags */}
       <meta property="og:title" content="Odd Scenes" />
       <meta property="og:description" content="Building the modern web with an eye for design and interaction" />
