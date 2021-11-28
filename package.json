@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "forever start ./node_modules/.bin/next"
+    "start": "next start",
+    "prod": "forever start -c 'npm start' ./"
   },
   "dependencies": {
     "@babel/core": "^7.13.14",
