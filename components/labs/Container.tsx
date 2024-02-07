@@ -54,13 +54,15 @@ const Container: React.FC<React.ReactNode> = () => {
 
     <img src="/art/ribcage.png" className="opacity-50 object-contain fixed left-0 right-0 mx-auto z-0 top-0 bottom-0 h-screen" />
 
-      <div className="z-10 relative mx-auto px-12 grid md:grid-cols-1 lg:grid-cols-3 lg:gap-2 container labs-container">
+      <div className="z-10 relative mx-auto px-12 grid md:grid-cols-1 lg:grid-cols-8 lg:gap-2 container labs-container">
 
-        <div className="md:col-span-1 mb-4 px-2 lg:px-auto lg:mb-auto lg:col-span-1">
+        <div className="col-span-1"></div>
+
+        <div className="md:col-span-1 mb-4 px-2 lg:px-auto lg:mb-auto lg:col-span-2">
           <Sidebar />
         </div>
 
-        <div className="md:col-span-1 lg:col-span-2 lab-cards grid grid-cols-2 gap-6 px-2">
+        <div className="md:col-span-1 lg:col-span-4 lab-cards grid grid-cols-2 gap-6 px-2">
 
           {labs.slice(0, postAmount).filter(post => {
             // Text
@@ -95,6 +97,8 @@ const Container: React.FC<React.ReactNode> = () => {
             hover:bg-gray-300 mx-auto mt-10" onClick={increasePosts}>Load More</BtnStatic>
           </div>}
         </div>
+
+        <div className="col-span-1"></div>
 
       </div>
     </div>

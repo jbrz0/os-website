@@ -90,9 +90,9 @@ const RecentProj: React.FC<React.ReactNode> = () => {
     </div>
 
     <div className="container mx-auto max-w-screen-md">
-      <Link href="/projects"><a className="hover:underline text-yellow inline-block">
+      <Link href="/projects" className="hover:underline text-yellow inline-block">
         <h3 className="container mx-auto max-w-screen-md text-yellow font-bold">See More Projects</h3>
-      </a></Link>
+      </Link>
     </div>
 
   </div>

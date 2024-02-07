@@ -1,7 +1,7 @@
 import {useState, useEffect, useRef} from 'react'
 import {useStoreState, useStoreActions} from '../../hooks/useStore'
 import Link from 'next/link'
-import ReactTooltip from "react-tooltip"
+// import ReactTooltip from "react-tooltip"
 import Cookies from 'js-cookie'
 import {useRouter, NextRouter} from 'next/router'
 import MenuButton from './MenuBtn'
@@ -56,13 +56,11 @@ const NavItem: React.FC<Content> = ({url, icon, title}, enter) => {
   const active: boolean = path === url ? true : false
 
   return <li className="md:mx-2 lg:mx-3 xl:mx-4" key={title}>
-    <Link href={url}>
-      <a
+    <Link href={url}
         className="flex items-stretch py-1 nav-item-link">
         <img src={active ? icon + '-active.svg' : icon + '.svg'}
           className="flex flex-none pr-2 hover:blue-800" />
         <span className="text-gray-200 text-sm">{title}</span>
-      </a>
     </Link>
   </li>
 }
@@ -88,7 +86,7 @@ const Nav: React.FC<React.ReactNode> = () => {
   return <div className="fixed w-full top-0 z-40">
     <nav className="bg-gray-900 rounded-sm m-1 p-2 grid grid-cols-12 gap-1 shadow-lg">
 
-      <ReactTooltip uuid="tooltip" />
+      {/* <ReactTooltip uuid="tooltip" /> */}
 
       <div className="sm:col-span-12 md:col-span-5 lg:col-span-3 flex self-center">
 
@@ -96,10 +94,10 @@ const Nav: React.FC<React.ReactNode> = () => {
           <MenuButton mobile />
         </ul>
 
-        <Link href="/"><a className="flex flex-none md:block md:absolute md:left-0 md:top-0 md:mt-4 md:ml-4">
+        <Link href="/" className="flex flex-none md:block md:absolute md:left-0 md:top-0 md:mt-4 md:ml-4">
           <img src="/logo.svg" alt="Odd Scenes Logo"
             className="w-40 xl:w-40 nav-logo" />
-        </a></Link>
+        </Link>
 
 
         { show && <div className="absolute top-0 right-0 tablet-dd" ref={ref}>
@@ -143,11 +141,11 @@ const Nav: React.FC<React.ReactNode> = () => {
                 data-background-color="#4028fb"
                 data-arrow-color="#4028fb">
                 {url !== "/sound" &&
-                  <Link href={url}><a className="self-center relative">
+                  <Link href={url} className="self-center relative">
                     {isNew && <span className="absolute bg-red w-1 h-1
                       rounded-full right-0 top-0" />}
                     <img src={icon} alt={title} className="flex flex-none w-4" />
-                  </a></Link>
+                  </Link>
                 }
               </li>
             )}

@@ -1,38 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Tailwind Stuff */
-@import "tailwindcss/base";
+/* @import "tailwindcss/base";
 @import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "tailwindcss/utilities"; */
 
-/* Typography */
-@import "./fonts";
-@import "./type";
-
-/* Design */
-@import "./gradients.css";
-@import "./icons.css";
-@import "./buttons.css";
-@import "./elements.css";
-
-/* Components */
-@import "./nav";
-@import "./code";
-@import "./plugins";
-@import "./animations";
-
-/* Sections */
-@import "./intro";
-@import "./post";
-
-/* Labs */
-@import "./labs";
-
-body {
-  @apply bg-black;
-}
-input {
-  caret-color: rgba(62, 11, 220);
-  outline: 0;
-}
-.behind {
-  z-index: -1;
-}

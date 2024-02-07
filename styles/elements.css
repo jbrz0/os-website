@@ -62,6 +62,15 @@
   cursor: pointer;
   padding: 0;
 }
+
+#react-select-1-option-0, #react-select-1-option-1 {
+  background: transparent !important;
+}
+
+#react-select-1-option-0:hover, #react-select-1-option-1:hover {
+  background: #131033 !important;
+}
+
 /* select (sort posts) */
 .selector.sort-posts {
   max-width: 14rem;

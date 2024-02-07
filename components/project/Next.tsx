@@ -5,7 +5,7 @@ const Next: React.FC<React.ReactNode> = () => {
   return <div className="pt-40 pb-32 bg-red shadow-2xl">
     <div className="container mx-auto px-10 mb-20 max-w-screen-lg">
 
-    <Link href="#"><a>
+    <Link href="#">
       <div className="grid grid-cols-8 group">
         <div className="col-span-10 md:col-span-6 group-hover:opacity-75">
           <div className="text-gray-100 text-lg">Next Project</div>
@@ -21,7 +21,7 @@ const Next: React.FC<React.ReactNode> = () => {
           </div>
         </div>
       </div>
-    </a></Link>
+    </Link>
 
     </div>
   </div>

@@ -9,7 +9,7 @@ const Overlay: React.FC<Props> = (props) => {
   return <>
     <>{props.children}</>
 
-    <Link href={props.href}><a className="fixed z-30">
+    <Link href={props.href} className="fixed z-30">
     <div className="fixed bottom-0 right-0 mr-2 mb-2 lg:mr-12 lg:mb-10
     card-overlay px-2 py-1 shadow-xl bg-gray-1000 hover:opacity-75">
 
@@ -29,7 +29,7 @@ const Overlay: React.FC<Props> = (props) => {
         <div><img src="/logo.svg" className="w-40" /></div>
       </div>
     </div>
-    </a></Link>
+    </Link>
   </>
 }
 

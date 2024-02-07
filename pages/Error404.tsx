@@ -16,12 +16,12 @@ const Error404: React.FC<React.ReactNode> = () => {
         <div className="mb-10 text-lg font-light text-center text-gray-200">
           This page does not exist
         </div>
-        <Link href="/"><a>
-          <button className="gr-tw-3 text-white font-light uppercase rounded
+        <Link href="/">
+          <button className="gr-tw-3 text-white uppercase rounded
             px-10 py-3 text-center block mx-auto text-lg font-normal">
               Go Home
             </button>
-        </a></Link>
+        </Link>
       </div>
       <img src="/404bot.svg" className="w-full absolute bottom-0" />
     </div>

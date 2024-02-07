@@ -57,10 +57,10 @@ const Search: React.FC<Props> = (props) => {
       style={{maxWidth: '315px'}} ref={ref}>
       {visible && posts.slice(0, 5).map((post, i) => {
 
-        return <Link href={`/blog/${post.slug}`} key={i}><a className="hover:opacity-75"><li className="pl-3 my-2">
+        return <Link href={`/blog/${post.slug}`} key={i} className="hover:opacity-75"><li className="pl-3 my-2">
           <div className="text-white font-bold mt-1">{post.title}</div>
           {/* <div className="text-gray-200 text-sm mb-1">{post.date}</div> */}
-        </li></a></Link>
+        </li></Link>
       })}
     </ul>
   </>

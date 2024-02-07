@@ -10,6 +10,12 @@ module.exports = {
   // purge: ['./components/**/*.js', './pages/**/*.js'],
   // variants: ['responsive', 'group-hover', 'group-focus', 'focus-within', 'first', 'last', 'odd', 'even', 'hover', 'focus', 'active', 'visited', 'disabled'],
 
+  content: [
+    './pages/**/*.{html,js,jsx,tsx}',
+    './pages/lab/**/*.{html,js,jsx,tsx}',
+    './pages/blog/**/*.{html,js,jsx,tsx}',
+    './components/**/*.{html,js,jsx,tsx}'
+  ],
   variants: {
     textColor: ['responsive', 'hover', 'focus', 'group-hover'],
     backgroundColor: ['responsive', 'hover', 'focus', 'active', 'group-hover'],

@@ -71,9 +71,9 @@ const MenuButton: React.FC<Viewport> = ({mobile}) => {
       <div className="h-full flex items-center">
         <div className="ml-8 pt-6 pb-2">
         {mobileMenu.map(({url, icon, title}, i) => <span key={i}>
-          <Link href={url}><a>
+          <Link href={url}>
             <div className="menu-text text-4xl text-white mb-6 hover:opacity-85">{title}</div>
-          </a></Link>
+          </Link>
           </span>
         )}
         </div>
@@ -82,10 +82,10 @@ const MenuButton: React.FC<Viewport> = ({mobile}) => {
       <div className="fixed w-full bottom-0 bg-gray-800 py-3 flex justify-center">
         <div className="max-w-md">
           <a href="mailto:oddscenes@gmail.com" className="float-left mx-2"><img src="/social/a-email.svg" className="my-4 w-6 email-mobile" alt="email"/></a>
-          <Link href="//twitter.com/oddscenes"><a className="float-left mx-2"><img src="/social/b-twitter.svg" className="my-4 w-6" alt="twitter"/></a></Link>
-          <Link href="//github.com/oddscenes"><a className="float-left mx-2"><img src="/social/c-github.svg" className="my-4 w-6 github-mobile" alt="github"/></a></Link>
-          <Link href="//behance.com/oddscenes"><a className="float-left mx-2"><img src="/social/d-behance.svg" className="my-4 w-6 behance-mobile" alt="behance"/></a></Link>
-          <Link href="//twitch.tv/oddscenes"><a className="float-left mx-2"><img src="/social/e-twitch.svg" className="my-4 w-5 twitch-mobile" alt="twitch"/></a></Link>
+          <Link href="https://twitter.com/oddscenes" className="float-left mx-2"><img src="/social/b-twitter.svg" className="my-4 w-6" alt="twitter"/></Link>
+          <Link href="https://github.com/oddscenes" className="float-left mx-2"><img src="/social/c-github.svg" className="my-4 w-6 github-mobile" alt="github"/></Link>
+          <Link href="https://behance.com/oddscenes" className="float-left mx-2"><img src="/social/d-behance.svg" className="my-4 w-6 behance-mobile" alt="behance"/></Link>
+          <Link href="https://twitch.tv/oddscenes" className="float-left mx-2"><img src="/social/e-twitch.svg" className="my-4 w-5 twitch-mobile" alt="twitch"/></Link>
         </div>
       </div>
 

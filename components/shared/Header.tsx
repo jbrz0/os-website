@@ -37,9 +37,10 @@ const Header: React.FC<React.ReactNode> = () => {
   return (<>
     <Head>
 
-      <title>Odd Scenes:
+      {/* <title>Odd Scenes:
         {path}
-      </title>
+      </title> */}
+      <title>{`Odd Scenes ${path}`}</title>
 
       <meta name="description" content="Building the modern web with an eye for design and interaction" />
 

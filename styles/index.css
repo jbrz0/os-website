@@ -1,0 +1,33 @@
+/* Typography */
+@import "./fonts.css";
+@import "./type.css";
+
+/* Design */
+@import "./gradients.css";
+@import "./icons.css";
+@import "./buttons.css";
+@import "./elements.css";
+
+/* Components */
+@import "./nav.css";
+@import "./code.css";
+@import "./plugins.css";
+@import "./animations.css";
+
+/* Sections */
+@import "./intro.css";
+@import "./post.css";
+
+/* Labs */
+@import "./labs.css";
+
+body {
+  @apply bg-black;
+}
+input {
+  caret-color: rgba(62, 11, 220);
+  outline: 0;
+}
+.behind {
+  z-index: -1;
+}
