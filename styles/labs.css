@@ -13,3 +13,8 @@
 .web-apis-btn {
   outline: 0 !important;
 }
+
+.gridjs-table {
+  margin-left: auto;
+  margin-right: auto;
+}

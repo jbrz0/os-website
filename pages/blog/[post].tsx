@@ -72,7 +72,7 @@ const Post: React.FC<React.ReactNode> = () => {
       <Header />
       <Nav />
       <Intro
-        tags={[...posts[id].tags]}
+        tags={posts[id].tags}
         date={posts[id].date}
         title={posts[id].title}
         cover={posts[id].cover}
