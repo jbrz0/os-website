@@ -63,11 +63,15 @@
   padding: 0;
 }
 
-#react-select-1-option-0, #react-select-1-option-1 {
+#react-select-1-listbox div,
+#react-select-2-listbox div,
+#react-select-3-listbox div {
   background: transparent !important;
 }
 
-#react-select-1-option-0:hover, #react-select-1-option-1:hover {
+#react-select-1-listbox div:hover,
+#react-select-2-listbox div:hover,
+#react-select-3-listbox div:hover {
   background: #131033 !important;
 }
 

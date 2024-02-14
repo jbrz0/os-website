@@ -22,16 +22,18 @@ const About: React.FC<React.ReactNode> = () => {
             />
             <p className="mb-8">Hi, my name is Justin Brazeau and I’m a Canadian web designer.
             I've been designing and building websites since the early days of Geocities.
-            <br /><br />Lately I'm focused on frontend development with CSS, Javascript, React &amp; Node. I
-            have a strong focus on layout and UI design.</p>
+            <br /><br />
+            Lately I'm focused on product & UI design, frontend development and working with teams on the product side to build web software. 
+            </p>
+            
 
             <div className="grid grid-cols-7">
               <div className="col-span-7 md:col-span-3 mb-8 md:mb-auto">
                 <h2 className="uppercase mb-4 md:pr-4">Design</h2>
                 <ul className="text-gray-200 md:pr-4">
                   <li className="gr-rb-dark gr-rb-dark-home mb-3">Web &amp; UI Design</li>
-                  <li className="mb-3">Graphic Design</li>
-                  <li className="mb-3">Digital Art</li>
+                  <li className="mb-3">Visual Design</li>
+                  <li className="mb-3">UX & Prototyping</li>
                 </ul>
               </div>
               <div className="col-span-7 md:col-span-3">

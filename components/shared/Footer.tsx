@@ -48,7 +48,7 @@ const Footer: React.FC<React.ReactNode> = () => {
         data-arrow-color="#4028fb"
         data-for="email"
       ><img src="/social/a-email.svg" alt=""/></a>
-      <Icon href="https://x.com/oddscenes" text="X @oddscenes" id="twitter" src="b-twitter" />
+      <Icon href="https://x.com/oddscenes" text="X @oddscenes" id="x" src="b-x" />
       <Icon href="https://github.com/oddscenes" text="Github @oddscenes" id="github" src="c-github" />
       <Icon href="https://behance.com/oddscenes" text="Behance @oddscenes" adjClass="behance" id="behance" src="d-behance" />
       <Icon href="https://twitch.tv/oddscenes" text="Twitch @oddscenes" id="twitch" src="e-twitch" />

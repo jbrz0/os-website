@@ -40,22 +40,22 @@ const Header: React.FC<React.ReactNode> = () => {
       {/* <title>Odd Scenes:
         {path}
       </title> */}
-      <title>{`Odd Scenes ${path}`}</title>
+      <title>{`Justin Brazeau | ${path}`}</title>
 
       <meta name="description" content="Building the modern web with an eye for design and interaction" />
 
       {/* OG Tags */}
-      <meta property="og:title" content="Odd Scenes" />
+      <meta property="og:title" content="Justin Brazeau | Web Maker" />
       <meta property="og:description" content="Building the modern web with an eye for design and interaction" />
       <meta property="og:image" content="https://oddscenes.s3.amazonaws.com/screenshot-os-website.png" />
-      <meta property="og:url" content="https://oddscenes.com" />
-      <meta property="og:site_name" content="Odd Scenes" />
+      <meta property="og:url" content="https://justinbrazeau.com" />
+      <meta property="og:site_name" content="Justin Brazeau" />
 
-      <meta name="twitter:title" content="Odd Scenes" />
+      <meta name="twitter:title" content="Justin Brazeau | Web Maker" />
       <meta name="twitter:description" content="Building the modern web with an eye for design and interaction" />
       <meta name="twitter:image" content=" https://oddscenes.s3.amazonaws.com/screenshot-os-website.png" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:image:alt" content="Odd Scenes" />
+      <meta name="twitter:image:alt" content="Justin Brazeau | Web Maker" />
 
       {dark === true && <link rel="icon" href="/favicon.ico" />}
       {dark === false && <link rel="icon" href="/favicon-light.ico" />}

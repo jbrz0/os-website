@@ -50,9 +50,9 @@ const Container: React.FC<React.ReactNode> = () => {
   return <>
 
     <div className="pt-24 lg:pt-40 pb-32 bg-black min-h-screen bg-fixed"
-      style={{backgroundImage: 'url(/art/rockbg.jpg)', backgroundSize: '250px'}}>
+      style={{backgroundImage: 'url(/art/rockbg2.jpg)', backgroundSize: '250px'}}>
 
-    <img src="/art/ribcage.png" className="opacity-50 object-contain fixed left-0 right-0 mx-auto z-0 top-0 bottom-0 h-screen" />
+    <img src="/art/ribcage.png" className="grayscale object-contain fixed left-0 right-0 mx-auto z-0 top-0 bottom-0 h-screen" style={{opacity: '0.05'}} />
 
       <div className="z-10 relative mx-auto px-12 grid md:grid-cols-1 lg:grid-cols-8 lg:gap-2 container labs-container">
 
@@ -62,7 +62,7 @@ const Container: React.FC<React.ReactNode> = () => {
           <Sidebar />
         </div>
 
-        <div className="md:col-span-1 lg:col-span-4 lab-cards grid grid-cols-2 gap-6 px-2">
+        <div className="md:col-span-1 lg:col-span-4 lab-cards grid grid-cols-2 gap-2 px-2">
 
           {labs.slice(0, postAmount).filter(post => {
             // Text

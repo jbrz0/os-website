@@ -95,7 +95,7 @@ const Nav: React.FC<React.ReactNode> = () => {
         </ul>
 
         <Link href="/" className="flex flex-none md:block md:absolute md:left-0 md:top-0 md:mt-4 md:ml-4">
-          <img src="/logo.svg" alt="Odd Scenes Logo"
+          <img src="/logo-wordmark.svg" alt="Odd Scenes Logo"
             className="w-40 xl:w-40 nav-logo" />
         </Link>
 

@@ -53,6 +53,7 @@ const Sidebar: React.FC<React.ReactNode> = () => {
   }
 
   useEffect(() => {
+
     // Get and filter our duplicate tags
     const allTags: Array<string> = posts.map(post => post.tags).flat(1)
     const filteredTags: Array<string> = allTags.filter((value, i) => allTags.indexOf(value) === i)
