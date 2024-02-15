@@ -1,0 +1,44 @@
+import Button from '../components/shared/Button'
+import Plink from '../components/shared/Plink'
+
+The goal of this web app was to be able to scan a webpage and determine sentiment. For the first round of input data on it, I used the reddit API. It's a simple UI taking 2 inputs from the user: `subreddit` and `keyword`. Once those inputs are included it will parse all recent posts, and use OpenAI to gauge the sentiment on it (either positive, neutral or negative - or some combination of these).
+
+&nbsp;&nbsp;
+-----
+
+The challenge that led to this mini-app being created was that the AI tools like ChatGPT couldn't methodically scan and scrape the data on a web page in a way that gave it the best possible set of data to analyze. If I asked for a sentiment on something it can search the web, but not take a specific set of data and scan it. This method of first organizing the data helps to get the final outcome. The reddit API works great locally however has challenges on a live server, but as a test case this project is a success and can definitely have more input sources added to it (for example X or other social platforms).
+
+&nbsp;&nbsp;
+-----
+
+## Detailed Features
+
+&nbsp;&nbsp;
+-----
+
+- Takes real user posts and organizes data to feed the OpenAI system
+- Allows user to easily determine the space and topic via a simple UI
+- Uses AI to analyze sentiment with refined input data
+
+&nbsp;&nbsp;
+-----
+
+## How to Use
+
+&nbsp;&nbsp;
+-----
+
+1. Clone the project
+
+2. Get your API Key (OpenAI), and add it to `.env`
+
+3. Install and run the nextjs project locally
+
+&nbsp;&nbsp;
+-----
+
+> <Plink href="https://github.com/oddscenes/sentiment-check" text="Get the Project on Github" />
+
+&nbsp;&nbsp;
+-----
+

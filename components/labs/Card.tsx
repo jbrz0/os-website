@@ -53,8 +53,9 @@ const Card: React.FC<Props> = (props) => {
 
 
       <div className="px-10 pb-8">
+
         <Button href={props.url === "" ? `/lab/${props.slug}` : `${props.url}`}
-          target={props.onSite || props.slug.slice(0, 2) !== '//' ? '_self' : '_blank'}
+          target={props.onSite && props.slug.slice(0, 2) !== '//' ? '_self' : '_blank'}
           className="text-gray-100 text-base group-hover:bg-purple hover:opacity-80 col-span-1 border-solid border border-purple block">
             View Lab
         </Button>
