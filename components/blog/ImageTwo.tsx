@@ -1,5 +1,3 @@
-import { loadGetInitialProps } from "next/dist/next-server/lib/utils"
-
 interface Props {
   ImageOne?: any,
   srcOne: string,
