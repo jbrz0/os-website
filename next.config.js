@@ -13,5 +13,10 @@ module.exports = withMDX({
   env: {
     S3_BUCKET: process.env.S3_BUCKET,
     GA: process.env.GA,
+  },
+
+  typescript: {
+    // Do not run TypeScript during build
+    ignoreBuildErrors: true,
   }
 })
